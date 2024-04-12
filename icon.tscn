@@ -5,3 +5,9 @@
 [node name="Icon" type="Sprite2D"]
 position = Vector2(153, 123)
 texture = ExtResource("1_orwpn")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(453, 179)
+scale = Vector2(4, 4)
+texture = ExtResource("1_orwpn")
