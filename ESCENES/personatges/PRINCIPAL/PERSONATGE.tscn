@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://c08vnqoxa8kow"]
+
+[ext_resource type="Texture2D" uid="uid://dlr206lgwp6fi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/character/player.png" id="1_1bjfh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxsyy"]
+atlas = ExtResource("1_1bjfh")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qniib"]
+atlas = ExtResource("1_1bjfh")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3g2u"]
+atlas = ExtResource("1_1bjfh")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u74ap"]
+atlas = ExtResource("1_1bjfh")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rufc4"]
+atlas = ExtResource("1_1bjfh")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ykq1"]
+atlas = ExtResource("1_1bjfh")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ywqib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxsyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qniib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3g2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u74ap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rufc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ykq1")
+}],
+"loop": true,
+"name": &"idle_cara",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5boci"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ywqib")
+animation = &"idle_cara"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5boci")
