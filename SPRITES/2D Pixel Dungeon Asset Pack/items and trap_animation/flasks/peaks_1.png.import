@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdb1we3owitk3"
-path="res://.godot/imported/peaks_1.png-ff00152b98f8793177cf3f6f0801fdf0.ctex"
+path="res://.godot/imported/peaks_1.png-5902a20ce7e9b238dd7797d1fa5c65f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_1.png"
-dest_files=["res://.godot/imported/peaks_1.png-ff00152b98f8793177cf3f6f0801fdf0.ctex"]
+source_file="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/peaks_1.png"
+dest_files=["res://.godot/imported/peaks_1.png-5902a20ce7e9b238dd7797d1fa5c65f6.ctex"]
 
 [params]
 

@@ -1,10 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcdvq3vbtgf4s"]
+[gd_scene load_steps=7 format=3 uid="uid://bcdvq3vbtgf4s"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mqqpw"]
+[ext_resource type="Texture2D" uid="uid://cdb1we3owitk3" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/peaks_1.png" id="1_iddan"]
+[ext_resource type="Texture2D" uid="uid://djjsvj4ue5421" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_2.png" id="2_h4aqh"]
+[ext_resource type="Texture2D" uid="uid://b2g16348yh01u" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_4.png" id="3_nxto1"]
+[ext_resource type="Texture2D" uid="uid://duh04ov5ocgmb" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_3.png" id="4_2iuvq"]
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kb46"]
+size = Vector2(16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_odgym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iddan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h4aqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nxto1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2iuvq")
+}],
+"loop": false,
+"name": &"bajar",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2iuvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nxto1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h4aqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_iddan")
+}],
+"loop": false,
+"name": &"subir",
+"speed": 12.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_mqqpw")
+shape = SubResource("RectangleShape2D_5kb46")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_odgym")
+animation = &"bajar"
+frame = 3
+frame_progress = 1.0

@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1nm3tdlb4diu"]
+
+[ext_resource type="Texture2D" uid="uid://cuslei8ieelwk" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_1_1.png" id="1_dxsul"]
+[ext_resource type="Texture2D" uid="uid://txg6k626gaoc" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_1_2.png" id="2_mlekn"]
+[ext_resource type="Texture2D" uid="uid://cmn22ai03gwol" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_1_3.png" id="3_sjr6w"]
+[ext_resource type="Texture2D" uid="uid://dacseykha0pyd" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_1_4.png" id="4_b7vrg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwnid"]
+size = Vector2(15, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aci66"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dxsul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mlekn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sjr6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b7vrg")
+}],
+"loop": false,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0.5, 4.5)
+shape = SubResource("RectangleShape2D_cwnid")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_aci66")
+frame = 3
+frame_progress = 1.0
