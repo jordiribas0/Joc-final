@@ -1,9 +1,54 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvmbdhbe527jj"]
+[gd_scene load_steps=10 format=3 uid="uid://bvmbdhbe527jj"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_vjuxk"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
 [ext_resource type="PackedScene" uid="uid://3li37qm27g02" path="res://ESCENES/personatges/ENEMIGOS/FLECHA.tscn" id="3_mth1f"]
 [ext_resource type="PackedScene" uid="uid://d1nm3tdlb4diu" path="res://ESCENES/personatges/ENEMIGOS/FUEGO.tscn" id="4_0jddp"]
+[ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="5_w64bc"]
+
+[sub_resource type="Curve2D" id="Curve2D_77m8r"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -194, 0, 0, 0, 0, 0, 107, 0)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_ohveu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_ipxoy"]
+resource_name = "new_animation"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tehiv"]
+_data = {
+"RESET": SubResource("Animation_ohveu"),
+"new_animation": SubResource("Animation_ipxoy")
+}
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,7 +56,7 @@
 position = Vector2(860, 207)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_emx43")]
-position = Vector2(1445, 504)
+position = Vector2(1442, 209)
 
 [node name="FLECHA" parent="." instance=ExtResource("3_mth1f")]
 position = Vector2(494, 409)
@@ -19,6 +64,18 @@ position = Vector2(494, 409)
 [node name="FUEGO" parent="." instance=ExtResource("4_0jddp")]
 position = Vector2(2622, 381)
 
-[node name="FUEGO2" parent="." instance=ExtResource("4_0jddp")]
-position = Vector2(2619, 500)
-rotation = 3.14159
+[node name="PATH SLIME" type="Path2D" parent="."]
+position = Vector2(1200, 100)
+curve = SubResource("Curve2D_77m8r")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PATH SLIME"]
+position = Vector2(107, 0)
+progress = 301.0
+
+[node name="SLIME" parent="PATH SLIME/PathFollow2D" instance=ExtResource("5_w64bc")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PATH SLIME/PathFollow2D"]
+libraries = {
+"": SubResource("AnimationLibrary_tehiv")
+}
+autoplay = "new_animation"

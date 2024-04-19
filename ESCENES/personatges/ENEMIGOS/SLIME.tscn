@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://bwwoja2p8gg3f"]
+[gd_scene load_steps=16 format=3 uid="uid://bwwoja2p8gg3f"]
 
 [ext_resource type="Texture2D" uid="uid://dt06firpsch8u" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/slime.png" id="1_bdel5"]
+[ext_resource type="Script" path="res://ESCENES/personatges/ENEMIGOS/SLIME.gd" id="1_fw5pu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ve3tv"]
 size = Vector2(16, 11)
@@ -96,12 +97,15 @@ animations = [{
 }]
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
+script = ExtResource("1_fw5pu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_ve3tv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_sdndg")
 animation = &"run"
-frame_progress = 0.517455
+frame = 5
+frame_progress = 0.356893
