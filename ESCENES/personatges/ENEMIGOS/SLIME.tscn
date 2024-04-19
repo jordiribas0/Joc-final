@@ -104,4 +104,4 @@ shape = SubResource("RectangleShape2D_ve3tv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_sdndg")
 animation = &"run"
-frame_progress = 0.396521
+frame_progress = 0.517455
