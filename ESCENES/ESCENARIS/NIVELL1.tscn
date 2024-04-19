@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bvmbdhbe527jj"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_vjuxk"]
-[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
-[ext_resource type="PackedScene" uid="uid://3li37qm27g02" path="res://ESCENES/personatges/ENEMIGOS/FLECHA.tscn" id="3_mth1f"]
-[ext_resource type="PackedScene" uid="uid://d1nm3tdlb4diu" path="res://ESCENES/personatges/ENEMIGOS/FUEGO.tscn" id="4_0jddp"]
+[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/PERSONATGES/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
+[ext_resource type="PackedScene" uid="uid://3li37qm27g02" path="res://ESCENES/PERSONATGES/ENEMIGOS/FLECHA.tscn" id="3_mth1f"]
+[ext_resource type="PackedScene" uid="uid://d1nm3tdlb4diu" path="res://ESCENES/PERSONATGES/ENEMIGOS/FUEGO.tscn" id="4_0jddp"]
 
 [node name="Node2D" type="Node2D"]
 
