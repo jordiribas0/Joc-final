@@ -92,7 +92,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 6.0
+"speed": 7.0
 }]
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
@@ -103,4 +103,5 @@ shape = SubResource("RectangleShape2D_ve3tv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_sdndg")
-animation = &"kill"
+animation = &"run"
+frame_progress = 0.396521
