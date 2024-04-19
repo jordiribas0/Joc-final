@@ -29,6 +29,7 @@ animations = [{
 }]
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
+scale = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -37,5 +38,4 @@ shape = SubResource("RectangleShape2D_cwnid")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_aci66")
-frame = 3
-frame_progress = 1.0
+frame = 1

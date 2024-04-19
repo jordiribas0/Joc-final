@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvmbdhbe527jj"]
+
+[ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_vjuxk"]
+[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
+[ext_resource type="PackedScene" uid="uid://3li37qm27g02" path="res://ESCENES/personatges/ENEMIGOS/FLECHA.tscn" id="3_mth1f"]
+[ext_resource type="PackedScene" uid="uid://d1nm3tdlb4diu" path="res://ESCENES/personatges/ENEMIGOS/FUEGO.tscn" id="4_0jddp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_vjuxk")]
+position = Vector2(860, 207)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_emx43")]
+position = Vector2(1445, 504)
+
+[node name="FLECHA" parent="." instance=ExtResource("3_mth1f")]
+position = Vector2(494, 409)
+
+[node name="FUEGO" parent="." instance=ExtResource("4_0jddp")]
+position = Vector2(2622, 381)
+
+[node name="FUEGO2" parent="." instance=ExtResource("4_0jddp")]
+position = Vector2(2619, 500)
+rotation = 3.14159
