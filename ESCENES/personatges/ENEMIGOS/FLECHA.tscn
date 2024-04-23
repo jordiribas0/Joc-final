@@ -17,3 +17,8 @@ shape = SubResource("RectangleShape2D_kcf3e")
 
 [node name="JustArrow" type="Sprite2D" parent="."]
 texture = ExtResource("1_5ub2h")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

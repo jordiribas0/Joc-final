@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_vjuxk"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
-[ext_resource type="PackedScene" uid="uid://3li37qm27g02" path="res://ESCENES/personatges/ENEMIGOS/FLECHA.tscn" id="3_mth1f"]
 [ext_resource type="PackedScene" uid="uid://d1nm3tdlb4diu" path="res://ESCENES/personatges/ENEMIGOS/FUEGO.tscn" id="4_0jddp"]
 [ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="5_w64bc"]
+[ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="6_hwyjk"]
 
 [sub_resource type="Curve2D" id="Curve2D_77m8r"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -194, 0, 0, 0, 0, 0, 107, 0)
+"points": PackedVector2Array(-106.463, 57.9564, 106.463, -57.9564, 98, 26, -112.133, -45.9871, 112.133, 45.9871, 401, 25)
 }
 point_count = 2
 
@@ -55,12 +55,6 @@ _data = {
 [node name="TileMap" parent="." instance=ExtResource("1_vjuxk")]
 position = Vector2(860, 207)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_emx43")]
-position = Vector2(851, 188)
-
-[node name="FLECHA" parent="." instance=ExtResource("3_mth1f")]
-position = Vector2(494, 409)
-
 [node name="FUEGO" parent="." instance=ExtResource("4_0jddp")]
 position = Vector2(2622, 381)
 
@@ -69,8 +63,10 @@ position = Vector2(1200, 100)
 curve = SubResource("Curve2D_77m8r")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="PATH SLIME"]
-position = Vector2(107, 0)
-progress = 301.0
+position = Vector2(401, 25)
+rotation = -0.00883369
+progress = 315.635
+rotates = false
 
 [node name="SLIME" parent="PATH SLIME/PathFollow2D" instance=ExtResource("5_w64bc")]
 
@@ -79,3 +75,9 @@ libraries = {
 "": SubResource("AnimationLibrary_tehiv")
 }
 autoplay = "new_animation"
+
+[node name="Sprite2D" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(494, 405)
+
+[node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
+position = Vector2(761, 438)
