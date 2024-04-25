@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bvmbdhbe527jj"]
+[gd_scene load_steps=9 format=3 uid="uid://bvmbdhbe527jj"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_vjuxk"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
-[ext_resource type="PackedScene" uid="uid://d1nm3tdlb4diu" path="res://ESCENES/personatges/ENEMIGOS/FUEGO.tscn" id="4_0jddp"]
 [ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="5_w64bc"]
 [ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="6_hwyjk"]
 
@@ -55,9 +54,6 @@ _data = {
 [node name="TileMap" parent="." instance=ExtResource("1_vjuxk")]
 position = Vector2(860, 207)
 
-[node name="FUEGO" parent="." instance=ExtResource("4_0jddp")]
-position = Vector2(2622, 381)
-
 [node name="PATH SLIME" type="Path2D" parent="."]
 position = Vector2(1200, 100)
 curve = SubResource("Curve2D_77m8r")
@@ -76,8 +72,29 @@ libraries = {
 }
 autoplay = "new_animation"
 
-[node name="Sprite2D" parent="." instance=ExtResource("6_hwyjk")]
+[node name="MED_IZ" parent="." instance=ExtResource("6_hwyjk")]
 position = Vector2(494, 405)
 
 [node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
-position = Vector2(761, 438)
+position = Vector2(1471, 154)
+
+[node name="MED_DE" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2445, 375)
+
+[node name="MED_DE2" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2478, 375)
+
+[node name="MED_DE3" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2510, 375)
+
+[node name="MED_DE4" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2541, 375)
+
+[node name="MED_IZ2" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(462, 405)
+
+[node name="MED_IZ3" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(430, 405)
+
+[node name="MED_IZ4" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(398, 405)

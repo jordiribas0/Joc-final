@@ -1,6 +1,6 @@
 extends Area2D
 var direccio:Vector2=Vector2.DOWN
-var velocitat:=300
+var velocitat:=250
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,16 +12,19 @@ func _process(delta):
 	position+= direccio*velocitat*delta
 	pass
 
-func dispara_fletxa():
-	var escenafletxa: PackedScene=load("res://ESCENES/personatges/ENEMIGOS/FLECHA.tscn")
-	var fletxa = escenafletxa.instantiate()
-	fletxa.global_position = global_position
 
 
 
+
+
+
+
+	pass # Replace with function body.
+
+
+	pass # Replace with function body.
 
 
 func _on_body_entered(body):
-	print("hola")
-	dispara_fletxa()
+	self.queue_free()
 	pass # Replace with function body.
