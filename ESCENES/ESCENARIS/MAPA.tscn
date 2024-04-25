@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://dj55fun5fc5gs"]
+[gd_scene load_steps=17 format=3 uid="uid://dj55fun5fc5gs"]
 
 [ext_resource type="Texture2D" uid="uid://dj65fdta3j84a" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_7verw"]
 [ext_resource type="Texture2D" uid="uid://b80xonwgxbwnh" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/0x72_16x16DungeonTileset.v5.png" id="2_p8c3y"]
 [ext_resource type="Texture2D" uid="uid://ckcdvmceb5qgk" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/SmoothdungeonTileset.png" id="3_1fast"]
+[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="4_suifn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0yoxu"]
 texture = ExtResource("1_7verw")
@@ -1444,3 +1445,6 @@ scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_3wyed")
 format = 2
 layer_0/tile_data = PackedInt32Array(-327637, 65536, 14, -393179, 393216, 6, -327643, 393216, 7, -393180, 393216, 6, -327644, 393216, 7, -393181, 393216, 6, -327645, 393216, 7, -327646, 1179648, 1, -262110, 1179648, 1, -196574, 1179648, 2, -131038, 1179648, 1, -65502, 1179648, 2, 34, 1179648, 1, 65570, 1179648, 1, 131106, 1245184, 2, 131107, 1114112, 0, 196643, 1114112, 1, 131108, 1114112, 0, 196644, 1114112, 1, 131109, 1114112, 0, 196645, 1114112, 1, 131110, 1114112, 0, 196646, 1114112, 1, 131115, 393216, 3, 196651, 393216, 4, 196642, 1245184, 3, 131111, 1769472, 1, 196647, 1769472, 2, 131112, 1835008, 1, 196648, 1835008, 2)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_suifn")]
+position = Vector2(607, 1816)
