@@ -8,9 +8,26 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-func disparar():
-	var fletxa:PackedScene=load("res://ESCENES/personatges/ENEMIGOS/FLECHA.gd")
-	
 	
 	pass
+
+
+func dispara_fletxa():
+	var escenafletxa: PackedScene=load("res://ESCENES/personatges/ENEMIGOS/FLECHA.tscn")
+	var fletxa = escenafletxa.instantiate()
+	fletxa.global_position = global_position
+	get_parent().add_child(fletxa)
+
+
+
+func _on_timer_timeout():
+	dispara_fletxa()
+
+
+
+
+	pass # Replace with function body.
+
+
+
+	pass # Replace with function body.
