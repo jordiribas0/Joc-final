@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bvmbdhbe527jj"]
+[gd_scene load_steps=10 format=3 uid="uid://bvmbdhbe527jj"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_vjuxk"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
+[ext_resource type="PackedScene" uid="uid://bcdvq3vbtgf4s" path="res://ESCENES/personatges/ENEMIGOS/pinchos.tscn" id="5_nd6oo"]
 [ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="5_w64bc"]
 [ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="6_hwyjk"]
 
@@ -75,20 +76,17 @@ autoplay = "new_animation"
 [node name="MED_IZ" parent="." instance=ExtResource("6_hwyjk")]
 position = Vector2(494, 405)
 
-[node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
-position = Vector2(1471, 154)
-
 [node name="MED_DE" parent="." instance=ExtResource("6_hwyjk")]
-position = Vector2(2445, 375)
+position = Vector2(2445, 373)
 
 [node name="MED_DE2" parent="." instance=ExtResource("6_hwyjk")]
-position = Vector2(2478, 375)
+position = Vector2(2380, 373)
 
 [node name="MED_DE3" parent="." instance=ExtResource("6_hwyjk")]
-position = Vector2(2510, 375)
+position = Vector2(2508, 373)
 
 [node name="MED_DE4" parent="." instance=ExtResource("6_hwyjk")]
-position = Vector2(2541, 375)
+position = Vector2(2316, 373)
 
 [node name="MED_IZ2" parent="." instance=ExtResource("6_hwyjk")]
 position = Vector2(462, 405)
@@ -98,3 +96,84 @@ position = Vector2(430, 405)
 
 [node name="MED_IZ4" parent="." instance=ExtResource("6_hwyjk")]
 position = Vector2(398, 405)
+
+[node name="ARR_IZ" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(429, -844)
+
+[node name="ARR_IZ2" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(398, -844)
+
+[node name="ARR_IZ3" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(367, -844)
+
+[node name="ARR_IZ4" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(334, -844)
+
+[node name="ARR_DE" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2413, -908)
+
+[node name="ARR_DE2" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2476, -908)
+
+[node name="ARR_DE3" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2540, -908)
+
+[node name="ARR_DE4" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2668, -908)
+
+[node name="ARR_DE5" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2348, -908)
+
+[node name="ARR_DE6" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2732, -908)
+
+[node name="MED_DE5" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2578, 372)
+
+[node name="MED_DE6" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2641, 370)
+
+[node name="MED_DE7" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2704, 370)
+
+[node name="ARR_DE7" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2604, -908)
+
+[node name="BAJO_DE" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2317, 1554)
+
+[node name="BAJO_DE2" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2380, 1554)
+
+[node name="BAJO_DE3" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2444, 1554)
+
+[node name="BAJO_DE4" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2508, 1554)
+
+[node name="BAJO_DE5" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2573, 1554)
+
+[node name="BAJO_DE6" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2636, 1554)
+
+[node name="BAJO_DE7" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(2701, 1554)
+
+[node name="AnimatableBody2D" parent="." instance=ExtResource("5_nd6oo")]
+position = Vector2(1371, -381)
+
+[node name="AnimatableBody2D2" parent="." instance=ExtResource("5_nd6oo")]
+position = Vector2(1411, -381)
+
+[node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
+position = Vector2(1471, 154)
+
+[node name="AnimatableBody2D3" parent="." instance=ExtResource("5_nd6oo")]
+position = Vector2(1451, -381)
+
+[node name="AnimatableBody2D4" parent="." instance=ExtResource("5_nd6oo")]
+position = Vector2(1491, -381)
+
+[node name="AnimatableBody2D5" parent="." instance=ExtResource("5_nd6oo")]
+position = Vector2(1531, -381)
