@@ -1,12 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcdvq3vbtgf4s"]
+[gd_scene load_steps=8 format=3 uid="uid://bcdvq3vbtgf4s"]
 
 [ext_resource type="Texture2D" uid="uid://cdb1we3owitk3" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/peaks_1.png" id="1_iddan"]
+[ext_resource type="Script" path="res://ESCENES/personatges/ENEMIGOS/pinchos.gd" id="1_kf2qu"]
 [ext_resource type="Texture2D" uid="uid://djjsvj4ue5421" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_2.png" id="2_h4aqh"]
 [ext_resource type="Texture2D" uid="uid://b2g16348yh01u" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_4.png" id="3_nxto1"]
 [ext_resource type="Texture2D" uid="uid://duh04ov5ocgmb" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_3.png" id="4_2iuvq"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kb46"]
-size = Vector2(16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_odgym"]
 animations = [{
@@ -45,13 +43,32 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="AnimatableBody2D" type="AnimatableBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kb46"]
+size = Vector2(16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_5kb46")
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_kf2qu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_odgym")
 animation = &"bajar"
 frame = 3
 frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_5kb46")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
