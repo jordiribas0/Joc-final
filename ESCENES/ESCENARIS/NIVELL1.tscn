@@ -166,9 +166,6 @@ position = Vector2(1371, -381)
 [node name="AnimatableBody2D2" parent="." instance=ExtResource("5_nd6oo")]
 position = Vector2(1411, -381)
 
-[node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
-position = Vector2(1471, 154)
-
 [node name="AnimatableBody2D3" parent="." instance=ExtResource("5_nd6oo")]
 position = Vector2(1451, -381)
 
@@ -177,3 +174,6 @@ position = Vector2(1491, -381)
 
 [node name="AnimatableBody2D5" parent="." instance=ExtResource("5_nd6oo")]
 position = Vector2(1531, -381)
+
+[node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
+position = Vector2(1471, 154)

@@ -413,7 +413,6 @@ shape = SubResource("RectangleShape2D_5boci")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ywqib")
-animation = &"idle_cara"
-frame_progress = 0.521312
+animation = &"idle_esquena"
 
 [node name="Camera2D" type="Camera2D" parent="."]
