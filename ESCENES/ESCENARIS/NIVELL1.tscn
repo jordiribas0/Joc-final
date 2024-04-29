@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bvmbdhbe527jj"]
+[gd_scene load_steps=11 format=3 uid="uid://bvmbdhbe527jj"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_vjuxk"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
 [ext_resource type="PackedScene" uid="uid://bcdvq3vbtgf4s" path="res://ESCENES/personatges/ENEMIGOS/pinchos.tscn" id="5_nd6oo"]
 [ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="5_w64bc"]
 [ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="6_hwyjk"]
+[ext_resource type="PackedScene" uid="uid://yv67h54pjper" path="res://ESCENES/ESCENARIS/derrere_persona.tscn" id="6_xb612"]
 
 [sub_resource type="Curve2D" id="Curve2D_77m8r"]
 _data = {
@@ -176,4 +177,7 @@ position = Vector2(1491, -381)
 position = Vector2(1531, -381)
 
 [node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
-position = Vector2(1471, 154)
+position = Vector2(9747, -269)
+
+[node name="TileMap2" parent="." instance=ExtResource("6_xb612")]
+layer_0/tile_data = PackedInt32Array()

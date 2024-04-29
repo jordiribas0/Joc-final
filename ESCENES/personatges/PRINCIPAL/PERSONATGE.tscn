@@ -404,7 +404,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-scale = Vector2(2, 2)
+scale = Vector2(1.8, 1.8)
 script = ExtResource("1_02qfu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -416,3 +416,4 @@ sprite_frames = SubResource("SpriteFrames_ywqib")
 animation = &"idle_esquena"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
