@@ -9,7 +9,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_77m8r"]
 _data = {
-"points": PackedVector2Array(-73.133, 4.0129, 73.133, -4.0129, 77, 43, 0, 0, 0, 0, -149, -133, 0, 0, 0, 0, 94, -136, 0, 0, 0, 0, -134, 32, 0, 0, 0, 0, 75, 43)
+"points": PackedVector2Array(-73.133, 4.0129, 73.133, -4.0129, 77, 43, 0, 0, 0, 0, -149, -133, 0, 0, 0, 0, 94, -136, 0, 0, 0, 0, -148, 42, 0, 0, 0, 0, 75, 43)
 }
 point_count = 5
 
@@ -145,7 +145,7 @@ _data = {
 position = Vector2(860, 207)
 
 [node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
-position = Vector2(9720, -314)
+position = Vector2(9719, -307)
 
 [node name="TileMap2" parent="." instance=ExtResource("6_xb612")]
 scale = Vector2(2, 2)
@@ -157,7 +157,7 @@ curve = SubResource("Curve2D_77m8r")
 [node name="PathFollow2D" type="PathFollow2D" parent="PATH SLIME"]
 position = Vector2(75, 43)
 rotation = -0.00883369
-progress = 1044.36
+progress = 1075.27
 rotates = false
 
 [node name="SLIME" parent="PATH SLIME/PathFollow2D" instance=ExtResource("5_w64bc")]

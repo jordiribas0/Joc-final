@@ -1,8 +1,10 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
-
+@onready var menu : Node2D = $Menu
 var speed = 200
 var ultima_direccio :Vector2 = Vector2.DOWN
+func _ready():
+	menu.visible = false
 func get_input():
 	var input_direction = Input.get_vector("left","right","up","down")
 	velocity = input_direction * speed
@@ -42,3 +44,15 @@ func _physics_process(_delta):
 	animacio()
 	ultima_direccio = velocity.normalized()
 	
+func _process(_delta):
+	if Input.is_action_just_pressed("menu"):
+		get_tree().paused = true
+		menu.visible = get_tree().paused
+
+func _on_quit_pressed():
+	get_tree().reload_current_scene()
+
+
+func _on_resume_pressed():
+	get_tree().paused = false
+	menu.visible = get_tree().paused
