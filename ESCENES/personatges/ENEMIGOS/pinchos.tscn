@@ -44,7 +44,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kb46"]
-size = Vector2(16, 16)
+size = Vector2(9.6, 9.6)
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
 scale = Vector2(2.5, 2.5)
@@ -57,7 +57,8 @@ frame = 3
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
+position = Vector2(-1.90735e-07, -1.90735e-07)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_5kb46")
 
 [node name="Timer" type="Timer" parent="."]
