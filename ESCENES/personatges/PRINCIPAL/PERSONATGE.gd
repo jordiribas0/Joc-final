@@ -6,6 +6,7 @@ var ultima_direccio :Vector2 = Vector2.DOWN
 func get_input():
 	var input_direction = Input.get_vector("left","right","up","down")
 	velocity = input_direction * speed
+	var vida=2
 
 func animacio():
 	if velocity.x == 0 and velocity.y == 0:
@@ -41,4 +42,5 @@ func _physics_process(_delta):
 	move_and_slide()
 	animacio()
 	ultima_direccio = velocity.normalized()
+	
 	
