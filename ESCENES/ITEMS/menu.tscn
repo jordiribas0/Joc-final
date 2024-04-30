@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbt6x4mpiclvs"]
+
+[ext_resource type="Script" path="res://CanvasLayer.gd" id="1_it5h4"]
+[ext_resource type="Texture2D" uid="uid://cmfmbilujpis0" path="res://SPRITES/MENU.png" id="2_pdgl1"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_it5h4")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Menu" type="Sprite2D" parent="."]
+position = Vector2(501.75, 302.25)
+scale = Vector2(0.923841, 0.917054)
+texture = ExtResource("2_pdgl1")
