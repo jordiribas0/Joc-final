@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmfmbilujpis0"
-path="res://.godot/imported/MENU.png-03f9ff49564a5144d8c2a894f6562c49.ctex"
+uid="uid://rlnyci6to58w"
+path="res://.godot/imported/elmapa.png-63a01e88ef820a0393c445a6ef0d4de1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/MENU.png"
-dest_files=["res://.godot/imported/MENU.png-03f9ff49564a5144d8c2a894f6562c49.ctex"]
+source_file="res://SPRITES/elmapa.png"
+dest_files=["res://.godot/imported/elmapa.png-63a01e88ef820a0393c445a6ef0d4de1.ctex"]
 
 [params]
 
