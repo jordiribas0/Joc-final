@@ -148,6 +148,8 @@ position = Vector2(860, 207)
 [node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
 position = Vector2(9719, -307)
 
+[node name="CanvasLayer" parent="PERSONATGE" instance=ExtResource("7_jtxy4")]
+
 [node name="TileMap2" parent="." instance=ExtResource("6_xb612")]
 scale = Vector2(2, 2)
 
@@ -257,5 +259,3 @@ libraries = {
 }
 
 [node name="AnimatableBody2D" parent="Path2D2/PathFollow2D" instance=ExtResource("6_ydyre")]
-
-[node name="CanvasLayer" parent="." instance=ExtResource("7_jtxy4")]

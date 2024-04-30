@@ -1,14 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbt6x4mpiclvs"]
+[gd_scene load_steps=5 format=3 uid="uid://dbt6x4mpiclvs"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_it5h4"]
 [ext_resource type="Texture2D" uid="uid://cmfmbilujpis0" path="res://SPRITES/MENU.png" id="2_pdgl1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hjv35"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qmogv"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_it5h4")
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Menu" type="Sprite2D" parent="."]
-position = Vector2(501.75, 302.25)
+[node name="Menu" type="Sprite2D" parent="Node2D"]
+position = Vector2(549, 318)
 scale = Vector2(0.923841, 0.917054)
 texture = ExtResource("2_pdgl1")
+
+[node name="RESUME" type="Button" parent="Node2D"]
+offset_left = 485.0
+offset_top = 262.0
+offset_right = 617.0
+offset_bottom = 312.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hjv35")
+flat = true
+
+[node name="RESTART" type="Button" parent="Node2D"]
+offset_left = 479.0
+offset_top = 382.0
+offset_right = 620.0
+offset_bottom = 421.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
+flat = true
+
+[connection signal="pressed" from="Node2D/RESUME" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Node2D/RESTART" to="." method="_on_restart_pressed"]
