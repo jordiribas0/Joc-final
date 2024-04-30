@@ -155,7 +155,7 @@ position = Vector2(9046, 919)
 curve = SubResource("Curve2D_77m8r")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="PATH SLIME"]
-position = Vector2(74.9981, 43)
+position = Vector2(75, 43)
 rotation = -0.00883369
 progress = 1075.27
 rotates = false
