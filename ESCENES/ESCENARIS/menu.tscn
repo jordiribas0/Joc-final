@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://q408iaug87k5"]
+
+[ext_resource type="Texture2D" uid="uid://b721453gxewja" path="res://SPRITES/menu.png" id="1_orinp"]
+
+[node name="menu" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 119.0
+offset_bottom = 63.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Menu" type="Sprite2D" parent="."]
+position = Vector2(59.5, 31.8125)
+scale = Vector2(0.171717, 0.138015)
+texture = ExtResource("1_orinp")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 1379.0
+offset_bottom = 107.0
+scale = Vector2(0.0209919, 0.147089)
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 34.0
+offset_top = 36.0
+offset_right = 84.0
+offset_bottom = 44.0
+metadata/_edit_use_anchors_ = true
