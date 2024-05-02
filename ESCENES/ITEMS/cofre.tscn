@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://uxok3ihsivsp"]
+
+[ext_resource type="Texture2D" uid="uid://cttgotous0oxv" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_3.png" id="1_g7ymy"]
+[ext_resource type="Script" path="res://ESCENES/ITEMS/cofre.gd" id="1_uoovh"]
+[ext_resource type="Texture2D" uid="uid://bpk8w6ff1x7h5" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_1.png" id="2_3kdun"]
+[ext_resource type="Texture2D" uid="uid://cf85ch5qbv885" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_2.png" id="3_rf1kn"]
+[ext_resource type="Texture2D" uid="uid://8kqno7yvq11e" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_3.png" id="4_fhvfu"]
+[ext_resource type="Texture2D" uid="uid://eahcvyr4pahi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_4.png" id="5_qo5mv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6mhb"]
+size = Vector2(14, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_si706"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g7ymy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3kdun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rf1kn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fhvfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qo5mv")
+}],
+"loop": false,
+"name": &"open",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tttac"]
+size = Vector2(24, 24)
+
+[node name="cofre" type="StaticBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_uoovh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_g6mhb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_si706")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("RectangleShape2D_tttac")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
