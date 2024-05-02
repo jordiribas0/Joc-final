@@ -354,7 +354,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_cara",
-"speed": 8.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -377,7 +377,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_esquena",
-"speed": 8.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -400,7 +400,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run_lado",
-"speed": 8.0
+"speed": 11.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -413,7 +413,7 @@ shape = SubResource("RectangleShape2D_5boci")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ywqib")
-animation = &"idle_esquena"
+animation = &"run_cara"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4.2, 4.2)
