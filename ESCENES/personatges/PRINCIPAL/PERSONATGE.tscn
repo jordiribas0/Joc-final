@@ -1,8 +1,7 @@
-[gd_scene load_steps=55 format=3 uid="uid://c08vnqoxa8kow"]
+[gd_scene load_steps=54 format=3 uid="uid://c08vnqoxa8kow"]
 
 [ext_resource type="Texture2D" uid="uid://dlr206lgwp6fi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/character/player.png" id="1_1bjfh"]
 [ext_resource type="Script" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.gd" id="1_02qfu"]
-[ext_resource type="AudioStream" uid="uid://dc045ieod6tnv" path="res://SPRITES/musica/footstep03.ogg" id="3_pvyj6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5boci"]
 size = Vector2(13, 20.8889)
@@ -421,6 +420,3 @@ zoom = Vector2(4.2, 4.2)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 autoplay = true
-
-[node name="Footsteps" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_pvyj6")
