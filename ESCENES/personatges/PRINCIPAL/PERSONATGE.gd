@@ -25,24 +25,24 @@ func animacio():
 		if ultima_direccio == Vector2.DOWN:
 			animated_sprite_2d.play("idle_cara")
 			animated_sprite_2d.flip_h = false
-	if velocity.x > 0:
-		animated_sprite_2d.play("run_lado")
-		animated_sprite_2d.flip_h = false
-		ultima_direccio = Vector2.RIGHT
-		footsteps.play()
-	if velocity.x < 0:
-		animated_sprite_2d.play("run_lado")
-		animated_sprite_2d.flip_h = true
-		ultima_direccio = Vector2.LEFT
-		footsteps.play()
-	if velocity.y < 0 and velocity.x == 0:
-		animated_sprite_2d.play("run_esquena")
-		ultima_direccio = Vector2.UP
-		footsteps.play()
-	if velocity.y > 0 and velocity.x == 0:
-		animated_sprite_2d.play("run_cara")
-		ultima_direccio = Vector2.DOWN
-		footsteps.play()
+	else:
+		if velocity.x > 0:
+			animated_sprite_2d.play("run_lado")
+			animated_sprite_2d.flip_h = false
+			ultima_direccio = Vector2.RIGHT
+		if velocity.x < 0:
+			animated_sprite_2d.play("run_lado")
+			animated_sprite_2d.flip_h = true
+			ultima_direccio = Vector2.LEFT
+		if velocity.y < 0 and velocity.x == 0:
+			animated_sprite_2d.play("run_esquena")
+			ultima_direccio = Vector2.UP
+		if velocity.y > 0 and velocity.x == 0:
+			animated_sprite_2d.play("run_cara")
+			ultima_direccio = Vector2.DOWN
+		if not footsteps.playing:
+			footsteps.play()
+		
 
 		
 func _physics_process(_delta):
