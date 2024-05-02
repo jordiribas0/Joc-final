@@ -184,7 +184,7 @@ fill_to = Vector2(0, 0)
 position = Vector2(860, 207)
 
 [node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
-position = Vector2(9719, -279)
+position = Vector2(9032, 1456)
 
 [node name="CanvasLayer" parent="PERSONATGE" instance=ExtResource("7_jtxy4")]
 
@@ -240,12 +240,6 @@ position = Vector2(9518, 564)
 
 [node name="Sprite2D4" parent="." instance=ExtResource("6_hwyjk")]
 position = Vector2(9581, 564)
-
-[node name="Sprite2D5" parent="." instance=ExtResource("6_hwyjk")]
-position = Vector2(8814, 277)
-
-[node name="Sprite2D6" parent="." instance=ExtResource("6_hwyjk")]
-position = Vector2(8878, 277)
 
 [node name="Sprite2D7" parent="." instance=ExtResource("6_hwyjk")]
 position = Vector2(9871, -12)
