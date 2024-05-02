@@ -1,11 +1,11 @@
 [gd_scene load_steps=27 format=3 uid="uid://bvmbdhbe527jj"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_vjuxk"]
-[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
-[ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="5_w64bc"]
+[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/PERSONATGES/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
+[ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/PERSONATGES/ENEMIGOS/SLIME.tscn" id="5_w64bc"]
 [ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="6_hwyjk"]
 [ext_resource type="PackedScene" uid="uid://ov1skty0reyt" path="res://tile_map.tscn" id="6_xb612"]
-[ext_resource type="PackedScene" uid="uid://dnw4d044wpxyj" path="res://ESCENES/personatges/ENEMIGOS/SLIME 2.tscn" id="6_ydyre"]
+[ext_resource type="PackedScene" uid="uid://dnw4d044wpxyj" path="res://ESCENES/PERSONATGES/ENEMIGOS/SLIME 2.tscn" id="6_ydyre"]
 [ext_resource type="PackedScene" uid="uid://dbt6x4mpiclvs" path="res://ESCENES/ITEMS/menu.tscn" id="7_jtxy4"]
 
 [sub_resource type="Gradient" id="Gradient_wxbjh"]
@@ -201,7 +201,7 @@ position = Vector2(9046, 919)
 curve = SubResource("Curve2D_77m8r")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="PATH SLIME"]
-position = Vector2(75, 43)
+position = Vector2(74.9981, 43)
 rotation = -0.00883369
 progress = 1075.27
 rotates = false
