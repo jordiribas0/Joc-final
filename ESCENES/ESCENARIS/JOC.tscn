@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://buayrucy4qhiv"]
+[gd_scene load_steps=5 format=3 uid="uid://besh1ri52srt8"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_mf2kq"]
-[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/PERSONATGES/PRINCIPAL/PERSONATGE.tscn" id="2_uj5eg"]
+[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_uj5eg"]
 [ext_resource type="PackedScene" uid="uid://dbt6x4mpiclvs" path="res://ESCENES/ITEMS/menu.tscn" id="3_1y464"]
+[ext_resource type="PackedScene" uid="uid://uxok3ihsivsp" path="res://ESCENES/ITEMS/cofre.tscn" id="4_ex2au"]
 
 [node name="Joc" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_mf2kq")]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
-position = Vector2(8863, -484)
+position = Vector2(8951, -225)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_1y464")]
+
+[node name="cofre" parent="." instance=ExtResource("4_ex2au")]
+position = Vector2(8779, -249)
