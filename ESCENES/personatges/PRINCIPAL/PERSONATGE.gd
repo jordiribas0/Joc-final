@@ -1,8 +1,10 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
-
 var speed = 200
 var ultima_direccio :Vector2 = Vector2.DOWN
+
+func _ready():
+	pass
 func get_input():
 	var input_direction = Input.get_vector("left","right","up","down")
 	velocity = input_direction * speed
@@ -41,4 +43,10 @@ func _physics_process(_delta):
 	move_and_slide()
 	animacio()
 	ultima_direccio = velocity.normalized()
-	
+
+
+
+
+
+
+

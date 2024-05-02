@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://dnw4d044wpxyj"]
+
+[ext_resource type="Script" path="res://ESCENES/personatges/ENEMIGOS/slime.gd" id="1_uuhf7"]
+[ext_resource type="Texture2D" uid="uid://dt06firpsch8u" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/slime.png" id="2_0jqyk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwfve"]
+size = Vector2(12, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r5br"]
+atlas = ExtResource("2_0jqyk")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ksvj"]
+atlas = ExtResource("2_0jqyk")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wude"]
+atlas = ExtResource("2_0jqyk")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j821"]
+atlas = ExtResource("2_0jqyk")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e17nh"]
+atlas = ExtResource("2_0jqyk")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56q3h"]
+atlas = ExtResource("2_0jqyk")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p5c23"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r5br")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ksvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wude")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j821")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e17nh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56q3h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_uuhf7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_dwfve")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_p5c23")
+frame = 4
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

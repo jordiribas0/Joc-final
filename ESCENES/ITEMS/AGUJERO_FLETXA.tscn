@@ -10,7 +10,7 @@ texture = ExtResource("1_hbo45")
 script = ExtResource("2_1osfy")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.8
+wait_time = 0.7
 autostart = true
 
 [node name="Area2D2" parent="." instance=ExtResource("2_dwya5")]

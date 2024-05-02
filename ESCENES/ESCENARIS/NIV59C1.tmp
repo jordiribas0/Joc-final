@@ -1,0 +1,261 @@
+[gd_scene load_steps=20 format=3 uid="uid://bvmbdhbe527jj"]
+
+[ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_vjuxk"]
+[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
+[ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="5_w64bc"]
+[ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="6_hwyjk"]
+[ext_resource type="PackedScene" uid="uid://ov1skty0reyt" path="res://tile_map.tscn" id="6_xb612"]
+[ext_resource type="PackedScene" uid="uid://dnw4d044wpxyj" path="res://ESCENES/personatges/ENEMIGOS/SLIME 2.tscn" id="6_ydyre"]
+[ext_resource type="PackedScene" uid="uid://dbt6x4mpiclvs" path="res://ESCENES/ITEMS/menu.tscn" id="7_jtxy4"]
+
+[sub_resource type="Curve2D" id="Curve2D_77m8r"]
+_data = {
+"points": PackedVector2Array(-73.133, 4.0129, 73.133, -4.0129, 77, 43, 0, 0, 0, 0, -149, -133, 0, 0, 0, 0, 94, -136, 0, 0, 0, 0, -148, 42, 0, 0, 0, 0, 75, 43)
+}
+point_count = 5
+
+[sub_resource type="Animation" id="Animation_cyukx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_h5ieg"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.3, 0.52, 0.8, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g86bu"]
+_data = {
+"RESET": SubResource("Animation_cyukx"),
+"SLIME": SubResource("Animation_h5ieg")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_dnabd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 8208, -270, 0, 0, 0, 0, 9139, -275)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_p1n7e"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_aicjm"]
+resource_name = "SLIME"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jm7tc"]
+_data = {
+"RESET": SubResource("Animation_p1n7e"),
+"SLIME": SubResource("Animation_aicjm")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_e1hxh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 8547, 1738, 0, 0, 0, 0, 9490, 1736)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_kauu1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_cb226"]
+resource_name = "SLIME"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hvbuv"]
+_data = {
+"RESET": SubResource("Animation_kauu1"),
+"SLIME": SubResource("Animation_cb226")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_vjuxk")]
+position = Vector2(860, 207)
+
+[node name="PERSONATGE" parent="." instance=ExtResource("2_emx43")]
+position = Vector2(9719, -307)
+
+[node name="CanvasLayer" parent="PERSONATGE" instance=ExtResource("7_jtxy4")]
+
+[node name="TileMap2" parent="." instance=ExtResource("6_xb612")]
+scale = Vector2(2, 2)
+
+[node name="PATH SLIME" type="Path2D" parent="."]
+position = Vector2(9046, 919)
+curve = SubResource("Curve2D_77m8r")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PATH SLIME"]
+position = Vector2(75, 43)
+rotation = -0.00883369
+progress = 1075.27
+rotates = false
+
+[node name="SLIME" parent="PATH SLIME/PathFollow2D" instance=ExtResource("5_w64bc")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PATH SLIME/PathFollow2D"]
+libraries = {
+"": SubResource("AnimationLibrary_g86bu")
+}
+autoplay = "SLIME"
+
+[node name="Sprite2D" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(9165, 277)
+
+[node name="Sprite2D2" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(9229, 277)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_dnabd")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(8208, -270)
+rotation = -0.00537052
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
+libraries = {
+"": SubResource("AnimationLibrary_jm7tc")
+}
+autoplay = "SLIME"
+
+[node name="AnimatableBody2D" parent="Path2D/PathFollow2D" instance=ExtResource("6_ydyre")]
+
+[node name="Sprite2D3" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(9518, 564)
+
+[node name="Sprite2D4" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(9581, 564)
+
+[node name="Sprite2D5" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(8814, 277)
+
+[node name="Sprite2D6" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(8878, 277)
+
+[node name="Sprite2D7" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(9871, -12)
+
+[node name="Sprite2D8" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(9933, -12)
+
+[node name="Sprite2D9" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(10221, -12)
+
+[node name="Sprite2D10" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(10284, -12)
+
+[node name="Sprite2D11" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(10573, 276)
+
+[node name="Sprite2D12" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(10638, 276)
+
+[node name="Sprite2D13" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(10573, 565)
+
+[node name="Sprite2D14" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(10637, 565)
+
+[node name="Sprite2D15" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(10573, 852)
+
+[node name="Sprite2D16" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(10636, 852)
+
+[node name="Sprite2D17" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(8813, 852)
+
+[node name="Sprite2D18" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(8878, 852)
+
+[node name="Sprite2D19" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(9164, 2005)
+
+[node name="Sprite2D20" parent="." instance=ExtResource("6_hwyjk")]
+position = Vector2(9228, 2005)
+
+[node name="Path2D2" type="Path2D" parent="."]
+curve = SubResource("Curve2D_e1hxh")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
+position = Vector2(8547, 1738)
+rotation = -0.00212089
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D2/PathFollow2D"]
+libraries = {
+"": SubResource("AnimationLibrary_hvbuv")
+}
+
+[node name="AnimatableBody2D" parent="Path2D2/PathFollow2D" instance=ExtResource("6_ydyre")]

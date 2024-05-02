@@ -1,7 +1,9 @@
-[gd_scene load_steps=54 format=3 uid="uid://c08vnqoxa8kow"]
+[gd_scene load_steps=56 format=3 uid="uid://c08vnqoxa8kow"]
 
 [ext_resource type="Texture2D" uid="uid://dlr206lgwp6fi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/character/player.png" id="1_1bjfh"]
 [ext_resource type="Script" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.gd" id="1_02qfu"]
+[ext_resource type="AudioStream" uid="uid://ot38sh7n87sk" path="res://SPRITES/musica/Witchcraft(loop - fantasy - guitar - piano).mp3" id="3_ol184"]
+[ext_resource type="Texture2D" uid="uid://b721453gxewja" path="res://SPRITES/menu.png" id="4_dfp14"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5boci"]
 size = Vector2(13, 20.8889)
@@ -419,4 +421,27 @@ animation = &"idle_esquena"
 zoom = Vector2(4.2, 4.2)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ol184")
 autoplay = true
+
+[node name="menu" type="Node2D" parent="."]
+
+[node name="Menu" type="Sprite2D" parent="menu"]
+position = Vector2(-2.38419e-07, 0)
+scale = Vector2(0.145643, 0.140365)
+texture = ExtResource("4_dfp14")
+
+[node name="quit" type="Button" parent="menu"]
+offset_left = -11.1111
+offset_top = 15.0
+offset_right = 11.8889
+offset_bottom = 23.0
+
+[node name="resume" type="Button" parent="menu"]
+offset_left = -21.1111
+offset_top = 4.44444
+offset_right = 20.8889
+offset_bottom = 12.4444
+
+[connection signal="pressed" from="menu/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="menu/resume" to="." method="_on_resume_pressed"]

@@ -111,6 +111,7 @@ frame = 5
 frame_progress = 0.356893
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+
+[node name="Timer2" type="Timer" parent="."]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
