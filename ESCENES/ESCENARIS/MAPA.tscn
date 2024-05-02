@@ -5527,6 +5527,7 @@ tile_set = SubResource("TileSet_3wyed")
 format = 2
 
 [node name="1_4" type="TileMap" parent="."]
+z_index = 1255
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_opqgs")
 format = 2
