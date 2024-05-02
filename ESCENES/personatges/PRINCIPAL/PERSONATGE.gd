@@ -1,5 +1,7 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var footsteps = $Footsteps
+
 var speed = 200
 var ultima_direccio :Vector2 = Vector2.DOWN
 
@@ -27,16 +29,21 @@ func animacio():
 		animated_sprite_2d.play("run_lado")
 		animated_sprite_2d.flip_h = false
 		ultima_direccio = Vector2.RIGHT
+		footsteps.play()
 	if velocity.x < 0:
 		animated_sprite_2d.play("run_lado")
 		animated_sprite_2d.flip_h = true
 		ultima_direccio = Vector2.LEFT
+		footsteps.play()
 	if velocity.y < 0 and velocity.x == 0:
 		animated_sprite_2d.play("run_esquena")
 		ultima_direccio = Vector2.UP
+		footsteps.play()
 	if velocity.y > 0 and velocity.x == 0:
 		animated_sprite_2d.play("run_cara")
 		ultima_direccio = Vector2.DOWN
+		footsteps.play()
+
 		
 func _physics_process(_delta):
 	get_input()
