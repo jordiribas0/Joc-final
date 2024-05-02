@@ -4,32 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://b74solrn2h2u2" path="res://SPRITES/Game Paused.png" id="2_g4o35"]
 [ext_resource type="Texture2D" uid="uid://rlnyci6to58w" path="res://SPRITES/elmapa.png" id="3_4pc46"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqx1o"]
-bg_color = Color(0.254902, 0.254902, 0.254902, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gg8xa"]
-bg_color = Color(0.439216, 0.439216, 0.439216, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hjv35"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rs4ym"]
 bg_color = Color(0.309804, 0.309804, 0.309804, 1)
 border_width_left = 10
@@ -56,28 +30,42 @@ corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qmogv"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqx1o"]
+bg_color = Color(0.254902, 0.254902, 0.254902, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gg8xa"]
+bg_color = Color(0.439216, 0.439216, 0.439216, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hjv35"]
+
 [node name="CanvasLayer" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_it5h4")
 
 [node name="menu" type="Node2D" parent="."]
-visible = false
 
 [node name="Menu" type="Sprite2D" parent="menu"]
 position = Vector2(998, 533)
 scale = Vector2(0.5, 0.432183)
 texture = ExtResource("2_g4o35")
-
-[node name="RESUME" type="Button" parent="menu"]
-offset_left = 872.0
-offset_top = 433.0
-offset_right = 1139.0
-offset_bottom = 554.0
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_nqx1o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gg8xa")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hjv35")
-text = "RESUME"
 
 [node name="RESTART" type="Button" parent="menu"]
 offset_left = 880.0
@@ -90,7 +78,20 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "RESTART"
 
+[node name="RESUME" type="Button" parent="menu"]
+offset_left = 882.0
+offset_top = 465.0
+offset_right = 1133.0
+offset_bottom = 586.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
+text = "RESUME
+"
+
 [node name="mapa" type="Node2D" parent="."]
+visible = false
 
 [node name="Mapa" type="Sprite2D" parent="mapa"]
 position = Vector2(1015, 523)
@@ -108,6 +109,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gg8xa")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hjv35")
 text = "RESUME"
 
-[connection signal="pressed" from="menu/RESUME" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="menu/RESTART" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="menu/RESUME" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="mapa/RESUME_M" to="." method="_on_resume_m_pressed"]
