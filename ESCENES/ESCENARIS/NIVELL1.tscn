@@ -1,12 +1,17 @@
 [gd_scene load_steps=28 format=3 uid="uid://bvmbdhbe527jj"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_vjuxk"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
 [ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="5_w64bc"]
 [ext_resource type="PackedScene" uid="uid://uxok3ihsivsp" path="res://ESCENES/ITEMS/cofre.tscn" id="6_avgok"]
+=======
+[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/PERSONATGES/PRINCIPAL/PERSONATGE.tscn" id="2_emx43"]
+[ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/PERSONATGES/ENEMIGOS/SLIME.tscn" id="5_w64bc"]
+>>>>>>> f19243238b2f4010e21906fdfa5000a4db348767
 [ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="6_hwyjk"]
 [ext_resource type="PackedScene" uid="uid://ov1skty0reyt" path="res://tile_map.tscn" id="6_xb612"]
-[ext_resource type="PackedScene" uid="uid://dnw4d044wpxyj" path="res://ESCENES/personatges/ENEMIGOS/SLIME 2.tscn" id="6_ydyre"]
+[ext_resource type="PackedScene" uid="uid://dnw4d044wpxyj" path="res://ESCENES/PERSONATGES/ENEMIGOS/SLIME 2.tscn" id="6_ydyre"]
 [ext_resource type="PackedScene" uid="uid://dbt6x4mpiclvs" path="res://ESCENES/ITEMS/menu.tscn" id="7_jtxy4"]
 
 [sub_resource type="Curve2D" id="Curve2D_77m8r"]
