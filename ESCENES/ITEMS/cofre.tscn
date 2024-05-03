@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://uxok3ihsivsp"]
+[gd_scene load_steps=12 format=3 uid="uid://uxok3ihsivsp"]
 
 [ext_resource type="Texture2D" uid="uid://cttgotous0oxv" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_3.png" id="1_g7ymy"]
 [ext_resource type="Script" path="res://ESCENES/ITEMS/cofre.gd" id="1_uoovh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://8kqno7yvq11e" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_3.png" id="4_fhvfu"]
 [ext_resource type="Texture2D" uid="uid://eahcvyr4pahi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_4.png" id="5_qo5mv"]
 [ext_resource type="Texture2D" uid="uid://datmxy1h3kwnk" path="res://SPRITES/E.png" id="7_eysaj"]
+[ext_resource type="PackedScene" uid="uid://d3vw4reshu10a" path="res://ESCENES/ITEMS/coin.tscn" id="8_4fv13"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6mhb"]
 size = Vector2(14, 12)
@@ -64,6 +65,10 @@ visible = false
 position = Vector2(0.5, -10)
 scale = Vector2(0.01, 0.01)
 texture = ExtResource("7_eysaj")
+
+[node name="coin" parent="." instance=ExtResource("8_4fv13")]
+visible = false
+position = Vector2(0, 17.5)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
