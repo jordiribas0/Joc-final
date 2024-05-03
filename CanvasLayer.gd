@@ -14,8 +14,7 @@ func _process(_delta):
 	
 	if Input.is_action_pressed("mapa"):
 		mapa.visible  = true
-	 
-
+	
 func _on_restart_pressed():
 	get_tree().reload_current_scene()
 	
@@ -28,3 +27,5 @@ func _on_resume_pressed():
 
 func _on_resume_m_pressed():
 	mapa.visible = false
+	
+	
