@@ -40,8 +40,8 @@ func animacio():
 		if velocity.y > 0 and velocity.x == 0:
 			animated_sprite_2d.play("run_cara")
 			ultima_direccio = Vector2.DOWN
-		#if not footsteps.playing:
-			#footsteps.play()
+		if not footsteps.playing:
+			footsteps.play()
 		
 
 		
