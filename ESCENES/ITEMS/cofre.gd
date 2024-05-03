@@ -5,6 +5,8 @@ extends StaticBody2D
 func _ready():
 	$E.visible=false
 	
+	
+	
 	pass # Replace with function body.
 
 
