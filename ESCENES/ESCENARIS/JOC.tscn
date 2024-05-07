@@ -1,18 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://besh1ri52srt8"]
+[gd_scene load_steps=6 format=3 uid="uid://besh1ri52srt8"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_mf2kq"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_uj5eg"]
 [ext_resource type="PackedScene" uid="uid://dbt6x4mpiclvs" path="res://ESCENES/ITEMS/menu.tscn" id="3_1y464"]
-[ext_resource type="PackedScene" uid="uid://uxok3ihsivsp" path="res://ESCENES/ITEMS/cofre.tscn" id="4_ex2au"]
+[ext_resource type="PackedScene" uid="uid://cct7vdc38wyei" path="res://ESCENES/ITEMS/cofre_coin.tscn" id="4_7xheh"]
+[ext_resource type="PackedScene" uid="uid://c2ckj4v0mi1c6" path="res://ESCENES/ITEMS/cofre_llave.tscn" id="5_6frc2"]
 
 [node name="Joc" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_mf2kq")]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
-position = Vector2(8951, -225)
-
 [node name="CanvasLayer" parent="." instance=ExtResource("3_1y464")]
 
-[node name="cofre" parent="." instance=ExtResource("4_ex2au")]
-position = Vector2(8779, -249)
+[node name="cofre_coin2" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(9923, 666)
+
+[node name="cofre_coin6" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(6410, 671)
+
+[node name="cofre_coin5" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(8171, 1811)
+
+[node name="cofre_coin4" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(7811, -1095)
+
+[node name="cofre_coin3" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(9926, 1533)
+
+[node name="cofre_coin" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(8755, -275)
+
+[node name="cofre_llave" parent="." instance=ExtResource("5_6frc2")]
+position = Vector2(8508, 302)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
+position = Vector2(8887, -189)

@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://c2ckj4v0mi1c6"]
+
+[ext_resource type="Texture2D" uid="uid://bnhm3t5rdlhdk" path="res://SPRITES/chest_01.png" id="1_22m4x"]
+[ext_resource type="Script" path="res://ESCENES/ITEMS/cofre_llave.gd" id="1_xw5xo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sr5db"]
+atlas = ExtResource("1_22m4x")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx6qe"]
+atlas = ExtResource("1_22m4x")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uswfj"]
+atlas = ExtResource("1_22m4x")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0215w"]
+atlas = ExtResource("1_22m4x")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28ori"]
+atlas = ExtResource("1_22m4x")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ngce0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr5db")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vx6qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uswfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0215w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28ori")
+}],
+"loop": false,
+"name": &"open",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38iva"]
+size = Vector2(14, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15ypl"]
+size = Vector2(31, 34)
+
+[node name="cofre_llave" type="StaticBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_xw5xo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ngce0")
+animation = &"open"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_38iva")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_15ypl")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
