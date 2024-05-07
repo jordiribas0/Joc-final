@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://cct7vdc38wyei"]
+
+[ext_resource type="Script" path="res://ESCENES/ITEMS/cofre.gd" id="1_12b4b"]
+[ext_resource type="Texture2D" uid="uid://bnhm3t5rdlhdk" path="res://SPRITES/chest_01.png" id="2_ymrwr"]
+[ext_resource type="PackedScene" uid="uid://d3vw4reshu10a" path="res://ESCENES/ITEMS/coin.tscn" id="8_8d7id"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by38f"]
+atlas = ExtResource("2_ymrwr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wwt8"]
+atlas = ExtResource("2_ymrwr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqre0"]
+atlas = ExtResource("2_ymrwr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg2te"]
+atlas = ExtResource("2_ymrwr")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exxhd"]
+atlas = ExtResource("2_ymrwr")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_si706"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_by38f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wwt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqre0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg2te")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exxhd")
+}],
+"loop": false,
+"name": &"open",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6mhb"]
+size = Vector2(14, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tttac"]
+size = Vector2(31, 34)
+
+[node name="cofre_coin" type="StaticBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_12b4b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_si706")
+animation = &"open"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_g6mhb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_tttac")
+
+[node name="coin" parent="." instance=ExtResource("8_8d7id")]
+visible = false
+position = Vector2(0, 17.5)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

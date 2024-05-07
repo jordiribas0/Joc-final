@@ -1,5 +1,5 @@
 extends Area2D
-var pillar_moneda:bool=false
+var pillar_llave:bool=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,21 +9,21 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pillarmoneda()
+	pillarllave()
 	pass
-func pillarmoneda():
-	if pillar_moneda==true:
+func pillarllave():
+	if pillar_llave==true:
 		if Input.is_action_just_pressed("Accion"):
 			self.queue_free()
 
 
 func _on_body_entered(body):
 	if body.name=="CharacterBody2D":
-		pillar_moneda=true
+		pillar_llave=true
 	pass # Replace with function body.
 
 
 func _on_body_exited(body):
 	if body.name=="CharacterBody2D":
-		pillar_moneda=false
+		pillar_llave=false
 	pass # Replace with function body.
