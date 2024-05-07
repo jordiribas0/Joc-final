@@ -5,7 +5,8 @@ extends CharacterBody2D
 var enemy_in_range = false
 var attack_cooldown = true
 var player_alive = true
-
+var num_claus = 0
+var num_coins = 0
 
 
 var speed = 200
@@ -56,8 +57,6 @@ func _physics_process(_delta):
 	move_and_slide()
 	animacio()
 	ultima_direccio = velocity.normalized()
-
-
 
 
 

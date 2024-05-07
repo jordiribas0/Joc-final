@@ -14,7 +14,8 @@ func _process(delta):
 func pillarmoneda():
 	if pillar_moneda==true:
 		if Input.is_action_just_pressed("Accion"):
-			self.queue_free()
+			get_parent().get_node("CharacterBody2D").num_coins += 1
+			$coin.play("colected")
 
 
 func _on_body_entered(body):
@@ -26,4 +27,9 @@ func _on_body_entered(body):
 func _on_body_exited(body):
 	if body.name=="CharacterBody2D":
 		pillar_moneda=false
+	pass # Replace with function body.
+
+
+func _on_coin_animation_finished():
+	self.queue_free()
 	pass # Replace with function body.

@@ -62,6 +62,7 @@ process_mode = 3
 script = ExtResource("1_it5h4")
 
 [node name="menu" type="Node2D" parent="."]
+visible = false
 
 [node name="Menu" type="Sprite2D" parent="menu"]
 position = Vector2(998, 533)
@@ -122,6 +123,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_hjv35")
 text = "RESUME"
 
 [node name="controls" type="Node2D" parent="."]
+visible = false
 position = Vector2(1001, 540)
 scale = Vector2(0.471802, 0.432183)
 
@@ -140,6 +142,22 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "SALIR
 "
+
+[node name="claus" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 9.0
+offset_right = 93.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 34
+text = "Claus:"
+
+[node name="coins" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 9.0
+offset_right = 316.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 34
+text = "Coins:"
 
 [connection signal="pressed" from="menu/RESTART" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="menu/RESUME" to="." method="_on_resume_pressed"]

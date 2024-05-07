@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cblpcbm22u12n"]
+
+[ext_resource type="Texture2D" uid="uid://dj65fdta3j84a" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_ul1s1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ek31c"]
+size = Vector2(64, 12)
+
+[node name="porta_h" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ul1s1")
+region_enabled = true
+region_rect = Rect2(96.4027, 95.0554, 31.7299, 17.4987)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_ek31c")

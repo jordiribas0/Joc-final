@@ -14,12 +14,15 @@ func _process(delta):
 func pillarllave():
 	if pillar_llave==true:
 		if Input.is_action_just_pressed("Accion"):
-			self.queue_free()
+			get_parent().get_node("CharacterBody2D").num_claus += 1
+			$clau.play("colected")
 
 
 func _on_body_entered(body):
+	
 	if body.name=="CharacterBody2D":
 		pillar_llave=true
+		
 	pass # Replace with function body.
 
 
@@ -27,3 +30,7 @@ func _on_body_exited(body):
 	if body.name=="CharacterBody2D":
 		pillar_llave=false
 	pass # Replace with function body.
+
+
+func _on_clau_animation_finished():
+	self.queue_free()
