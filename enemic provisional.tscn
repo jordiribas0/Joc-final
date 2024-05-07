@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp4fdudlt7var"]
+
+[ext_resource type="Texture2D" uid="uid://datmxy1h3kwnk" path="res://SPRITES/E.png" id="1_kapby"]
+
+[node name="CharacterBody2D2" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(886.5, 540)
+scale = Vector2(0.144167, 0.128333)
+texture = ExtResource("1_kapby")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
