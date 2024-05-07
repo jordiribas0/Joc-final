@@ -1,8 +1,9 @@
-[gd_scene load_steps=55 format=3 uid="uid://c08vnqoxa8kow"]
+[gd_scene load_steps=57 format=3 uid="uid://c08vnqoxa8kow"]
 
 [ext_resource type="Texture2D" uid="uid://dlr206lgwp6fi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/character/player.png" id="1_1bjfh"]
 [ext_resource type="Script" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.gd" id="1_02qfu"]
 [ext_resource type="AudioStream" uid="uid://dc045ieod6tnv" path="res://SPRITES/musica/footstep03.ogg" id="3_rgnew"]
+[ext_resource type="PackedScene" uid="uid://bp4fdudlt7var" path="res://enemic provisional.tscn" id="4_x5bp0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5boci"]
 size = Vector2(13, 20.8889)
@@ -404,23 +405,39 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_asix3"]
+radius = 12.2222
+
+[node name="Node" type="Node"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 scale = Vector2(1.8, 1.8)
 script = ExtResource("1_02qfu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0.5, 8.44445)
 shape = SubResource("RectangleShape2D_5boci")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_ywqib")
 animation = &"idle_esquena"
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4.2, 4.2)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CharacterBody2D"]
 autoplay = true
 
-[node name="Footsteps" type="AudioStreamPlayer2D" parent="."]
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
 stream = ExtResource("3_rgnew")
+
+[node name="player_hitbox" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/player_hitbox"]
+position = Vector2(0.555556, 7.77778)
+shape = SubResource("CircleShape2D_asix3")
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("4_x5bp0")]
+
+[connection signal="body_entered" from="CharacterBody2D/player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/player_hitbox" to="CharacterBody2D" method="_on_player_hitbox_body_exited"]
