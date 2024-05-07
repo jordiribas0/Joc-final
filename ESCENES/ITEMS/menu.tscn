@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbt6x4mpiclvs"]
+[gd_scene load_steps=11 format=3 uid="uid://dbt6x4mpiclvs"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_it5h4"]
 [ext_resource type="Texture2D" uid="uid://b74solrn2h2u2" path="res://SPRITES/Game Paused.png" id="2_g4o35"]
 [ext_resource type="Texture2D" uid="uid://rlnyci6to58w" path="res://SPRITES/elmapa.png" id="3_4pc46"]
+[ext_resource type="Texture2D" uid="uid://tqv1iglkr7d2" path="res://SPRITES/controls.png" id="4_1v77s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rs4ym"]
 bg_color = Color(0.309804, 0.309804, 0.309804, 1)
@@ -68,10 +69,10 @@ scale = Vector2(0.5, 0.432183)
 texture = ExtResource("2_g4o35")
 
 [node name="RESTART" type="Button" parent="menu"]
-offset_left = 880.0
-offset_top = 651.0
-offset_right = 1131.0
-offset_bottom = 772.0
+offset_left = 871.0
+offset_top = 729.0
+offset_right = 1118.0
+offset_bottom = 835.0
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
@@ -79,16 +80,27 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "RESTART"
 
 [node name="RESUME" type="Button" parent="menu"]
-offset_left = 882.0
-offset_top = 465.0
-offset_right = 1133.0
-offset_bottom = 586.0
+offset_left = 869.0
+offset_top = 469.0
+offset_right = 1114.0
+offset_bottom = 578.0
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "RESUME
 "
+
+[node name="CONTROLS" type="Button" parent="menu"]
+offset_left = 872.0
+offset_top = 603.0
+offset_right = 1118.0
+offset_bottom = 707.0
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
+text = "CONTROLS"
 
 [node name="mapa" type="Node2D" parent="."]
 visible = false
@@ -109,6 +121,28 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gg8xa")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hjv35")
 text = "RESUME"
 
+[node name="controls" type="Node2D" parent="."]
+position = Vector2(1001, 540)
+scale = Vector2(0.471802, 0.432183)
+
+[node name="controls" type="Sprite2D" parent="controls"]
+position = Vector2(0, -20.8245)
+texture = ExtResource("4_1v77s")
+
+[node name="SALIR" type="Button" parent="controls"]
+offset_left = -218.312
+offset_top = 627.049
+offset_right = 241.688
+offset_bottom = 840.049
+theme_override_font_sizes/font_size = 96
+theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
+text = "SALIR
+"
+
 [connection signal="pressed" from="menu/RESTART" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="menu/RESUME" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="menu/CONTROLS" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="mapa/RESUME_M" to="." method="_on_resume_m_pressed"]
+[connection signal="pressed" from="controls/SALIR" to="." method="_on_salir_pressed"]
