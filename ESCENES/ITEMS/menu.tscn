@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dbt6x4mpiclvs"]
+[gd_scene load_steps=12 format=3 uid="uid://dbt6x4mpiclvs"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_it5h4"]
 [ext_resource type="Texture2D" uid="uid://b74solrn2h2u2" path="res://SPRITES/Game Paused.png" id="2_g4o35"]
 [ext_resource type="Texture2D" uid="uid://rlnyci6to58w" path="res://SPRITES/elmapa.png" id="3_4pc46"]
 [ext_resource type="Texture2D" uid="uid://tqv1iglkr7d2" path="res://SPRITES/controls.png" id="4_1v77s"]
+[ext_resource type="Texture2D" uid="uid://bdp2i1clur6f4" path="res://SPRITES/AUDIO.png" id="5_yw5a0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rs4ym"]
 bg_color = Color(0.309804, 0.309804, 0.309804, 1)
@@ -61,6 +62,22 @@ corner_radius_bottom_left = 25
 process_mode = 3
 script = ExtResource("1_it5h4")
 
+[node name="claus" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 9.0
+offset_right = 115.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 34
+text = "Claus:"
+
+[node name="coins" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 9.0
+offset_right = 317.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 34
+text = "Coins:"
+
 [node name="menu" type="Node2D" parent="."]
 visible = false
 
@@ -70,10 +87,10 @@ scale = Vector2(0.5, 0.432183)
 texture = ExtResource("2_g4o35")
 
 [node name="RESTART" type="Button" parent="menu"]
-offset_left = 871.0
-offset_top = 729.0
-offset_right = 1118.0
-offset_bottom = 835.0
+offset_left = 865.0
+offset_top = 776.0
+offset_right = 1112.0
+offset_bottom = 882.0
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
@@ -81,10 +98,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "RESTART"
 
 [node name="RESUME" type="Button" parent="menu"]
-offset_left = 869.0
-offset_top = 469.0
-offset_right = 1114.0
-offset_bottom = 578.0
+offset_left = 865.0
+offset_top = 409.0
+offset_right = 1110.0
+offset_bottom = 518.0
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
@@ -93,15 +110,26 @@ text = "RESUME
 "
 
 [node name="CONTROLS" type="Button" parent="menu"]
-offset_left = 872.0
-offset_top = 603.0
-offset_right = 1118.0
-offset_bottom = 707.0
+offset_left = 866.0
+offset_top = 532.0
+offset_right = 1109.0
+offset_bottom = 634.0
 theme_override_font_sizes/font_size = 42
 theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "CONTROLS"
+
+[node name="AUDIO" type="Button" parent="menu"]
+offset_left = 872.0
+offset_top = 656.0
+offset_right = 1104.0
+offset_bottom = 757.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
+text = "AUDIO"
 
 [node name="mapa" type="Node2D" parent="."]
 visible = false
@@ -143,24 +171,50 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "SALIR
 "
 
-[node name="claus" type="Label" parent="."]
-offset_left = 16.0
-offset_top = 9.0
-offset_right = 93.0
-offset_bottom = 39.0
-theme_override_font_sizes/font_size = 34
-text = "Claus:"
+[node name="audio" type="Node2D" parent="."]
+visible = false
 
-[node name="coins" type="Label" parent="."]
-offset_left = 217.0
-offset_top = 9.0
-offset_right = 316.0
-offset_bottom = 56.0
-theme_override_font_sizes/font_size = 34
-text = "Coins:"
+[node name="Menu" type="Sprite2D" parent="audio"]
+position = Vector2(998, 533)
+scale = Vector2(0.5, 0.432183)
+texture = ExtResource("5_yw5a0")
+
+[node name="sons" type="HSlider" parent="audio"]
+offset_left = 996.0
+offset_top = 490.0
+offset_right = 1309.0
+offset_bottom = 544.0
+min_value = 70.0
+max_value = 120.0
+value = 70.0
+
+[node name="musica" type="HSlider" parent="audio"]
+offset_left = 995.0
+offset_top = 368.0
+offset_right = 1308.0
+offset_bottom = 422.0
+min_value = 70.0
+max_value = 120.0
+value = 70.0
+
+[node name="SALIR2" type="Button" parent="audio"]
+offset_left = 900.0
+offset_top = 759.0
+offset_right = 1124.0
+offset_bottom = 875.0
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
+text = "SALIR
+"
 
 [connection signal="pressed" from="menu/RESTART" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="menu/RESUME" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="menu/CONTROLS" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="menu/AUDIO" to="." method="_on_audio_pressed"]
 [connection signal="pressed" from="mapa/RESUME_M" to="." method="_on_resume_m_pressed"]
 [connection signal="pressed" from="controls/SALIR" to="." method="_on_salir_pressed"]
+[connection signal="value_changed" from="audio/sons" to="." method="_on_sons_value_changed"]
+[connection signal="value_changed" from="audio/musica" to="." method="_on_musica_value_changed"]
+[connection signal="pressed" from="audio/SALIR2" to="." method="_on_salir_2_pressed"]

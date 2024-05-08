@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ot38sh7n87sk"
+path="res://.godot/imported/Witchcraft(loop - fantasy - guitar - piano).mp3-d015069f89bd1f9042bae4d3f41e5a3e.mp3str"
+
+[deps]
+
+source_file="res://SPRITES/Witchcraft(loop - fantasy - guitar - piano).mp3"
+dest_files=["res://.godot/imported/Witchcraft(loop - fantasy - guitar - piano).mp3-d015069f89bd1f9042bae4d3f41e5a3e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

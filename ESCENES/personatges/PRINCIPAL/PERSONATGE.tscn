@@ -1,7 +1,8 @@
-[gd_scene load_steps=56 format=3 uid="uid://c08vnqoxa8kow"]
+[gd_scene load_steps=57 format=3 uid="uid://c08vnqoxa8kow"]
 
 [ext_resource type="Texture2D" uid="uid://dlr206lgwp6fi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/character/player.png" id="1_1bjfh"]
 [ext_resource type="Script" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.gd" id="1_02qfu"]
+[ext_resource type="AudioStream" uid="uid://ot38sh7n87sk" path="res://SPRITES/Witchcraft(loop - fantasy - guitar - piano).mp3" id="3_jxaad"]
 [ext_resource type="AudioStream" uid="uid://dc045ieod6tnv" path="res://SPRITES/musica/footstep03.ogg" id="3_rgnew"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5boci"]
@@ -422,11 +423,15 @@ animation = &"idle_esquena"
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4.2, 4.2)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="musica" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("3_jxaad")
 autoplay = true
+bus = &"musica"
 
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_rgnew")
+bus = &"sons"
 
 [node name="player_hitbox" type="Area2D" parent="."]
 

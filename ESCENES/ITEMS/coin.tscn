@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"colected",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -91,5 +91,5 @@ autoplay = "default"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
-[connection signal="animation_finished" from="coin" to="." method="_on_coin_animation_finished"]
 [connection signal="animation_finished" from="coin" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="coin" to="." method="_on_coin_animation_finished"]

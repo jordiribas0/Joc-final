@@ -102,7 +102,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"colected",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -154,7 +154,6 @@ shape = SubResource("RectangleShape2D_yb3m3")
 
 [node name="clau" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vvcco")
-animation = &"colected"
 autoplay = "default"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
