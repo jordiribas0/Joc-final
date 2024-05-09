@@ -1,14 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp4fdudlt7var"]
+[gd_scene load_steps=3 format=3 uid="uid://bp4fdudlt7var"]
 
-[ext_resource type="Texture2D" uid="uid://datmxy1h3kwnk" path="res://SPRITES/E.png" id="1_kapby"]
+[ext_resource type="Texture2D" uid="uid://b74solrn2h2u2" path="res://SPRITES/Game Paused.png" id="1_obu2r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r0l8"]
+size = Vector2(72, 51)
 
 [node name="CharacterBody2D2" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(886.5, 540)
-scale = Vector2(0.144167, 0.128333)
-texture = ExtResource("1_kapby")
+position = Vector2(410, 186)
+scale = Vector2(0.0281653, 0.0131523)
+texture = ExtResource("1_obu2r")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(412, 186)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_2r0l8")

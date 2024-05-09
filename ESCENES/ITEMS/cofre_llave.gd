@@ -16,6 +16,7 @@ func _process(delta):
 		tres_coins=true
 	if tres_coins==true:
 		abrir_cofre()
+		
 	pass
 
 
@@ -23,8 +24,7 @@ func _on_area_2d_body_entered(body):
 	if body.name=="CharacterBody2D":
 		if cofre_abierto==false:
 			poder_abrir_cofre=true
-			if tres_coins==false:
-				$"3Coins".visible=true
+			$"3Coins".visible=true
 	pass # Replace with function body.
 func abrir_cofre():
 	if poder_abrir_cofre==true:
@@ -32,6 +32,7 @@ func abrir_cofre():
 			$AnimatedSprite2D.play("open")
 			cofre_abierto=true
 			poder_abrir_cofre=false
+			get_parent().get_node("CharacterBody2D").num_coins -= 3
 
 
 func _on_animated_sprite_2d_animation_finished():

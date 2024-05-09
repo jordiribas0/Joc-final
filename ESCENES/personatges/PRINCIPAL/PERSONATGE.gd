@@ -66,14 +66,14 @@ func _physics_process(_delta):
 
 
 
-func _on_player_hitbox_body_entered(body):
-	if body.has_method("enemy"):
-		enemy_in_range = true
+#func _on_player_hitbox_body_entered(body):
+#	if body.has_method("enemy"):
+#		enemy_in_range = true
 
 
-func _on_player_hitbox_body_exited(body):
-	if body.has_method("enemy"):
-		enemy_in_range = false
+#func _on_player_hitbox_body_exited(body):
+#	if body.has_method("enemy"):
+#		enemy_in_range = false
 		
-func enemy_attack():
-	pass
+#func enemy_attack():
+#	pass

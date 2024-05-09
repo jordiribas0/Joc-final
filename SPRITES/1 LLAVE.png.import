@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvnl3a0c0hjq3"
-path="res://.godot/imported/3 COINS.png-bcb32c550ca02494419a92a5535c679d.ctex"
+uid="uid://ygbhtdethitd"
+path="res://.godot/imported/1 LLAVE.png-0f3e8213f6278fd0bfc9b93b375f6665.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/3 COINS.png"
-dest_files=["res://.godot/imported/3 COINS.png-bcb32c550ca02494419a92a5535c679d.ctex"]
+source_file="res://SPRITES/1 LLAVE.png"
+dest_files=["res://.godot/imported/1 LLAVE.png-0f3e8213f6278fd0bfc9b93b375f6665.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvnl3a0c0hjq3"
-path="res://.godot/imported/3 COINS.png-bcb32c550ca02494419a92a5535c679d.ctex"
+uid="uid://c32w5dxxi1hin"
+path="res://.godot/imported/hud_heartEmpty.png-935c04b0391f11db5d6d777a3156fd01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/3 COINS.png"
-dest_files=["res://.godot/imported/3 COINS.png-bcb32c550ca02494419a92a5535c679d.ctex"]
+source_file="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartEmpty.png"
+dest_files=["res://.godot/imported/hud_heartEmpty.png-935c04b0391f11db5d6d777a3156fd01.ctex"]
 
 [params]
 
