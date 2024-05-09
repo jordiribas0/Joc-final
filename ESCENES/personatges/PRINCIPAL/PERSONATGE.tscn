@@ -1,9 +1,11 @@
-[gd_scene load_steps=57 format=3 uid="uid://c08vnqoxa8kow"]
+[gd_scene load_steps=59 format=3 uid="uid://c08vnqoxa8kow"]
 
 [ext_resource type="Texture2D" uid="uid://dlr206lgwp6fi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/character/player.png" id="1_1bjfh"]
 [ext_resource type="Script" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.gd" id="1_02qfu"]
 [ext_resource type="AudioStream" uid="uid://ot38sh7n87sk" path="res://SPRITES/Witchcraft(loop - fantasy - guitar - piano).mp3" id="3_jxaad"]
 [ext_resource type="AudioStream" uid="uid://dc045ieod6tnv" path="res://SPRITES/musica/footstep03.ogg" id="3_rgnew"]
+[ext_resource type="Texture2D" uid="uid://cicb6hygp4jje" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartFull.png" id="5_codvv"]
+[ext_resource type="Texture2D" uid="uid://c32w5dxxi1hin" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartEmpty.png" id="6_maxr7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5boci"]
 size = Vector2(13, 20.8889)
@@ -438,6 +440,34 @@ bus = &"sons"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
 position = Vector2(0.555556, 7.77778)
 shape = SubResource("CircleShape2D_asix3")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -126.0
+offset_top = -70.0
+offset_right = -74.0
+offset_bottom = -53.0
+
+[node name="CorsPlens" type="TextureRect" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 161.0
+offset_bottom = 47.0
+scale = Vector2(0.300908, 0.301183)
+texture = ExtResource("5_codvv")
+stretch_mode = 1
+
+[node name="CorsBuits" type="TextureRect" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 161.0
+offset_bottom = 47.0
+scale = Vector2(0.301191, 0.300539)
+texture = ExtResource("6_maxr7")
+stretch_mode = 1
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
