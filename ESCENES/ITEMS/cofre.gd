@@ -1,6 +1,7 @@
 extends StaticBody2D
 var cofre_abierto:bool=false
 var poder_abrir_cofre:bool=false
+@onready var so_cofre = $so_cofre
 
 
 # Called when the node enters the scene tree for the first time.
@@ -47,6 +48,7 @@ func abrir_cofre():
 	if poder_abrir_cofre==true:
 		if Input.is_action_just_pressed("Accion"):
 			$AnimatedSprite2D.play("open")
+			
 			cofre_abierto=true
 			poder_abrir_cofre=false
 func dar_moneda():
