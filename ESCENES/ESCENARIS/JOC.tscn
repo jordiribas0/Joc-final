@@ -356,3 +356,6 @@ texture = SubResource("GradientTexture2D_krkvj")
 position = Vector2(7631, -494)
 scale = Vector2(1.84375, 1.85547)
 texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="cofre_coin7" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(9226, 375)
