@@ -50,7 +50,9 @@ func animacio():
 		if not footsteps.playing:
 			footsteps.play()
 		
-
+func abrir_puerta():
+	
+	pass 
 		
 func _physics_process(_delta):
 	get_input()

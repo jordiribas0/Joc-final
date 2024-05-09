@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2ckj4v0mi1c6"]
+[gd_scene load_steps=12 format=3 uid="uid://c2ckj4v0mi1c6"]
 
 [ext_resource type="Texture2D" uid="uid://bnhm3t5rdlhdk" path="res://SPRITES/chest_01.png" id="1_22m4x"]
 [ext_resource type="Script" path="res://ESCENES/ITEMS/cofre_llave.gd" id="1_xw5xo"]
+[ext_resource type="Texture2D" uid="uid://dvnl3a0c0hjq3" path="res://SPRITES/3 COINS.png" id="3_pjimy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sr5db"]
 atlas = ExtResource("1_22m4x")
@@ -75,5 +76,11 @@ shape = SubResource("RectangleShape2D_38iva")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_15ypl")
 
+[node name="3Coins" type="Sprite2D" parent="."]
+position = Vector2(-1.13687e-13, -10)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_pjimy")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
