@@ -1,26 +1,27 @@
 [gd_scene load_steps=6 format=3 uid="uid://cblpcbm22u12n"]
 
 [ext_resource type="Script" path="res://ESCENES/ITEMS/porta_h.gd" id="1_dyyyf"]
-[ext_resource type="Texture2D" uid="uid://dj65fdta3j84a" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="1_ul1s1"]
 [ext_resource type="Texture2D" uid="uid://ygbhtdethitd" path="res://SPRITES/1 LLAVE.png" id="3_kofmx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5km"]
-size = Vector2(64, 9)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2uv3"]
+size = Vector2(62, 7)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ek31c"]
-size = Vector2(64, 42)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7giax"]
+load_path = "res://.godot/imported/Dungeon_Tileset.png-292b46110d86827a28c6332fbf091a74.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl4u0"]
+size = Vector2(64, 39)
 
 [node name="porta_h" type="StaticBody2D"]
 script = ExtResource("1_dyyyf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, 11.5)
-shape = SubResource("RectangleShape2D_6j5km")
+position = Vector2(0, 12.5)
+shape = SubResource("RectangleShape2D_t2uv3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("1_ul1s1")
+texture = SubResource("CompressedTexture2D_7giax")
 region_enabled = true
 region_rect = Rect2(96.4027, 95.0554, 31.7299, 17.4987)
 
@@ -29,11 +30,11 @@ position = Vector2(0, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta_h"]
 texture_filter = 1
-position = Vector2(0, -2)
-shape = SubResource("RectangleShape2D_ek31c")
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_tl4u0")
 
 [node name="1Llave" type="Sprite2D" parent="."]
-position = Vector2(-1.19209e-07, -5)
+position = Vector2(0, 4)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_kofmx")
 

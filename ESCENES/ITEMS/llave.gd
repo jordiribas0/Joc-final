@@ -14,7 +14,7 @@ func _process(delta):
 func pillarllave():
 	if pillar_llave==true:
 		if Input.is_action_just_pressed("Accion"):
-			
+			$pillar.play()
 			$clau.play("colected")
 
 
@@ -34,4 +34,4 @@ func _on_body_exited(body):
 
 func _on_clau_animation_finished():
 	get_parent().get_node("CharacterBody2D").num_claus += 1
-	self.queue_free()
+	queue_free()

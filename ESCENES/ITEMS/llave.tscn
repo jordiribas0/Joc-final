@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://ce6fyrs0iolqn"]
+[gd_scene load_steps=25 format=3 uid="uid://ce6fyrs0iolqn"]
 
 [ext_resource type="Texture2D" uid="uid://bgw16qd5vhbvy" path="res://SPRITES/key-white.png" id="1_41n4p"]
 [ext_resource type="Script" path="res://ESCENES/ITEMS/llave.gd" id="1_rvmjr"]
 [ext_resource type="Texture2D" uid="uid://d1j2stunjgsk4" path="res://SPRITES/Collected.png" id="2_j6g2o"]
+[ext_resource type="AudioStream" uid="uid://dli4tuo65341v" path="res://SPRITES/musica/agafar objecte.mp3" id="4_k4ot7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yb3m3"]
 size = Vector2(22, 28)
@@ -102,7 +103,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"colected",
-"speed": 15.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -154,7 +155,12 @@ shape = SubResource("RectangleShape2D_yb3m3")
 
 [node name="clau" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vvcco")
+animation = &"colected"
 autoplay = "default"
+
+[node name="pillar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_k4ot7")
+volume_db = 1.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

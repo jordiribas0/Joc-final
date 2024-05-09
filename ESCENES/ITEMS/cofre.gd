@@ -47,6 +47,7 @@ func _on_area_2d_body_exited(body):
 func abrir_cofre():
 	if poder_abrir_cofre==true:
 		if Input.is_action_just_pressed("Accion"):
+			$cofre.play()
 			$AnimatedSprite2D.play("open")
 			
 			cofre_abierto=true

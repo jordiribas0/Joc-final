@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cct7vdc38wyei"]
+[gd_scene load_steps=13 format=3 uid="uid://cct7vdc38wyei"]
 
 [ext_resource type="Script" path="res://ESCENES/ITEMS/cofre.gd" id="1_12b4b"]
 [ext_resource type="Texture2D" uid="uid://bnhm3t5rdlhdk" path="res://SPRITES/chest_01.png" id="2_ymrwr"]
+[ext_resource type="AudioStream" uid="uid://2cqxtylcm2xb" path="res://SPRITES/musica/cofre.mp3" id="4_1n7it"]
 [ext_resource type="PackedScene" uid="uid://d3vw4reshu10a" path="res://ESCENES/ITEMS/coin.tscn" id="8_8d7id"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_by38f"]
@@ -80,6 +81,11 @@ shape = SubResource("RectangleShape2D_tttac")
 [node name="coin" parent="." instance=ExtResource("8_8d7id")]
 visible = false
 position = Vector2(0, 17.5)
+
+[node name="cofre" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_1n7it")
+volume_db = 4.0
+bus = &"sons"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

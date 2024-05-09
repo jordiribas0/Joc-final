@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dli4tuo65341v"
+path="res://.godot/imported/agafar objecte.mp3-8a9382d0bcac3952fcf80906b7383afd.mp3str"
+
+[deps]
+
+source_file="res://SPRITES/musica/agafar objecte.mp3"
+dest_files=["res://.godot/imported/agafar objecte.mp3-8a9382d0bcac3952fcf80906b7383afd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0.0
+beat_count=0
+bar_beats=4

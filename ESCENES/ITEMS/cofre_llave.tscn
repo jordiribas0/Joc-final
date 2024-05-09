@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://c2ckj4v0mi1c6"]
+[gd_scene load_steps=13 format=3 uid="uid://c2ckj4v0mi1c6"]
 
 [ext_resource type="Texture2D" uid="uid://bnhm3t5rdlhdk" path="res://SPRITES/chest_01.png" id="1_22m4x"]
 [ext_resource type="Script" path="res://ESCENES/ITEMS/cofre_llave.gd" id="1_xw5xo"]
 [ext_resource type="Texture2D" uid="uid://dvnl3a0c0hjq3" path="res://SPRITES/3 COINS.png" id="3_pjimy"]
+[ext_resource type="AudioStream" uid="uid://2cqxtylcm2xb" path="res://SPRITES/musica/cofre.mp3" id="4_ep6vr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sr5db"]
 atlas = ExtResource("1_22m4x")
@@ -80,6 +81,11 @@ shape = SubResource("RectangleShape2D_15ypl")
 position = Vector2(-1.13687e-13, -10)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_pjimy")
+
+[node name="cofre" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ep6vr")
+volume_db = 4.0
+bus = &"sons"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

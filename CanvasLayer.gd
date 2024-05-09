@@ -64,7 +64,7 @@ func _on_salir_2_pressed():
 	pass # Replace with function body.
 	
 func inicia_audio():
-	for slider in audio.get_children():
-		if slider is HSlider:
-			slider.value = 90
+	for sons in audio.get_children():
+		if sons is HSlider:
+			sons.value = 95
 			
