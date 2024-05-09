@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bnhm3t5rdlhdk" path="res://SPRITES/chest_01.png" id="1_22m4x"]
 [ext_resource type="Script" path="res://ESCENES/ITEMS/cofre_llave.gd" id="1_xw5xo"]
-[ext_resource type="Texture2D" uid="uid://bj5mswr8ay57g" path="res://SPRITES/3 COINS.png" id="3_pjimy"]
+[ext_resource type="Texture2D" uid="uid://dvnl3a0c0hjq3" path="res://SPRITES/3 COINS.png" id="3_pjimy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sr5db"]
 atlas = ExtResource("1_22m4x")
@@ -77,7 +77,7 @@ shape = SubResource("RectangleShape2D_38iva")
 shape = SubResource("RectangleShape2D_15ypl")
 
 [node name="3Coins" type="Sprite2D" parent="."]
-position = Vector2(2.38419e-07, -12)
+position = Vector2(-1.13687e-13, -10)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_pjimy")
 

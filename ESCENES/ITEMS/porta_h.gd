@@ -3,6 +3,7 @@ var poder_abrir_puerta:bool=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$"1Llave".visible=false
 	pass # Replace with function body.
 
 
@@ -19,11 +20,13 @@ func abrir_puerta():
 
 func _on_porta_h_body_entered(body):
 	if body.name=="CharacterBody2D":
-			poder_abrir_puerta=true
+		$"1Llave".visible=true
+		poder_abrir_puerta=true
 	pass # Replace with function body.
 
 
 func _on_porta_h_body_exited(body):
 	if body.name=="CharacterBody2D":
-			poder_abrir_puerta=false
+		$"1Llave".visible=false
+		poder_abrir_puerta=false
 	pass # Replace with function body.
