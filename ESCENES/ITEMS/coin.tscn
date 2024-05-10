@@ -87,7 +87,6 @@ shape = SubResource("RectangleShape2D_jruqb")
 
 [node name="coin" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o28oo")
-animation = &"colected"
 autoplay = "default"
 
 [node name="pillar" type="AudioStreamPlayer2D" parent="."]
@@ -97,5 +96,5 @@ bus = &"sons"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
-[connection signal="animation_finished" from="coin" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="animation_finished" from="coin" to="." method="_on_coin_animation_finished"]
+[connection signal="animation_finished" from="coin" to="." method="_on_animated_sprite_2d_animation_finished"]

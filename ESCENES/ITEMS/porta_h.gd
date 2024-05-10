@@ -16,7 +16,7 @@ func abrir_puerta():
 		if poder_abrir_puerta==true:
 			if Input.is_action_just_pressed("Accion"):
 				self.queue_free()
-				get_parent().get_node("CharacterBody2D").num_claus-=1
+				
 
 func _on_porta_h_body_entered(body):
 	if body.name=="CharacterBody2D":
