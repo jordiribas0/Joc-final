@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bgw16qd5vhbvy" path="res://SPRITES/key-white.png" id="1_41n4p"]
 [ext_resource type="Script" path="res://ESCENES/ITEMS/llave.gd" id="1_rvmjr"]
 [ext_resource type="Texture2D" uid="uid://d1j2stunjgsk4" path="res://SPRITES/Collected.png" id="2_j6g2o"]
-[ext_resource type="AudioStream" uid="uid://dli4tuo65341v" path="res://SPRITES/musica/agafar objecte.mp3" id="4_k4ot7"]
+[ext_resource type="AudioStream" uid="uid://c53fau2sc3atf" path="res://SPRITES/musica/agafar objectes.mp3" id="4_k4ot7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yb3m3"]
 size = Vector2(22, 28)
