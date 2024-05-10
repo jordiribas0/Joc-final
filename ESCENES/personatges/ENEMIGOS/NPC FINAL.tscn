@@ -27,6 +27,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tte5"]
 
 [node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(3, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2.5)
@@ -35,7 +36,7 @@ shape = SubResource("RectangleShape2D_6aj4m")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_w6fgq")
 autoplay = "default"
-frame_progress = 0.447374
+frame_progress = 0.817749
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="."]

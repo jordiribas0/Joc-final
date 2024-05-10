@@ -9,6 +9,7 @@ var num_claus = 0
 var num_coins = 0
 
 
+
 var speed = 200
 var ultima_direccio :Vector2 = Vector2.DOWN
 
