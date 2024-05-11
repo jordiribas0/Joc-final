@@ -33,7 +33,7 @@ func abrir_cofre():
 			$AnimatedSprite2D.play("open")
 			cofre_abierto=true
 			poder_abrir_cofre=false
-			get_parent().get_node("CharacterBody2D").num_coins -= 3
+			
 
 
 func _on_animated_sprite_2d_animation_finished():

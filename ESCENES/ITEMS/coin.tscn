@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d1j2stunjgsk4" path="res://SPRITES/Collected.png" id="2_kaucb"]
 [ext_resource type="Texture2D" uid="uid://tgs0em7igiyb" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/coin/coin_3.png" id="3_ckmaa"]
 [ext_resource type="Texture2D" uid="uid://caae5grpmoq58" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/coin/coin_4.png" id="4_d2xvk"]
-[ext_resource type="AudioStream" uid="uid://dli4tuo65341v" path="res://SPRITES/musica/agafar objecte.mp3" id="7_ouvke"]
+[ext_resource type="AudioStream" uid="uid://c53fau2sc3atf" path="res://SPRITES/musica/agafar objectes.mp3" id="7_ouvke"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jruqb"]
 size = Vector2(10, 10)
@@ -87,7 +87,6 @@ shape = SubResource("RectangleShape2D_jruqb")
 
 [node name="coin" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o28oo")
-animation = &"colected"
 autoplay = "default"
 
 [node name="pillar" type="AudioStreamPlayer2D" parent="."]
@@ -97,5 +96,5 @@ bus = &"sons"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
-[connection signal="animation_finished" from="coin" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="animation_finished" from="coin" to="." method="_on_coin_animation_finished"]
+[connection signal="animation_finished" from="coin" to="." method="_on_animated_sprite_2d_animation_finished"]

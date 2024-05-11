@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://besh1ri52srt8"]
+[gd_scene load_steps=17 format=3 uid="uid://besh1ri52srt8"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_mf2kq"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_uj5eg"]
@@ -7,16 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://c2ckj4v0mi1c6" path="res://ESCENES/ITEMS/cofre_llave.tscn" id="5_6frc2"]
 [ext_resource type="PackedScene" uid="uid://cblpcbm22u12n" path="res://ESCENES/ITEMS/porta_h.tscn" id="6_dwpiq"]
 [ext_resource type="PackedScene" uid="uid://b3xwhpg8b1jtq" path="res://porta_v.tscn" id="7_3fdeh"]
+[ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="8_gjbaa"]
+[ext_resource type="PackedScene" uid="uid://bcmspnsde4cnr" path="res://ESCENES/personatges/ENEMIGOS/NPC FINAL.tscn" id="8_pg0gj"]
 
 [sub_resource type="Gradient" id="Gradient_rbuaw"]
 offsets = PackedFloat32Array(0.279221, 0.844156, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.0630631, 0.0630631, 0.0630631, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_dauk6"]
-gradient = SubResource("Gradient_rbuaw")
-fill = 1
-fill_from = Vector2(0.486239, 0.5)
-fill_to = Vector2(0.311927, 0.325688)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_krkvj"]
 gradient = SubResource("Gradient_rbuaw")
@@ -24,8 +20,57 @@ fill = 1
 fill_from = Vector2(0.486239, 0.5)
 fill_to = Vector2(0.105505, 0.133028)
 
+[sub_resource type="Curve2D" id="Curve2D_3mf2l"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 137.778, 920, 0, 0, 0, 0, 261.667, 1012.22, 0, 0, 0, 0, 260, 920.556, 0, 0, 0, 0, 139.444, 1010, 0, 0, 0, 0, 137.778, 921.667)
+}
+point_count = 5
+
+[sub_resource type="Animation" id="Animation_cuhri"]
+resource_name = "SLIME"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.3243, 0.5135, 0.8107, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_cqdji"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8dg0y"]
+_data = {
+"RESET": SubResource("Animation_cqdji"),
+"SLIME": SubResource("Animation_cuhri")
+}
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dauk6"]
+gradient = SubResource("Gradient_rbuaw")
+fill = 1
+fill_from = Vector2(0.486239, 0.5)
+fill_to = Vector2(0.311927, 0.325688)
+
 [node name="Joc" type="Node2D"]
-metadata/_edit_vertical_guides_ = [7886.0]
 
 [node name="TileMap" parent="." instance=ExtResource("1_mf2kq")]
 
@@ -67,15 +112,6 @@ position = Vector2(6296, 576)
 [node name="cofre_coin4,3" parent="." instance=ExtResource("4_7xheh")]
 position = Vector2(6645, 1729)
 
-[node name="cofre_coin5,1" parent="." instance=ExtResource("4_7xheh")]
-position = Vector2(6662, -280)
-
-[node name="cofre_coin5,2" parent="." instance=ExtResource("4_7xheh")]
-position = Vector2(8258, -570)
-
-[node name="cofre_coin5,3" parent="." instance=ExtResource("4_7xheh")]
-position = Vector2(7554, -863)
-
 [node name="cofre_llave1" parent="." instance=ExtResource("5_6frc2")]
 position = Vector2(8508, 302)
 
@@ -87,18 +123,6 @@ position = Vector2(8400, 2016)
 
 [node name="cofre_llave4" parent="." instance=ExtResource("5_6frc2")]
 position = Vector2(7571, 997)
-
-[node name="cofre_llave5" parent="." instance=ExtResource("5_6frc2")]
-position = Vector2(7700, -1184)
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
-position = Vector2(8864, -485)
-collision_mask = 3
-
-[node name="PointLight2D57" type="PointLight2D" parent="CharacterBody2D"]
-position = Vector2(1.11127, 7.22223)
-scale = Vector2(1.01042, 1.06283)
-texture = SubResource("GradientTexture2D_dauk6")
 
 [node name="porta_h" parent="." instance=ExtResource("6_dwpiq")]
 position = Vector2(8864, 529)
@@ -114,6 +138,7 @@ position = Vector2(7983, 94)
 position = Vector2(7985, 672)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.0784314, 0.0784314, 0.0784314, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="CanvasModulate"]
@@ -545,3 +570,47 @@ texture = SubResource("GradientTexture2D_krkvj")
 position = Vector2(9917, 1963)
 scale = Vector2(1.5, 1.51563)
 texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="cofre_coin5,3" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(7554, -863)
+
+[node name="cofre_coin5,2" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(8258, -570)
+
+[node name="cofre_coin5,1" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(6662, -280)
+
+[node name="cofre_llave5" parent="." instance=ExtResource("5_6frc2")]
+position = Vector2(7700, -1184)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("8_pg0gj")]
+position = Vector2(3832, 3768)
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(8859, -491)
+scale = Vector2(1.8, 1.8)
+curve = SubResource("Curve2D_3mf2l")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(137.778, 921.667)
+progress = 484.589
+rotates = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
+libraries = {
+"": SubResource("AnimationLibrary_8dg0y")
+}
+autoplay = "SLIME"
+
+[node name="AnimatableBody2D" parent="Path2D/PathFollow2D" instance=ExtResource("8_gjbaa")]
+scale = Vector2(0.555556, 0.555556)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
+position = Vector2(8897, 1221)
+collision_mask = 3
+
+[node name="PointLight2D57" type="PointLight2D" parent="CharacterBody2D"]
+visible = false
+position = Vector2(1.11127, 7.22223)
+scale = Vector2(1.01042, 1.06283)
+texture = SubResource("GradientTexture2D_dauk6")
