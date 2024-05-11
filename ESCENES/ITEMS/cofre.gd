@@ -6,44 +6,27 @@ var poder_abrir_cofre:bool=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	
-	
-	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
-	pass
 	abrir_cofre()
 	
-
-
-
 func _on_area_2d_body_entered(body):
 	if body.name=="CharacterBody2D":
 		if cofre_abierto==false:
 			poder_abrir_cofre=true
-			
-	
-	
-	pass # Replace with function body.
-
 
 func _on_animated_sprite_2d_animation_finished():
 	if $AnimatedSprite2D.animation=="open":
 		cofre_abierto=true
 		dar_moneda()
-	pass # Replace with function body.
-
-
+	
 func _on_area_2d_body_exited(body):
 	if body.name=="CharacterBody2D":
 		poder_abrir_cofre=false
-		
-	pass # Replace with function body.
+
 func abrir_cofre():
 	if poder_abrir_cofre==true:
 		if Input.is_action_just_pressed("Accion"):

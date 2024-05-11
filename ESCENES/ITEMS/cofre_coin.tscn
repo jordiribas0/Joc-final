@@ -1,35 +1,31 @@
-[gd_scene load_steps=13 format=3 uid="uid://cct7vdc38wyei"]
+[gd_scene load_steps=12 format=3 uid="uid://cct7vdc38wyei"]
 
 [ext_resource type="Script" path="res://ESCENES/ITEMS/cofre.gd" id="1_12b4b"]
-[ext_resource type="Texture2D" uid="uid://bnhm3t5rdlhdk" path="res://SPRITES/chest_01.png" id="2_ymrwr"]
+[ext_resource type="Texture2D" uid="uid://ufnowylmys51" path="res://SPRITES/chest_01.png" id="2_hcmy3"]
 [ext_resource type="AudioStream" uid="uid://2cqxtylcm2xb" path="res://SPRITES/musica/cofre.mp3" id="4_1n7it"]
 [ext_resource type="PackedScene" uid="uid://d3vw4reshu10a" path="res://ESCENES/ITEMS/coin.tscn" id="8_8d7id"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_by38f"]
-atlas = ExtResource("2_ymrwr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyh7q"]
+atlas = ExtResource("2_hcmy3")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2wwt8"]
-atlas = ExtResource("2_ymrwr")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tqre0"]
-atlas = ExtResource("2_ymrwr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehego"]
+atlas = ExtResource("2_hcmy3")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xg2te"]
-atlas = ExtResource("2_ymrwr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfsnr"]
+atlas = ExtResource("2_hcmy3")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_exxhd"]
-atlas = ExtResource("2_ymrwr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvgkr"]
+atlas = ExtResource("2_hcmy3")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_si706"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_by38f")
+"texture": SubResource("AtlasTexture_lyh7q")
 }],
 "loop": true,
 "name": &"default",
@@ -37,16 +33,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2wwt8")
+"texture": SubResource("AtlasTexture_lyh7q")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tqre0")
+"texture": SubResource("AtlasTexture_ehego")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xg2te")
+"texture": SubResource("AtlasTexture_wfsnr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_exxhd")
+"texture": SubResource("AtlasTexture_fvgkr")
 }],
 "loop": false,
 "name": &"open",
