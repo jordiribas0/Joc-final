@@ -26,6 +26,21 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="Animation" id="Animation_cqdji"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_cuhri"]
 resource_name = "SLIME"
 length = 4.0
@@ -41,21 +56,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 0.3243, 0.5135, 0.8107, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_cqdji"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8dg0y"]
@@ -592,8 +592,7 @@ scale = Vector2(1.8, 1.8)
 curve = SubResource("Curve2D_3mf2l")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(137.778, 921.667)
-progress = 484.589
+position = Vector2(137.778, 920)
 rotates = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
