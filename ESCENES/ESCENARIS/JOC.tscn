@@ -25,6 +25,7 @@ fill_from = Vector2(0.486239, 0.5)
 fill_to = Vector2(0.105505, 0.133028)
 
 [node name="Joc" type="Node2D"]
+metadata/_edit_vertical_guides_ = [7886.0]
 
 [node name="TileMap" parent="." instance=ExtResource("1_mf2kq")]
 
@@ -66,6 +67,15 @@ position = Vector2(6296, 576)
 [node name="cofre_coin4,3" parent="." instance=ExtResource("4_7xheh")]
 position = Vector2(6645, 1729)
 
+[node name="cofre_coin5,1" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(6662, -280)
+
+[node name="cofre_coin5,2" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(8258, -570)
+
+[node name="cofre_coin5,3" parent="." instance=ExtResource("4_7xheh")]
+position = Vector2(7554, -863)
+
 [node name="cofre_llave1" parent="." instance=ExtResource("5_6frc2")]
 position = Vector2(8508, 302)
 
@@ -78,12 +88,14 @@ position = Vector2(8400, 2016)
 [node name="cofre_llave4" parent="." instance=ExtResource("5_6frc2")]
 position = Vector2(7571, 997)
 
+[node name="cofre_llave5" parent="." instance=ExtResource("5_6frc2")]
+position = Vector2(7700, -1184)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
 position = Vector2(8864, -485)
 collision_mask = 3
 
 [node name="PointLight2D57" type="PointLight2D" parent="CharacterBody2D"]
-visible = false
 position = Vector2(1.11127, 7.22223)
 scale = Vector2(1.01042, 1.06283)
 texture = SubResource("GradientTexture2D_dauk6")
@@ -102,7 +114,6 @@ position = Vector2(7983, 94)
 position = Vector2(7985, 672)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.0784314, 0.0784314, 0.0784314, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="CanvasModulate"]
@@ -534,15 +545,3 @@ texture = SubResource("GradientTexture2D_krkvj")
 position = Vector2(9917, 1963)
 scale = Vector2(1.5, 1.51563)
 texture = SubResource("GradientTexture2D_krkvj")
-
-[node name="cofre_coin5,3" parent="." instance=ExtResource("4_7xheh")]
-position = Vector2(7554, -863)
-
-[node name="cofre_coin5,2" parent="." instance=ExtResource("4_7xheh")]
-position = Vector2(8258, -570)
-
-[node name="cofre_coin5,1" parent="." instance=ExtResource("4_7xheh")]
-position = Vector2(6662, -280)
-
-[node name="cofre_llave5" parent="." instance=ExtResource("5_6frc2")]
-position = Vector2(7700, -1184)
