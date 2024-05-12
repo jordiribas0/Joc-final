@@ -218,6 +218,7 @@ offset_right = 42.0
 offset_bottom = 50.0
 
 [node name="CorPle" type="TextureRect" parent="Cors"]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 22.0
 offset_right = 175.0
@@ -227,6 +228,7 @@ texture = ExtResource("6_k8q3l")
 stretch_mode = 1
 
 [node name="CorBuit" type="TextureRect" parent="Cors"]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 22.0
 offset_right = 175.0
