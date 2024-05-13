@@ -68,7 +68,7 @@ _data = {
 gradient = SubResource("Gradient_rbuaw")
 fill = 1
 fill_from = Vector2(0.486239, 0.5)
-fill_to = Vector2(0.311927, 0.325688)
+fill_to = Vector2(0.0779817, 0.137615)
 
 [node name="Joc" type="Node2D"]
 
@@ -123,13 +123,6 @@ position = Vector2(8609, 2613)
 
 [node name="cofre_llave4" parent="." instance=ExtResource("5_6frc2")]
 position = Vector2(6677, 1753)
-
-[node name="porta_h" parent="." instance=ExtResource("6_dwpiq")]
-position = Vector2(8864, 529)
-collision_layer = 2
-
-[node name="porta_h2" parent="." instance=ExtResource("6_dwpiq")]
-position = Vector2(8163, 521)
 
 [node name="porta_v" parent="." instance=ExtResource("7_3fdeh")]
 position = Vector2(7983, 94)
@@ -613,3 +606,12 @@ visible = false
 position = Vector2(1.11127, 7.22223)
 scale = Vector2(1.01042, 1.06283)
 texture = SubResource("GradientTexture2D_dauk6")
+
+[node name="porta_h2" parent="." instance=ExtResource("6_dwpiq")]
+z_index = 23
+position = Vector2(8163, 521)
+
+[node name="porta_h" parent="." instance=ExtResource("6_dwpiq")]
+z_index = 23
+position = Vector2(8864, 529)
+collision_layer = 2
