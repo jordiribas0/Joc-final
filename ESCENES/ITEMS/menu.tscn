@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://dbt6x4mpiclvs"]
+[gd_scene load_steps=15 format=3 uid="uid://dbt6x4mpiclvs"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_it5h4"]
 [ext_resource type="Texture2D" uid="uid://b74solrn2h2u2" path="res://SPRITES/Game Paused.png" id="2_g4o35"]
 [ext_resource type="Texture2D" uid="uid://cx1bhpcyv8cq5" path="res://SPRITES/mappa.png" id="3_enypq"]
-[ext_resource type="Texture2D" uid="uid://tqv1iglkr7d2" path="res://SPRITES/controls.png" id="4_1v77s"]
+[ext_resource type="Texture2D" uid="uid://cl8comnok1ejr" path="res://SPRITES/CONTROLS (2).png" id="4_m22cl"]
 [ext_resource type="Texture2D" uid="uid://bdp2i1clur6f4" path="res://SPRITES/AUDIO.png" id="5_yw5a0"]
 [ext_resource type="Texture2D" uid="uid://cicb6hygp4jje" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartFull.png" id="6_k8q3l"]
 [ext_resource type="Texture2D" uid="uid://c32w5dxxi1hin" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartEmpty.png" id="7_dxxri"]
+[ext_resource type="Texture2D" uid="uid://jmtivs38s046" path="res://SPRITES/inventario.png" id="8_ihryj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rs4ym"]
 bg_color = Color(0.309804, 0.309804, 0.309804, 1)
@@ -64,47 +65,31 @@ corner_radius_bottom_left = 25
 process_mode = 3
 script = ExtResource("1_it5h4")
 
-[node name="claus" type="Label" parent="."]
-offset_left = 28.0
-offset_top = 136.0
-offset_right = 127.0
-offset_bottom = 183.0
-theme_override_font_sizes/font_size = 34
-text = "Claus:"
-
-[node name="coins" type="Label" parent="."]
-offset_left = 217.0
-offset_top = 136.0
-offset_right = 317.0
-offset_bottom = 183.0
-theme_override_font_sizes/font_size = 34
-text = "Coins:"
-
 [node name="menu" type="Node2D" parent="."]
 visible = false
 
 [node name="Menu" type="Sprite2D" parent="menu"]
-position = Vector2(998, 533)
+position = Vector2(998, 534)
 scale = Vector2(0.5, 0.432183)
 texture = ExtResource("2_g4o35")
 
 [node name="RESTART" type="Button" parent="menu"]
-offset_left = 865.0
-offset_top = 776.0
-offset_right = 1112.0
-offset_bottom = 882.0
-theme_override_font_sizes/font_size = 50
+offset_left = 852.0
+offset_top = 706.0
+offset_right = 1155.0
+offset_bottom = 765.0
+theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "RESTART"
 
 [node name="RESUME" type="Button" parent="menu"]
-offset_left = 865.0
-offset_top = 409.0
-offset_right = 1110.0
-offset_bottom = 518.0
-theme_override_font_sizes/font_size = 50
+offset_left = 854.0
+offset_top = 397.0
+offset_right = 1160.0
+offset_bottom = 456.0
+theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
@@ -112,28 +97,29 @@ text = "RESUME
 "
 
 [node name="CONTROLS" type="Button" parent="menu"]
-offset_left = 866.0
-offset_top = 532.0
-offset_right = 1109.0
-offset_bottom = 634.0
-theme_override_font_sizes/font_size = 42
+offset_left = 853.0
+offset_top = 493.0
+offset_right = 1158.0
+offset_bottom = 552.0
+theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "CONTROLS"
 
 [node name="AUDIO" type="Button" parent="menu"]
-offset_left = 872.0
-offset_top = 656.0
-offset_right = 1104.0
-offset_bottom = 757.0
-theme_override_font_sizes/font_size = 50
+offset_left = 852.0
+offset_top = 600.0
+offset_right = 1156.0
+offset_bottom = 659.0
+theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_rs4ym")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "AUDIO"
 
 [node name="mapa" type="Node2D" parent="."]
+visible = false
 
 [node name="Mapa" type="Sprite2D" parent="mapa"]
 position = Vector2(1015, 523)
@@ -158,7 +144,7 @@ scale = Vector2(0.471802, 0.432183)
 
 [node name="controls" type="Sprite2D" parent="controls"]
 position = Vector2(0, -20.8245)
-texture = ExtResource("4_1v77s")
+texture = ExtResource("4_m22cl")
 
 [node name="SALIR" type="Button" parent="controls"]
 offset_left = -218.312
@@ -210,6 +196,7 @@ text = "SALIR
 "
 
 [node name="Cors" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 2.0
@@ -237,6 +224,42 @@ scale = Vector2(1.99958, 2.00022)
 texture = ExtResource("7_dxxri")
 stretch_mode = 1
 
+[node name="inventario" type="Node2D" parent="."]
+
+[node name="Menu" type="Sprite2D" parent="inventario"]
+position = Vector2(998, 533)
+scale = Vector2(0.5, 0.432183)
+texture = ExtResource("8_ihryj")
+
+[node name="claus" type="Label" parent="inventario"]
+offset_left = 704.0
+offset_top = 440.0
+offset_right = 803.0
+offset_bottom = 487.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 34
+text = "Claus:"
+
+[node name="coins" type="Label" parent="inventario"]
+offset_left = 704.0
+offset_top = 376.0
+offset_right = 804.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 34
+text = "Coins:"
+
+[node name="RESUME_I" type="Button" parent="inventario"]
+offset_left = 917.0
+offset_top = 857.0
+offset_right = 1117.0
+offset_bottom = 926.0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_nqx1o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gg8xa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hjv35")
+text = "RESUME"
+
 [connection signal="pressed" from="menu/RESTART" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="menu/RESUME" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="menu/CONTROLS" to="." method="_on_controls_pressed"]
@@ -246,3 +269,4 @@ stretch_mode = 1
 [connection signal="value_changed" from="audio/sons" to="." method="_on_sons_value_changed"]
 [connection signal="value_changed" from="audio/musica" to="." method="_on_musica_value_changed"]
 [connection signal="pressed" from="audio/SALIR2" to="." method="_on_salir_2_pressed"]
+[connection signal="pressed" from="inventario/RESUME_I" to="." method="_on_resume_i_pressed"]
