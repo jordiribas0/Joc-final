@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cblpcbm22u12n"]
 
 [ext_resource type="Script" path="res://ESCENES/ITEMS/PORTES/porta_h.gd" id="1_dyyyf"]
-[ext_resource type="Texture2D" uid="uid://ygbhtdethitd" path="res://SPRITES/1 LLAVE.png" id="3_kofmx"]
+[ext_resource type="Texture2D" uid="uid://bmbm4f6j1g0uu" path="res://SPRITES/llave.png" id="2_oxq5g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2uv3"]
 size = Vector2(62, 7)
@@ -33,10 +33,12 @@ texture_filter = 1
 position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_tl4u0")
 
-[node name="1Llave" type="Sprite2D" parent="."]
-position = Vector2(0, 4)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_kofmx")
+[node name="Llave" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_oxq5g")
+region_enabled = true
+region_rect = Rect2(98.1631, 57.9324, 265.734, 37.4991)
 
 [connection signal="body_entered" from="porta_h" to="." method="_on_porta_h_body_entered"]
 [connection signal="body_exited" from="porta_h" to="." method="_on_porta_h_body_exited"]

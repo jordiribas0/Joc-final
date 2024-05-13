@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3xwhpg8b1jtq"]
+[gd_scene load_steps=6 format=3 uid="uid://dvxtblabyx1l0"]
 
-[ext_resource type="Script" path="res://porta_v.gd" id="1_x5x21"]
-[ext_resource type="Texture2D" uid="uid://dj65fdta3j84a" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_0dhmk"]
-[ext_resource type="Texture2D" uid="uid://ygbhtdethitd" path="res://SPRITES/1 LLAVE.png" id="3_feb0y"]
+[ext_resource type="Script" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.gd" id="1_tf83k"]
+[ext_resource type="Texture2D" uid="uid://dj65fdta3j84a" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_fwm0o"]
+[ext_resource type="Texture2D" uid="uid://dj38vtj0wjl0l" path="res://SPRITES/llave 4.png" id="3_jeslf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5km"]
 size = Vector2(11, 78)
@@ -11,7 +11,7 @@ size = Vector2(11, 78)
 size = Vector2(31, 63)
 
 [node name="porta_v" type="StaticBody2D"]
-script = ExtResource("1_x5x21")
+script = ExtResource("1_tf83k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -8)
@@ -19,7 +19,7 @@ shape = SubResource("RectangleShape2D_6j5km")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("2_0dhmk")
+texture = ExtResource("2_fwm0o")
 region_enabled = true
 region_rect = Rect2(100.879, 63.7294, 6.05661, 32.4168)
 
@@ -31,10 +31,12 @@ texture_filter = 1
 position = Vector2(0.5, -4.5)
 shape = SubResource("RectangleShape2D_ek31c")
 
-[node name="1Llave" type="Sprite2D" parent="."]
-position = Vector2(0, -36)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_feb0y")
+[node name="Llave4" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_jeslf")
+region_enabled = true
+region_rect = Rect2(43.4305, 32.2434, 278.85, 33.8684)
 
 [connection signal="body_entered" from="porta_v" to="." method="_on_porta_h_body_entered"]
 [connection signal="body_exited" from="porta_v" to="." method="_on_porta_h_body_exited"]

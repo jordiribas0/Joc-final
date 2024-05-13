@@ -3,7 +3,7 @@ var poder_abrir_puerta:bool=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$"Llave".visible=false
+	$"Llave4".visible=false
 	pass # Replace with function body.
 
 
@@ -12,7 +12,7 @@ func _process(delta):
 	abrir_puerta()
 	pass
 func abrir_puerta():
-	if get_parent().get_node("CharacterBody2D").num_claus >0:
+	if get_parent().get_node("CharacterBody2D").num_claus ==4:
 		if poder_abrir_puerta==true:
 			if Input.is_action_just_pressed("Accion"):
 				self.queue_free()
@@ -20,13 +20,14 @@ func abrir_puerta():
 
 func _on_porta_h_body_entered(body):
 	if body.name=="CharacterBody2D":
-		$"Llave".visible=true
+		$"Llave4".visible=true
 		poder_abrir_puerta=true
 	pass # Replace with function body.
 
 
 func _on_porta_h_body_exited(body):
 	if body.name=="CharacterBody2D":
-		$"Llave".visible=false
+		$"Llave4".visible=false
 		poder_abrir_puerta=false
 	pass # Replace with function body.
+
