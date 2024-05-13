@@ -15,7 +15,6 @@ func _process(delta):
 
 
 func _on_timer_timeout():
-	$Timer.start()
 	if $AnimatedSprite2D.flip_h == false:
 		$AnimatedSprite2D.flip_h =true
 	else:

@@ -24,7 +24,8 @@ func _on_area_2d_body_entered(body):
 	if body.name=="CharacterBody2D":
 		if cofre_abierto==false:
 			poder_abrir_cofre=true
-			$"3Coins".visible=true
+			if get_parent().get_node("CharacterBody2D").num_coins<4:
+				$"3Coins".visible=true
 	pass # Replace with function body.
 func abrir_cofre():
 	if poder_abrir_cofre==true:

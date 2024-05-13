@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://besh1ri52srt8"]
+[gd_scene load_steps=19 format=3 uid="uid://besh1ri52srt8"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_mf2kq"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_uj5eg"]
@@ -6,9 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cct7vdc38wyei" path="res://ESCENES/ITEMS/cofre_coin.tscn" id="4_7xheh"]
 [ext_resource type="PackedScene" uid="uid://c2ckj4v0mi1c6" path="res://ESCENES/ITEMS/cofre_llave.tscn" id="5_6frc2"]
 [ext_resource type="PackedScene" uid="uid://cblpcbm22u12n" path="res://ESCENES/ITEMS/PORTES/porta_h.tscn" id="6_dwpiq"]
-[ext_resource type="PackedScene" uid="uid://b3xwhpg8b1jtq" path="res://porta_v.tscn" id="7_3fdeh"]
 [ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="8_gjbaa"]
 [ext_resource type="PackedScene" uid="uid://bcmspnsde4cnr" path="res://ESCENES/personatges/ENEMIGOS/NPC FINAL.tscn" id="8_pg0gj"]
+[ext_resource type="PackedScene" uid="uid://cdnn00q6ga6b4" path="res://ESCENES/ITEMS/PORTES/porta_h_2_llaves.tscn" id="9_c2e77"]
+[ext_resource type="PackedScene" uid="uid://d2heo4ijstcen" path="res://ESCENES/ITEMS/PORTES/porta_v.tscn" id="10_78itu"]
+[ext_resource type="PackedScene" uid="uid://dvxtblabyx1l0" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.tscn" id="11_hjmb6"]
 
 [sub_resource type="Gradient" id="Gradient_rbuaw"]
 offsets = PackedFloat32Array(0.279221, 0.844156, 1)
@@ -123,19 +125,6 @@ position = Vector2(8609, 2613)
 
 [node name="cofre_llave4" parent="." instance=ExtResource("5_6frc2")]
 position = Vector2(6677, 1753)
-
-[node name="porta_h" parent="." instance=ExtResource("6_dwpiq")]
-position = Vector2(8864, 529)
-collision_layer = 2
-
-[node name="porta_h2" parent="." instance=ExtResource("6_dwpiq")]
-position = Vector2(8163, 521)
-
-[node name="porta_v" parent="." instance=ExtResource("7_3fdeh")]
-position = Vector2(7983, 94)
-
-[node name="porta_v2" parent="." instance=ExtResource("7_3fdeh")]
-position = Vector2(7985, 672)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
@@ -592,7 +581,8 @@ scale = Vector2(1.8, 1.8)
 curve = SubResource("Curve2D_3mf2l")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(137.778, 920)
+position = Vector2(223.614, 983.894)
+progress = 106.998
 rotates = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
@@ -613,3 +603,15 @@ visible = false
 position = Vector2(1.11127, 7.22223)
 scale = Vector2(1.01042, 1.06283)
 texture = SubResource("GradientTexture2D_dauk6")
+
+[node name="porta_h" parent="." instance=ExtResource("6_dwpiq")]
+position = Vector2(8864, 814)
+
+[node name="porta_h2llaves" parent="." instance=ExtResource("9_c2e77")]
+position = Vector2(8160, 530)
+
+[node name="porta_v" parent="." instance=ExtResource("10_78itu")]
+position = Vector2(7982, 94)
+
+[node name="porta_v2" parent="." instance=ExtResource("11_hjmb6")]
+position = Vector2(7632, 671)

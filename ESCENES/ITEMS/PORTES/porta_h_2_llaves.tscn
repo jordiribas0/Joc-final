@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdnn00q6ga6b4"]
+[gd_scene load_steps=6 format=3 uid="uid://cdnn00q6ga6b4"]
 
-[ext_resource type="Texture2D" uid="uid://ygbhtdethitd" path="res://SPRITES/1 LLAVE.png" id="1_utawa"]
+[ext_resource type="Script" path="res://ESCENES/ITEMS/PORTES/porta_h_2_llaves.gd" id="1_3if76"]
+[ext_resource type="Texture2D" uid="uid://1t7iwig674se" path="res://SPRITES/llave 2.png" id="2_jphkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2uv3"]
 size = Vector2(62, 7)
@@ -12,6 +13,7 @@ load_path = "res://.godot/imported/Dungeon_Tileset.png-292b46110d86827a28c6332fb
 size = Vector2(64, 39)
 
 [node name="porta_h2llaves" type="StaticBody2D"]
+script = ExtResource("1_3if76")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 12.5)
@@ -31,10 +33,12 @@ texture_filter = 1
 position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_tl4u0")
 
-[node name="1Llave" type="Sprite2D" parent="."]
-position = Vector2(0, 4)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_utawa")
+[node name="Llave2" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, 0.999998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_jphkr")
+region_enabled = true
+region_rect = Rect2(14.0753, 11.7921, 283.366, 33.304)
 
 [connection signal="body_entered" from="porta_h" to="." method="_on_porta_h_body_entered"]
 [connection signal="body_exited" from="porta_h" to="." method="_on_porta_h_body_exited"]
