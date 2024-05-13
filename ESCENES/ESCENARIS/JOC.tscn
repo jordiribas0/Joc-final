@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dbt6x4mpiclvs" path="res://ESCENES/ITEMS/menu.tscn" id="3_1y464"]
 [ext_resource type="PackedScene" uid="uid://cct7vdc38wyei" path="res://ESCENES/ITEMS/cofre_coin.tscn" id="4_7xheh"]
 [ext_resource type="PackedScene" uid="uid://c2ckj4v0mi1c6" path="res://ESCENES/ITEMS/cofre_llave.tscn" id="5_6frc2"]
-[ext_resource type="PackedScene" uid="uid://cblpcbm22u12n" path="res://ESCENES/ITEMS/porta_h.tscn" id="6_dwpiq"]
+[ext_resource type="PackedScene" uid="uid://cblpcbm22u12n" path="res://ESCENES/ITEMS/PORTES/porta_h.tscn" id="6_dwpiq"]
 [ext_resource type="PackedScene" uid="uid://b3xwhpg8b1jtq" path="res://porta_v.tscn" id="7_3fdeh"]
 [ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="8_gjbaa"]
 [ext_resource type="PackedScene" uid="uid://bcmspnsde4cnr" path="res://ESCENES/personatges/ENEMIGOS/NPC FINAL.tscn" id="8_pg0gj"]
@@ -101,7 +101,7 @@ position = Vector2(7695, 2300)
 position = Vector2(8065, 889)
 
 [node name="cofre_coin3,3" parent="." instance=ExtResource("4_7xheh")]
-position = Vector2(8625, 2686)
+position = Vector2(8602, 2027)
 
 [node name="cofre_coin4,1" parent="." instance=ExtResource("4_7xheh")]
 position = Vector2(7211, 283)
@@ -110,7 +110,7 @@ position = Vector2(7211, 283)
 position = Vector2(6296, 576)
 
 [node name="cofre_coin4,3" parent="." instance=ExtResource("4_7xheh")]
-position = Vector2(6645, 1729)
+position = Vector2(7350, 880)
 
 [node name="cofre_llave1" parent="." instance=ExtResource("5_6frc2")]
 position = Vector2(8508, 302)
@@ -119,10 +119,10 @@ position = Vector2(8508, 302)
 position = Vector2(10383, 1854)
 
 [node name="cofre_llave3" parent="." instance=ExtResource("5_6frc2")]
-position = Vector2(8400, 2016)
+position = Vector2(8609, 2613)
 
 [node name="cofre_llave4" parent="." instance=ExtResource("5_6frc2")]
-position = Vector2(7571, 997)
+position = Vector2(6677, 1753)
 
 [node name="porta_h" parent="." instance=ExtResource("6_dwpiq")]
 position = Vector2(8864, 529)
@@ -605,7 +605,7 @@ autoplay = "SLIME"
 scale = Vector2(0.555556, 0.555556)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
-position = Vector2(8897, 1221)
+position = Vector2(8862, -490)
 collision_mask = 3
 
 [node name="PointLight2D57" type="PointLight2D" parent="CharacterBody2D"]
