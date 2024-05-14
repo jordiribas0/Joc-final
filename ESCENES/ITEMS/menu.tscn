@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_it5h4"]
 [ext_resource type="Texture2D" uid="uid://b74solrn2h2u2" path="res://SPRITES/Game Paused.png" id="2_g4o35"]
 [ext_resource type="Texture2D" uid="uid://cx1bhpcyv8cq5" path="res://SPRITES/mappa.png" id="3_enypq"]
-[ext_resource type="Texture2D" uid="uid://cl8comnok1ejr" path="res://SPRITES/CONTROLS (2).png" id="4_m22cl"]
 [ext_resource type="Texture2D" uid="uid://bdp2i1clur6f4" path="res://SPRITES/AUDIO.png" id="5_yw5a0"]
 [ext_resource type="Texture2D" uid="uid://cicb6hygp4jje" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartFull.png" id="6_k8q3l"]
+[ext_resource type="Texture2D" uid="uid://clsq1u2lsdg23" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/coin/coin_1.png" id="7_20eek"]
 [ext_resource type="Texture2D" uid="uid://c32w5dxxi1hin" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartEmpty.png" id="7_dxxri"]
-[ext_resource type="Texture2D" uid="uid://jmtivs38s046" path="res://SPRITES/inventario.png" id="8_ihryj"]
+[ext_resource type="Texture2D" uid="uid://bgw16qd5vhbvy" path="res://SPRITES/key-white.png" id="8_2hniy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rs4ym"]
 bg_color = Color(0.309804, 0.309804, 0.309804, 1)
@@ -144,7 +144,6 @@ scale = Vector2(0.471802, 0.432183)
 
 [node name="controls" type="Sprite2D" parent="controls"]
 position = Vector2(0, -20.8245)
-texture = ExtResource("4_m22cl")
 
 [node name="SALIR" type="Button" parent="controls"]
 offset_left = -218.312
@@ -196,7 +195,6 @@ text = "SALIR
 "
 
 [node name="Cors" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 2.0
@@ -224,41 +222,33 @@ scale = Vector2(1.99958, 2.00022)
 texture = ExtResource("7_dxxri")
 stretch_mode = 1
 
-[node name="inventario" type="Node2D" parent="."]
+[node name="Coin1" type="Sprite2D" parent="."]
+position = Vector2(1734, 71)
+scale = Vector2(8, 8)
+texture = ExtResource("7_20eek")
 
-[node name="Menu" type="Sprite2D" parent="inventario"]
-position = Vector2(998, 533)
-scale = Vector2(0.5, 0.432183)
-texture = ExtResource("8_ihryj")
+[node name="Label" type="Label" parent="."]
+offset_left = 1782.0
+offset_top = 14.0
+offset_right = 1896.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 80
+text = ":"
 
-[node name="claus" type="Label" parent="inventario"]
-offset_left = 704.0
-offset_top = 440.0
-offset_right = 803.0
-offset_bottom = 487.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 34
-text = "Claus:"
+[node name="Key-white" type="Sprite2D" parent="."]
+position = Vector2(1740, 235)
+scale = Vector2(5, 5)
+texture = ExtResource("8_2hniy")
+region_enabled = true
+region_rect = Rect2(0, 0, 33.3556, 32)
 
-[node name="coins" type="Label" parent="inventario"]
-offset_left = 704.0
-offset_top = 376.0
-offset_right = 804.0
-offset_bottom = 423.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 34
-text = "Coins:"
-
-[node name="RESUME_I" type="Button" parent="inventario"]
-offset_left = 917.0
-offset_top = 857.0
-offset_right = 1117.0
-offset_bottom = 926.0
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_nqx1o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gg8xa")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hjv35")
-text = "RESUME"
+[node name="Label2" type="Label" parent="."]
+offset_left = 1786.0
+offset_top = 181.0
+offset_right = 1900.0
+offset_bottom = 291.0
+theme_override_font_sizes/font_size = 80
+text = ":44"
 
 [connection signal="pressed" from="menu/RESTART" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="menu/RESUME" to="." method="_on_resume_pressed"]
@@ -269,4 +259,3 @@ text = "RESUME"
 [connection signal="value_changed" from="audio/sons" to="." method="_on_sons_value_changed"]
 [connection signal="value_changed" from="audio/musica" to="." method="_on_musica_value_changed"]
 [connection signal="pressed" from="audio/SALIR2" to="." method="_on_salir_2_pressed"]
-[connection signal="pressed" from="inventario/RESUME_I" to="." method="_on_resume_i_pressed"]

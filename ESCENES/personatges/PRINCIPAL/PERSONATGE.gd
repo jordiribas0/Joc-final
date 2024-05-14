@@ -14,6 +14,8 @@ var speed = 200
 var ultima_direccio :Vector2 = Vector2.DOWN
 
 func _ready():
+	
+	
 	pass
 func get_input():
 	var input_direction = Input.get_vector("left","right","up","down")
@@ -60,6 +62,7 @@ func _physics_process(_delta):
 	move_and_slide()
 	animacio()
 	ultima_direccio = velocity.normalized()
+	
 
 
 

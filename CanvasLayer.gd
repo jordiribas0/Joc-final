@@ -10,12 +10,15 @@ func _ready():
 	mapa.visible = false
 	controls.visible = false
 	audio.visible = false
-	$claus.text = "Claus: " + str(get_parent().get_node("CharacterBody2D").num_claus)
-	$coins.text = "Coins: " + str(get_parent().get_node("CharacterBody2D").num_coins)
+	if get_parent().has_node("CharacterBody2D"):
+		$Label.text= ": " + str(get_parent().get_node("CharacterBody2D").num_coins)
+		$Label2.text= ": " + str(get_parent().get_node("CharacterBody2D").num_claus)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	$claus.text = "Claus: " + str(get_parent().get_node("CharacterBody2D").num_claus)
-	$coins.text = "Coins: " + str(get_parent().get_node("CharacterBody2D").num_coins)
+	$Label.text= ": " + str(get_parent().get_node("CharacterBody2D").num_coins)
+	$Label2.text= ": " + str(get_parent().get_node("CharacterBody2D").num_claus)
+	
 	if Input.is_action_just_pressed("menu"):
 		get_tree().paused = true
 		menu.visible = true
