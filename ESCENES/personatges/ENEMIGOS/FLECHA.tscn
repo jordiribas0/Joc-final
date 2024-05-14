@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcf3e"]
 size = Vector2(1, 3.33333)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["enemy"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_34g1y")
 

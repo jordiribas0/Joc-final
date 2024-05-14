@@ -434,11 +434,12 @@ stream = ExtResource("3_rgnew")
 volume_db = -10.306
 bus = &"sons"
 
-[node name="player_hitbox" type="Area2D" parent="."]
+[node name="player_hitbox" type="Area2D" parent="." groups=["player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
 position = Vector2(0.555556, 7.77778)
 shape = SubResource("CircleShape2D_asix3")
 
+[connection signal="area_entered" from="player_hitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]

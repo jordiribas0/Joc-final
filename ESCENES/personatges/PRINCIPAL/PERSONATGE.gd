@@ -63,21 +63,7 @@ func _physics_process(_delta):
 	animacio()
 	ultima_direccio = velocity.normalized()
 	
-
-
-
-
-
-
-
-#func _on_player_hitbox_body_entered(body):
-#	if body.has_method("enemy"):
-#		enemy_in_range = true
-
-
-#func _on_player_hitbox_body_exited(body):
-#	if body.has_method("enemy"):
-#		enemy_in_range = false
-		
-#func enemy_attack():
-#	pass
+func _on_player_hitbox_area_entered(area):
+	print("qasco")
+	if area.is_in_group("enemy"):
+		CorPle.vida -= 1

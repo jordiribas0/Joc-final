@@ -20,3 +20,6 @@ func _on_timer_timeout():
 	else:
 		$AnimatedSprite2D.flip_h =false
 	pass # Replace with function body.
+
+
+
