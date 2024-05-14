@@ -3,9 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://dt06firpsch8u" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/slime.png" id="1_bdel5"]
 [ext_resource type="Script" path="res://ESCENES/personatges/ENEMIGOS/SLIME.gd" id="1_fw5pu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ve3tv"]
-size = Vector2(16, 11)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_v6tc0"]
 atlas = ExtResource("1_bdel5")
 region = Rect2(0, 128, 32, 32)
@@ -96,12 +93,12 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ahco8"]
+radius = 11.0
+height = 32.0
+
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
 script = ExtResource("1_fw5pu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1.5)
-shape = SubResource("RectangleShape2D_ve3tv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
@@ -114,5 +111,12 @@ frame_progress = 0.356893
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 5)
+rotation = 4.71239
+shape = SubResource("CapsuleShape2D_ahco8")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

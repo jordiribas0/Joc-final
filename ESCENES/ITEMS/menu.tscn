@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://dbt6x4mpiclvs"]
+[gd_scene load_steps=16 format=3 uid="uid://dbt6x4mpiclvs"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_it5h4"]
 [ext_resource type="Texture2D" uid="uid://b74solrn2h2u2" path="res://SPRITES/Game Paused.png" id="2_g4o35"]
 [ext_resource type="Texture2D" uid="uid://cx1bhpcyv8cq5" path="res://SPRITES/mappa.png" id="3_enypq"]
 [ext_resource type="Texture2D" uid="uid://bdp2i1clur6f4" path="res://SPRITES/AUDIO.png" id="5_yw5a0"]
+[ext_resource type="Script" path="res://ESCENES/ITEMS/CorPle.gd" id="6_6tyyi"]
 [ext_resource type="Texture2D" uid="uid://cicb6hygp4jje" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartFull.png" id="6_k8q3l"]
 [ext_resource type="Texture2D" uid="uid://clsq1u2lsdg23" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/coin/coin_1.png" id="7_20eek"]
 [ext_resource type="Texture2D" uid="uid://c32w5dxxi1hin" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartEmpty.png" id="7_dxxri"]
@@ -211,6 +212,7 @@ offset_bottom = 67.0
 scale = Vector2(1.99958, 2.00022)
 texture = ExtResource("6_k8q3l")
 stretch_mode = 1
+script = ExtResource("6_6tyyi")
 
 [node name="CorBuit" type="TextureRect" parent="Cors"]
 layout_mode = 0
