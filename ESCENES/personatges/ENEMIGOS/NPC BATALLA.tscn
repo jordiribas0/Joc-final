@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx6krj1qwid88"]
+
+[ext_resource type="Script" path="res://ESCENES/personatges/ENEMIGOS/NPC BATALLA.gd" id="1_psl5a"]
+[ext_resource type="Texture2D" uid="uid://deker1dsg5fb4" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_2.png" id="2_t56ex"]
+[ext_resource type="Texture2D" uid="uid://ixq5vbl51fd8" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_3.png" id="3_e3uvm"]
+[ext_resource type="Texture2D" uid="uid://cuq2vv18g1m8q" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_4.png" id="4_tuy7k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rqhem"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kx068"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t56ex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e3uvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tuy7k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(13, 13)
+script = ExtResource("1_psl5a")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("CircleShape2D_rqhem")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D"]
+sprite_frames = SubResource("SpriteFrames_kx068")
+autoplay = "default"
+frame_progress = 0.204259
+flip_h = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -13.0
+offset_top = -17.0
+offset_right = 14.0
+offset_bottom = -10.0
+show_percentage = false

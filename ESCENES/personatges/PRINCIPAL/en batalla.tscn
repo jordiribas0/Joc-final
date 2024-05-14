@@ -1,0 +1,177 @@
+[gd_scene load_steps=18 format=3 uid="uid://c6x3ly45gmilx"]
+
+[ext_resource type="Texture2D" uid="uid://dlr206lgwp6fi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/character/player.png" id="1_02u4c"]
+[ext_resource type="Script" path="res://ESCENES/personatges/PRINCIPAL/en batalla.gd" id="1_vjqjr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hq01"]
+size = Vector2(11, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypier"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(0, 336, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aifam"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(48, 336, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvq4e"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(96, 336, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3c2o"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(144, 336, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haxih"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lce7u"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27mhx"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5rh5"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4brv6"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(192, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdo2g"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(240, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id0f2"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2dg7"]
+atlas = ExtResource("1_02u4c")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0bc6o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypier")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aifam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvq4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3c2o")
+}],
+"loop": false,
+"name": &"ataque",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haxih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lce7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27mhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5rh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4brv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdo2g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_id0f2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2dg7")
+}],
+"loop": true,
+"name": &"paz_mental",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ph0gp"]
+size = Vector2(239, 249)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_vjqjr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0.5, 7.5)
+shape = SubResource("RectangleShape2D_2hq01")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_0bc6o")
+animation = &"paz_mental"
+autoplay = "default"
+frame_progress = 0.917417
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -136.0
+offset_top = -62.0
+offset_right = 139.0
+offset_bottom = -10.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+fill_mode = 1
+show_percentage = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 203.0
+offset_bottom = 47.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = -18.0
+offset_right = 285.0
+offset_bottom = 191.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "GOLPE ESPADA"
+
+[node name="Button2" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "PAZ MENTAL"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.5, 71.5)
+shape = SubResource("RectangleShape2D_ph0gp")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

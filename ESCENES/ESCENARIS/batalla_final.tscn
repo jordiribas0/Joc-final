@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvums36c8v12g"]
+
+[ext_resource type="Script" path="res://ESCENES/ESCENARIS/batalla_final.gd" id="1_0i470"]
+[ext_resource type="Texture2D" uid="uid://kadk77lwfqti" path="res://SPRITES/Fire_Dungeon_8.jpg" id="1_bv7ct"]
+[ext_resource type="PackedScene" uid="uid://c6x3ly45gmilx" path="res://ESCENES/personatges/PRINCIPAL/en batalla.tscn" id="2_m4w5n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7x2iu"]
+size = Vector2(270, 271)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0i470")
+
+[node name="FireDungeon1" type="Sprite2D" parent="."]
+position = Vector2(968, 582)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_bv7ct")
+region_enabled = true
+region_rect = Rect2(0, 0, 1536, 832)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="Node2D"]
+position = Vector2(1093, 874)
+
+[node name="Marker2D2" type="Marker2D" parent="Node2D"]
+position = Vector2(1446, 936)
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2"]
+layout_mode = 0
+offset_left = 967.0
+offset_top = 790.0
+offset_right = 1049.0
+offset_bottom = 837.0
+
+[node name="Button" type="Button" parent="Control2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "ELEGIR"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 1317.0
+offset_top = 868.0
+offset_right = 1414.0
+offset_bottom = 936.0
+
+[node name="Button2" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "ELEGIR"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1449, 949.5)
+shape = SubResource("RectangleShape2D_7x2iu")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(1094, 871)
+shape = SubResource("RectangleShape2D_7x2iu")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_m4w5n")]
+position = Vector2(489, 843)
+
+[connection signal="child_exiting_tree" from="Node2D/Marker2D" to="." method="_on_marker_2d_2_child_exiting_tree"]
+[connection signal="child_exiting_tree" from="Node2D/Marker2D2" to="." method="_on_marker_2d_child_exiting_tree"]
+[connection signal="button_down" from="Control2/VBoxContainer/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Control2/VBoxContainer/Button" to="." method="_on_button_button_up"]
+[connection signal="button_down" from="Control/VBoxContainer/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_up" from="Control/VBoxContainer/Button2" to="." method="_on_button_2_button_up"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D2" to="." method="_on_area_2d_2_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D2" to="." method="_on_area_2d_2_mouse_exited"]

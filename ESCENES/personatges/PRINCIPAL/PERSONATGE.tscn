@@ -418,7 +418,7 @@ shape = SubResource("RectangleShape2D_5boci")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ywqib")
-animation = &"idle_esquena"
+animation = &"idle_lado"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4.2, 4.2)
