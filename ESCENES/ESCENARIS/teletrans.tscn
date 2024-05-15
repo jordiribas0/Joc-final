@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b83kyds6amd5b"]
+
+[ext_resource type="Texture2D" uid="uid://ddjrpxnx0dka7" path="res://SPRITES/Portal-PNG-Pic.png" id="1_wagle"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8l8vq"]
+radius = 72.0
+height = 144.0
+
+[node name="teletrans" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -7)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8l8vq")
+
+[node name="Portal-png-pic" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wagle")

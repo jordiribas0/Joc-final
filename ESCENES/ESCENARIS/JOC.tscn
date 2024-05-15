@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://besh1ri52srt8"]
+[gd_scene load_steps=22 format=3 uid="uid://besh1ri52srt8"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_mf2kq"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_uj5eg"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://d2heo4ijstcen" path="res://ESCENES/ITEMS/PORTES/porta_v.tscn" id="10_78itu"]
 [ext_resource type="PackedScene" uid="uid://dvxtblabyx1l0" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.tscn" id="11_hjmb6"]
 [ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="12_43b4v"]
+[ext_resource type="PackedScene" uid="uid://bf0cjg1ycx7xk" path="res://ESCENES/ITEMS/PORTES/porta_v_5.tscn" id="12_qig5h"]
+[ext_resource type="PackedScene" uid="uid://b83kyds6amd5b" path="res://ESCENES/ESCENARIS/teletrans.tscn" id="13_25q10"]
 
 [sub_resource type="Gradient" id="Gradient_rbuaw"]
 offsets = PackedFloat32Array(0.279221, 0.844156, 1)
@@ -560,6 +562,171 @@ position = Vector2(9917, 1963)
 scale = Vector2(1.5, 1.51563)
 texture = SubResource("GradientTexture2D_krkvj")
 
+[node name="PointLight2D87" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(6573, 1804)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D88" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(6223, 1810)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D89" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(5870, 1807)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D90" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(5518, 1803)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D91" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(5169, 1812)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D92" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4813, 1812)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D93" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4466, 1812)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D94" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4116, 1813)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D95" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3894.5, 1825.41)
+scale = Vector2(3.70313, 3.33106)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D96" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3348, 3685)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D97" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3347, 3812)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D98" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3535, 3685)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D99" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3537, 3810)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D100" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3727, 3683)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D101" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3730, 3812)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D102" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3887, 3753)
+scale = Vector2(0.875005, 0.880857)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D103" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3985, 3942)
+scale = Vector2(0.875005, 0.880857)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D104" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4113, 3597)
+scale = Vector2(0.875005, 0.880857)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D105" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4334, 3755)
+scale = Vector2(0.875005, 0.880857)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D106" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4240, 3945)
+scale = Vector2(0.875005, 0.880857)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D107" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3366, 3990)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D108" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3369, 4140)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D109" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3664, 4139)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D110" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4181, 4154)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D111" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4785, 4155)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D112" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4880, 4094)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D113" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4812, 3398)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D114" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4468, 3404)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D115" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(4106, 3403)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D116" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3759, 3405)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D117" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3407, 3410)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D118" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3369, 3540)
+scale = Vector2(1.84375, 1.85547)
+texture = SubResource("GradientTexture2D_krkvj")
+
+[node name="PointLight2D119" type="PointLight2D" parent="CanvasModulate"]
+position = Vector2(3167, 3758)
+scale = Vector2(2.73438, 2.50585)
+texture = SubResource("GradientTexture2D_krkvj")
+
 [node name="cofre_coin5,3" parent="." instance=ExtResource("4_7xheh")]
 position = Vector2(7554, -863)
 
@@ -594,10 +761,11 @@ autoplay = "SLIME"
 scale = Vector2(0.555556, 0.555556)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
-position = Vector2(8861, -487)
+position = Vector2(3993, 1841)
 collision_mask = 3
 
 [node name="PointLight2D57" type="PointLight2D" parent="CharacterBody2D"]
+visible = false
 position = Vector2(0.555556, 7.77771)
 scale = Vector2(1.01042, 1.06283)
 texture = SubResource("GradientTexture2D_dauk6")
@@ -613,6 +781,9 @@ position = Vector2(7982, 94)
 
 [node name="porta_v2" parent="." instance=ExtResource("11_hjmb6")]
 position = Vector2(7632, 671)
+
+[node name="porta_v3" parent="." instance=ExtResource("12_qig5h")]
+position = Vector2(6576, 1826)
 
 [node name="Sprite2D" parent="." instance=ExtResource("12_43b4v")]
 position = Vector2(9713, 645)
@@ -697,3 +868,13 @@ position = Vector2(8305, 1797)
 
 [node name="Sprite2D28" parent="." instance=ExtResource("12_43b4v")]
 position = Vector2(8368, 1797)
+
+[node name="teletrans" parent="." instance=ExtResource("13_25q10")]
+position = Vector2(3843, 1824)
+scale = Vector2(0.3, 0.3)
+
+[node name="teletrans2" parent="." instance=ExtResource("13_25q10")]
+position = Vector2(3133, 3763)
+scale = Vector2(0.3, 0.3)
+
+[connection signal="body_entered" from="teletrans" to="CharacterBody2D" method="_on_teletrans_body_entered"]
