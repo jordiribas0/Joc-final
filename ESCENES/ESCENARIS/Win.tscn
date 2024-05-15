@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvc8xjlqgx5du"]
+
+[ext_resource type="Texture2D" uid="uid://icahg8rn2dml" path="res://SPRITES/Fire_Dungeon_13.jpg" id="1_g0fm0"]
+[ext_resource type="AudioStream" uid="uid://su61vdltxxxq" path="res://SPRITES/Voicy_Brawl Stars Song Lose Meme.mp3" id="2_baqs4"]
+
+[node name="derrota" type="Sprite2D"]
+position = Vector2(999, 540)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_g0fm0")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -163.846
+offset_top = -210.769
+offset_right = 178.154
+offset_bottom = -113.769
+theme_override_font_sizes/font_size = 71
+text = "YOU WIN"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -258.462
+offset_top = -98.4615
+offset_right = 210.538
+offset_bottom = 26.5385
+theme_override_font_sizes/font_size = 44
+text = "Felicitats has guanyat!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_baqs4")
+volume_db = -7.0
+autoplay = true

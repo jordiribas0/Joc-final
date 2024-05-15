@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8i285vqo7h2t"
-path="res://.godot/imported/PANTALLA_I.png-58e619e65dd66e210f1bcb11e40d8e01.ctex"
+uid="uid://icahg8rn2dml"
+path="res://.godot/imported/Fire_Dungeon_13.jpg-9f2ee39d9d090a1bdc15ee0b2ce7129c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPRITES/PANTALLA_I.png"
-dest_files=["res://.godot/imported/PANTALLA_I.png-58e619e65dd66e210f1bcb11e40d8e01.ctex"]
+source_file="res://SPRITES/Fire_Dungeon_13.jpg"
+dest_files=["res://.godot/imported/Fire_Dungeon_13.jpg-9f2ee39d9d090a1bdc15ee0b2ce7129c.ctex"]
 
 [params]
 

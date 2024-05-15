@@ -87,6 +87,7 @@ value = 100.0
 show_percentage = false
 
 [node name="vida" type="Label" parent="vida_pb"]
+layout_mode = 0
 offset_left = 141.0
 offset_top = 9.0
 offset_right = 167.0
