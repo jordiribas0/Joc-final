@@ -71,10 +71,8 @@ func _on_button_pressed():
 			daño=dañoinicial*2
 			seleccion.critico=true
 	else:
-		intento_critico= randf_range(1,3)
-		if intento_critico==poder_hacer_critico_bueno:
-			daño=dañoinicial*2
-			get_tree().get_nodes_in_group(str(seleccionvida))[0].critico=true
+		daño=dañoinicial*2
+		get_tree().get_nodes_in_group(str(seleccionvida))[0].critico=true
 
 	
 	pass # Replace with function body.
