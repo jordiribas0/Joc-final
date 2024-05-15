@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://dbt6x4mpiclvs"]
+[gd_scene load_steps=17 format=3 uid="uid://dbt6x4mpiclvs"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_it5h4"]
 [ext_resource type="Texture2D" uid="uid://b74solrn2h2u2" path="res://SPRITES/Game Paused.png" id="2_g4o35"]
 [ext_resource type="Texture2D" uid="uid://cx1bhpcyv8cq5" path="res://SPRITES/mappa.png" id="3_enypq"]
+[ext_resource type="Texture2D" uid="uid://3ia617jm2tam" path="res://SPRITES/controless.png" id="4_7h1bu"]
 [ext_resource type="Texture2D" uid="uid://bdp2i1clur6f4" path="res://SPRITES/AUDIO.png" id="5_yw5a0"]
 [ext_resource type="Script" path="res://ESCENES/ITEMS/CorPle.gd" id="6_6tyyi"]
 [ext_resource type="Texture2D" uid="uid://cicb6hygp4jje" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartFull.png" id="6_k8q3l"]
@@ -66,15 +67,44 @@ corner_radius_bottom_left = 25
 process_mode = 3
 script = ExtResource("1_it5h4")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 87.0
+offset_top = 18.0
+offset_right = 399.0
+offset_bottom = 61.0
+
+[node name="vida_pb" type="ProgressBar" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 87.0
+offset_top = 18.0
+offset_right = 399.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+step = 1.0
+value = 100.0
+show_percentage = false
+
+[node name="vida" type="Label" parent="vida_pb"]
+offset_left = 141.0
+offset_top = 9.0
+offset_right = 167.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 19
+text = "HP"
+
 [node name="menu" type="Node2D" parent="."]
-visible = false
 
 [node name="Menu" type="Sprite2D" parent="menu"]
 position = Vector2(998, 534)
 scale = Vector2(0.5, 0.432183)
 texture = ExtResource("2_g4o35")
 
-[node name="RESTART" type="Button" parent="menu"]
+[node name="HOME" type="Button" parent="menu"]
 offset_left = 852.0
 offset_top = 706.0
 offset_right = 1155.0
@@ -145,6 +175,7 @@ scale = Vector2(0.471802, 0.432183)
 
 [node name="controls" type="Sprite2D" parent="controls"]
 position = Vector2(0, -20.8245)
+texture = ExtResource("4_7h1bu")
 
 [node name="SALIR" type="Button" parent="controls"]
 offset_left = -218.312
@@ -196,6 +227,7 @@ text = "SALIR
 "
 
 [node name="Cors" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 2.0
@@ -229,7 +261,7 @@ position = Vector2(1734, 71)
 scale = Vector2(8, 8)
 texture = ExtResource("7_20eek")
 
-[node name="Label" type="Label" parent="."]
+[node name="coin" type="Label" parent="."]
 offset_left = 1782.0
 offset_top = 14.0
 offset_right = 1896.0
@@ -244,15 +276,15 @@ texture = ExtResource("8_2hniy")
 region_enabled = true
 region_rect = Rect2(0, 0, 33.3556, 32)
 
-[node name="Label2" type="Label" parent="."]
+[node name="clau" type="Label" parent="."]
 offset_left = 1786.0
 offset_top = 181.0
 offset_right = 1900.0
 offset_bottom = 291.0
 theme_override_font_sizes/font_size = 80
-text = ":44"
+text = ":"
 
-[connection signal="pressed" from="menu/RESTART" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="menu/HOME" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="menu/RESUME" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="menu/CONTROLS" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="menu/AUDIO" to="." method="_on_audio_pressed"]

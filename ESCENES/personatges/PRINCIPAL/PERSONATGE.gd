@@ -7,7 +7,7 @@ var attack_cooldown = true
 var player_alive = true
 var num_claus = 0
 var num_coins = 0
-
+var vida = 100
 
 
 var speed = 200
@@ -64,6 +64,6 @@ func _physics_process(_delta):
 	ultima_direccio = velocity.normalized()
 	
 func _on_player_hitbox_area_entered(area):
-	print("qasco")
+	
 	if area.is_in_group("enemy"):
 		CorPle.vida -= 1

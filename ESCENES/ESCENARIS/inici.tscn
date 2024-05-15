@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnni3c5s6l3pi"]
+
+[ext_resource type="Texture2D" uid="uid://drmre4fey6yms" path="res://SPRITES/Fire_Dungeon_1.jpg" id="1_ul3ll"]
+[ext_resource type="Script" path="res://ESCENES/ESCENARIS/inici.gd" id="2_xunog"]
+[ext_resource type="AudioStream" uid="uid://ot38sh7n87sk" path="res://SPRITES/Witchcraft(loop - fantasy - guitar - piano).mp3" id="3_iu4d3"]
+[ext_resource type="PackedScene" uid="uid://6x05uehuu72i" path="res://ESCENES/ESCENARIS/intro.tscn" id="4_0q47b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hvh7"]
+bg_color = Color(0.309804, 0.309804, 0.309804, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sdlu"]
+bg_color = Color(0.490196, 0.490196, 0.490196, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v6b2g"]
+
+[node name="PantallaI" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(999, 540)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_ul3ll")
+script = ExtResource("2_xunog")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -170.769
+offset_top = -335.385
+offset_right = 153.231
+offset_bottom = -261.385
+theme_override_font_sizes/font_size = 54
+text = "DARK ABYSS"
+justification_flags = 35
+
+[node name="play" type="Button" parent="."]
+offset_left = -154.615
+offset_top = -149.231
+offset_right = 148.385
+offset_bottom = -90.2308
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_3hvh7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3sdlu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v6b2g")
+text = "PLAY
+"
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_iu4d3")
+volume_db = -7.0
+
+[node name="introduccio2" parent="." instance=ExtResource("4_0q47b")]
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]

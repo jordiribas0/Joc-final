@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3xwhpg8b1jtq"]
+[gd_scene load_steps=5 format=3 uid="uid://b3xwhpg8b1jtq"]
 
 [ext_resource type="Script" path="res://porta_v.gd" id="1_x5x21"]
 [ext_resource type="Texture2D" uid="uid://dj65fdta3j84a" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_0dhmk"]
-[ext_resource type="Texture2D" uid="uid://ygbhtdethitd" path="res://SPRITES/1 LLAVE.png" id="3_feb0y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5km"]
 size = Vector2(11, 78)
@@ -34,7 +33,6 @@ shape = SubResource("RectangleShape2D_ek31c")
 [node name="1Llave" type="Sprite2D" parent="."]
 position = Vector2(0, -36)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_feb0y")
 
 [connection signal="body_entered" from="porta_v" to="." method="_on_porta_h_body_entered"]
 [connection signal="body_exited" from="porta_v" to="." method="_on_porta_h_body_exited"]

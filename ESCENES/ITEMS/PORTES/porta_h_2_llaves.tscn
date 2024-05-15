@@ -13,6 +13,7 @@ load_path = "res://.godot/imported/Dungeon_Tileset.png-292b46110d86827a28c6332fb
 size = Vector2(64, 39)
 
 [node name="porta_h2llaves" type="StaticBody2D"]
+z_index = 23
 script = ExtResource("1_3if76")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwwoja2p8gg3f"]
+[gd_scene load_steps=17 format=3 uid="uid://bwwoja2p8gg3f"]
 
 [ext_resource type="Texture2D" uid="uid://dt06firpsch8u" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/slime.png" id="1_bdel5"]
 [ext_resource type="Script" path="res://ESCENES/personatges/ENEMIGOS/SLIME.gd" id="1_fw5pu"]
@@ -93,11 +93,15 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_os5vi"]
+radius = 5.0
+height = 10.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ahco8"]
 radius = 11.0
 height = 32.0
 
-[node name="AnimatableBody2D" type="AnimatableBody2D"]
+[node name="AnimatableBody2D" type="AnimatableBody2D" groups=["enemy"]]
 script = ExtResource("1_fw5pu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -107,6 +111,12 @@ animation = &"run"
 autoplay = "run"
 frame = 5
 frame_progress = 0.356893
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_os5vi")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
