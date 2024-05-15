@@ -10,14 +10,17 @@ func _ready():
 	mapa.visible = false
 	controls.visible = false
 	audio.visible = false
+	
+	$vida_pb.value = get_parent().get_node("CharacterBody2D").vida
 	if get_parent().has_node("CharacterBody2D"):
-		$Label.text= ": " + str(get_parent().get_node("CharacterBody2D").num_coins)
-		$Label2.text= ": " + str(get_parent().get_node("CharacterBody2D").num_claus)
+		$coin.text= ": " + str(get_parent().get_node("CharacterBody2D").num_coins)
+		$clau.text= ": " + str(get_parent().get_node("CharacterBody2D").num_claus)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	$Label.text= ": " + str(get_parent().get_node("CharacterBody2D").num_coins)
-	$Label2.text= ": " + str(get_parent().get_node("CharacterBody2D").num_claus)
+	$coin.text= ": " + str(get_parent().get_node("CharacterBody2D").num_coins)
+	$clau.text= ": " + str(get_parent().get_node("CharacterBody2D").num_claus)
+	$vida_pb.value = get_parent().get_node("CharacterBody2D").vida
 	
 	if Input.is_action_just_pressed("menu"):
 		get_tree().paused = true
@@ -26,14 +29,15 @@ func _process(_delta):
 	if Input.is_action_pressed("mapa"):
 		mapa.visible  = true
 		get_tree().paused = true
-func _on_restart_pressed():
+func _on_home_pressed():
+	menu.visible = false
 	get_tree().paused = false
 	get_tree().reload_current_scene()
-	
 
 func _on_resume_pressed():
 	get_tree().paused = false
 	menu.visible = false
+	
 
 func _on_resume_m_pressed():
 	mapa.visible = false

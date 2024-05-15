@@ -71,7 +71,7 @@ _data = {
 gradient = SubResource("Gradient_rbuaw")
 fill = 1
 fill_from = Vector2(0.486239, 0.5)
-fill_to = Vector2(0.311927, 0.325688)
+fill_to = Vector2(0.0733945, 0.105505)
 
 [node name="Joc" type="Node2D"]
 
@@ -128,8 +128,7 @@ position = Vector2(8609, 2613)
 position = Vector2(6677, 1753)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+color = Color(0.203922, 0.203922, 0.203922, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="CanvasModulate"]
 position = Vector2(8863, -341)
@@ -595,12 +594,11 @@ autoplay = "SLIME"
 scale = Vector2(0.555556, 0.555556)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
-position = Vector2(9210, 1296)
+position = Vector2(8861, -487)
 collision_mask = 3
 
 [node name="PointLight2D57" type="PointLight2D" parent="CharacterBody2D"]
-visible = false
-position = Vector2(1.11127, 7.22223)
+position = Vector2(0.555556, 7.77771)
 scale = Vector2(1.01042, 1.06283)
 texture = SubResource("GradientTexture2D_dauk6")
 
