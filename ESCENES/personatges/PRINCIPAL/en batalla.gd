@@ -8,7 +8,7 @@ var poder_atacar:bool=false
 var seleccion=""
 var seleccionvida="enemigo1"
 var poder_hacer_critico=10
-var poder_hacer_critico_bueno=5
+var poder_hacer_critico_bueno=2
 var intento_critico=0
 var paz_mental:bool=false
 var posicion_inicial:Vector2 = Vector2(489,843)
@@ -71,7 +71,7 @@ func _on_button_pressed():
 			daño=dañoinicial*2
 			seleccion.critico=true
 	else:
-		intento_critico= randf_range(1,6)
+		intento_critico= randf_range(1,3)
 		if intento_critico==poder_hacer_critico_bueno:
 			daño=dañoinicial*2
 			get_tree().get_nodes_in_group(str(seleccionvida))[0].critico=true
