@@ -46,8 +46,10 @@ text = "ELEGIR"
 position = Vector2(1449, 949.5)
 shape = SubResource("RectangleShape2D_7x2iu")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_m4w5n")]
+[node name="PLAYER" type="Node2D" parent="."]
 position = Vector2(489, 843)
+
+[node name="CharacterBody2D" parent="PLAYER" instance=ExtResource("2_m4w5n")]
 
 [connection signal="child_exiting_tree" from="Node2D/Marker2D" to="." method="_on_marker_2d_child_exiting_tree"]
 [connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,12 +1,13 @@
 extends Node2D
 var enemigo = preload("res://ESCENES/personatges/ENEMIGOS/NPC BATALLA.tscn")
 @onready var slot1=$Node2D/Marker2D
-@onready var slot2=$Node2D/Marker2D2
+
 var turno_player=0
-var turno_enemigo
+var turno_enemigo=0
+var enemigo_seleccionado:bool=false
 func _ready():
 	$Control.visible=false
-	$Control2.visible=false
+	
 	enemigos()
 	pass # Replace with function body.
 
@@ -17,15 +18,10 @@ func _process(delta):
 func enemigos():
 	var enemigo1 =enemigo.instantiate()
 	slot1.add_child(enemigo1)
-	var enemigo2 =enemigo.instantiate()
-	slot2.add_child(enemigo2)
+	enemigo1.add_to_group("enemigo1")
+	
 
 
-func _on_marker_2d_2_child_exiting_tree(node):
-	$Node2D/Marker2D2.queue_free()
-	$Area2D2.queue_free()
-	$Control2.queue_free()
-	pass # Replace with function body.
 
 
 func _on_marker_2d_child_exiting_tree(node):
@@ -33,17 +29,6 @@ func _on_marker_2d_child_exiting_tree(node):
 	$Area2D.queue_free()
 	$Control.queue_free()
 	pass # Replace with function body.
-
-
-
-	
-	pass # Replace with function body.
-
-
-
-	
-	pass # Replace with function body.
-
 
 func _on_area_2d_mouse_entered():
 	$Control.visible=true
@@ -66,25 +51,15 @@ func _on_area_2d_mouse_exited():
 	pass # Replace with function body.
 
 
-func _on_button_2_button_down():
-	get_node("CharacterBody2D").objetivo=2
-	get_node("CharacterBody2D").poder_atacar=true
+
+
+func _on_button_pressed():
+	if get_node("CharacterBody2D").golpe_espada==true:
+		get_node("CharacterBody2D").objetivo=1
+		get_node("CharacterBody2D").poder_atacar=true
+
 	pass # Replace with function body.
 
 
-func _on_button_button_down():
-	get_node("CharacterBody2D").objetivo=1
-	get_node("CharacterBody2D").poder_atacar=true
-	pass # Replace with function body.
 
-
-func _on_button_button_up():
-	get_node("CharacterBody2D").objetivo=0
-	get_node("CharacterBody2D").poder_atacar=false
-	pass # Replace with function body.
-
-
-func _on_button_2_button_up():
-	get_node("CharacterBody2D").objetivo=0
-	get_node("CharacterBody2D").poder_atacar=false
 	pass # Replace with function body.

@@ -1,14 +1,54 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx6krj1qwid88"]
+[gd_scene load_steps=10 format=3 uid="uid://bx6krj1qwid88"]
 
 [ext_resource type="Script" path="res://ESCENES/personatges/ENEMIGOS/NPC BATALLA.gd" id="1_psl5a"]
+[ext_resource type="Texture2D" uid="uid://bje3jbbxagakl" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_1.png" id="2_q8mlq"]
 [ext_resource type="Texture2D" uid="uid://deker1dsg5fb4" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_2.png" id="2_t56ex"]
 [ext_resource type="Texture2D" uid="uid://ixq5vbl51fd8" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_3.png" id="3_e3uvm"]
+[ext_resource type="Texture2D" uid="uid://da50wtqllfcyu" path="res://SPRITES/TRANSPARENT.png" id="3_qtl8h"]
 [ext_resource type="Texture2D" uid="uid://cuq2vv18g1m8q" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_4.png" id="4_tuy7k"]
+[ext_resource type="Texture2D" uid="uid://dbvvyeaqd5a1a" path="res://SPRITES/CRITIC.png" id="7_mkkwl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rqhem"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kx068"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q8mlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q8mlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q8mlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q8mlq")
+}],
+"loop": false,
+"name": &"ataque",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q8mlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qtl8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q8mlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qtl8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q8mlq")
+}],
+"loop": false,
+"name": &"daño",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_t56ex")
@@ -35,8 +75,8 @@ shape = SubResource("CircleShape2D_rqhem")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D"]
 sprite_frames = SubResource("SpriteFrames_kx068")
+animation = &"ataque"
 autoplay = "default"
-frame_progress = 0.204259
 flip_h = true
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
@@ -44,4 +84,17 @@ offset_left = -13.0
 offset_top = -17.0
 offset_right = 14.0
 offset_bottom = -10.0
+max_value = 20.0
+value = 20.0
 show_percentage = false
+
+[node name="Critic" type="Sprite2D" parent="."]
+position = Vector2(-11.8462, -5.46154)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_mkkwl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+
+[connection signal="animation_finished" from="AnimatableBody2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
