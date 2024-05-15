@@ -75,3 +75,7 @@ func inicia_audio():
 		if sons is HSlider:
 			sons.value = 95
 			
+
+
+func _on_teletrans_2_body_entered(body):
+	pass # Replace with function body.

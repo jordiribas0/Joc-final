@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://besh1ri52srt8"]
+[gd_scene load_steps=21 format=3 uid="uid://besh1ri52srt8"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_mf2kq"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_uj5eg"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://d2heo4ijstcen" path="res://ESCENES/ITEMS/PORTES/porta_v.tscn" id="10_78itu"]
 [ext_resource type="PackedScene" uid="uid://dvxtblabyx1l0" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.tscn" id="11_hjmb6"]
 [ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="12_43b4v"]
+[ext_resource type="PackedScene" uid="uid://b83kyds6amd5b" path="res://ESCENES/ESCENARIS/teletrans.tscn" id="13_xu6wo"]
 
 [sub_resource type="Gradient" id="Gradient_rbuaw"]
 offsets = PackedFloat32Array(0.279221, 0.844156, 1)
@@ -699,3 +700,14 @@ position = Vector2(8305, 1797)
 
 [node name="Sprite2D28" parent="." instance=ExtResource("12_43b4v")]
 position = Vector2(8368, 1797)
+
+[node name="teletrans" parent="." instance=ExtResource("13_xu6wo")]
+position = Vector2(3842, 1826)
+scale = Vector2(0.3, 0.3)
+
+[node name="teletrans2" parent="." instance=ExtResource("13_xu6wo")]
+position = Vector2(3121, 3755)
+scale = Vector2(0.3, 0.3)
+
+[connection signal="body_entered" from="teletrans" to="CharacterBody2D" method="_on_teletrans_body_entered"]
+[connection signal="body_entered" from="teletrans2" to="CharacterBody2D" method="_on_teletrans_2_body_entered"]

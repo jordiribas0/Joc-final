@@ -70,7 +70,12 @@ func _on_player_hitbox_area_entered(area):
 
 
 func _on_teletrans_body_entered(body):
-	$teletrans.play()
 	if body.get_name() == "CharacterBody2D":
 		body.global_position = Vector2(3143, 3762)
+	pass # Replace with function body.
+
+
+func _on_teletrans_2_body_entered(body):
+	if body.get_name() == "CharacterBody2D":
+		body.global_position = Vector2(3844, 1827)
 	pass # Replace with function body.

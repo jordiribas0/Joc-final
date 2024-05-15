@@ -9,6 +9,7 @@ height = 144.0
 [node name="teletrans" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(3, -7)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_8l8vq")
