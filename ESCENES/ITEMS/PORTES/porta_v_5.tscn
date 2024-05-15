@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bf0cjg1ycx7xk"]
+
+[ext_resource type="Script" path="res://ESCENES/ITEMS/PORTES/porta_v_5.gd" id="1_aod4o"]
+[ext_resource type="Texture2D" uid="uid://dj65fdta3j84a" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_yysmj"]
+[ext_resource type="Texture2D" uid="uid://c1kjjjdkeus32" path="res://SPRITES/llave 5.png" id="3_irkje"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5km"]
+size = Vector2(11, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ek31c"]
+size = Vector2(31, 63)
+
+[node name="porta_v" type="StaticBody2D"]
+script = ExtResource("1_aod4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -8)
+shape = SubResource("RectangleShape2D_6j5km")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_yysmj")
+region_enabled = true
+region_rect = Rect2(100.879, 63.7294, 6.05661, 32.4168)
+
+[node name="porta_v" type="Area2D" parent="."]
+position = Vector2(0, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="porta_v"]
+texture_filter = 1
+position = Vector2(0.5, -4.5)
+shape = SubResource("RectangleShape2D_ek31c")
+
+[node name="Llave5" type="Sprite2D" parent="."]
+position = Vector2(-2, -29)
+scale = Vector2(0.111919, 0.0790598)
+texture = ExtResource("3_irkje")
+
+[connection signal="body_entered" from="porta_v" to="." method="_on_porta_h_body_entered"]
+[connection signal="body_exited" from="porta_v" to="." method="_on_porta_h_body_exited"]

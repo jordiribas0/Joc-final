@@ -67,3 +67,10 @@ func _on_player_hitbox_area_entered(area):
 	
 	if area.is_in_group("enemy"):
 		CorPle.vida -= 1
+
+
+func _on_teletrans_body_entered(body):
+	$teletrans.play()
+	if body.get_name() == "CharacterBody2D":
+		body.global_position = Vector2(3143, 3762)
+	pass # Replace with function body.

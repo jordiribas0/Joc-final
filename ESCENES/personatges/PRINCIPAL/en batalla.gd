@@ -105,6 +105,7 @@ func _on_animated_sprite_2d_animation_finished():
 		get_tree().get_nodes_in_group(str(seleccionvida))[0].hitted()
 		if get_tree().get_nodes_in_group(str(seleccionvida))[0].vida==0:
 			get_tree().get_nodes_in_group(str(seleccionvida))[0].queue_free()
+			get_tree().change_scene_to_file("res://ESCENES/ESCENARIS/Win.tscn")
 		$Timer2.start()
 		
 		
