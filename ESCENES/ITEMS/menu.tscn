@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_it5h4"]
 [ext_resource type="Texture2D" uid="uid://b74solrn2h2u2" path="res://SPRITES/Game Paused.png" id="2_g4o35"]
-[ext_resource type="Texture2D" uid="uid://cx1bhpcyv8cq5" path="res://SPRITES/mappa.png" id="3_enypq"]
+[ext_resource type="Texture2D" uid="uid://bx2h51yicjyd8" path="res://SPRITES/mapa.png" id="3_n7nmm"]
 [ext_resource type="Texture2D" uid="uid://3ia617jm2tam" path="res://SPRITES/controless.png" id="4_7h1bu"]
 [ext_resource type="Texture2D" uid="uid://bdp2i1clur6f4" path="res://SPRITES/AUDIO.png" id="5_yw5a0"]
 [ext_resource type="Script" path="res://ESCENES/ITEMS/CorPle.gd" id="6_6tyyi"]
@@ -99,6 +99,7 @@ theme_override_font_sizes/font_size = 19
 text = "HP"
 
 [node name="menu" type="Node2D" parent="."]
+visible = false
 
 [node name="Menu" type="Sprite2D" parent="menu"]
 position = Vector2(998, 534)
@@ -151,18 +152,17 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "AUDIO"
 
 [node name="mapa" type="Node2D" parent="."]
-visible = false
 
 [node name="Mapa" type="Sprite2D" parent="mapa"]
 position = Vector2(1015, 523)
-scale = Vector2(1.45809, 1.37934)
-texture = ExtResource("3_enypq")
+scale = Vector2(1.3, 1.23)
+texture = ExtResource("3_n7nmm")
 
 [node name="RESUME_M" type="Button" parent="mapa"]
-offset_left = 910.0
-offset_top = 956.0
-offset_right = 1110.0
-offset_bottom = 1025.0
+offset_left = 1222.0
+offset_top = 912.0
+offset_right = 1422.0
+offset_bottom = 981.0
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_nqx1o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gg8xa")
