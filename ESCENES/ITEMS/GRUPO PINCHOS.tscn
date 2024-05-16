@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dossii5jk30or"]
 
-[ext_resource type="PackedScene" uid="uid://bcdvq3vbtgf4s" path="res://ESCENES/personatges/ENEMIGOS/pinchos.tscn" id="1_gpbnq"]
+[ext_resource type="PackedScene" uid="uid://bcdvq3vbtgf4s" path="res://ESCENES/PERSONATGES/ENEMIGOS/pinchos.tscn" id="1_gpbnq"]
 
 [node name="Node2D" type="Node2D"]
 

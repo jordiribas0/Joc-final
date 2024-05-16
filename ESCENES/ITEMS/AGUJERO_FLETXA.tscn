@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cehs5av8kbbyg" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/arrow/arrow_2.png" id="1_hbo45"]
 [ext_resource type="Script" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.gd" id="2_1osfy"]
-[ext_resource type="PackedScene" uid="uid://3li37qm27g02" path="res://ESCENES/personatges/ENEMIGOS/FLECHA.tscn" id="2_dwya5"]
+[ext_resource type="PackedScene" uid="uid://3li37qm27g02" path="res://ESCENES/PERSONATGES/ENEMIGOS/FLECHA.tscn" id="2_dwya5"]
 
 [node name="Sprite2D" type="Sprite2D"]
 scale = Vector2(2.5, 2.5)
