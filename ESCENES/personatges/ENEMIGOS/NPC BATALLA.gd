@@ -1,5 +1,5 @@
 extends Node2D
-var daño=1
+var daño=2
 var vida=20
 var vidamaxima=20
 var daño_recibido=0

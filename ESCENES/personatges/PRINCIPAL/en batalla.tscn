@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://c6x3ly45gmilx"]
+[gd_scene load_steps=19 format=3 uid="uid://c6x3ly45gmilx"]
 
 [ext_resource type="Texture2D" uid="uid://dlr206lgwp6fi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/character/player.png" id="1_02u4c"]
 [ext_resource type="Script" path="res://ESCENES/personatges/PRINCIPAL/en batalla.gd" id="1_vjqjr"]
+[ext_resource type="Texture2D" uid="uid://csikbnftjxnip" path="res://SPRITES/artworks-000188509722-d50ce4-t240x240.jpg" id="3_3ldjb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hq01"]
 size = Vector2(11, 19)
@@ -125,6 +126,11 @@ sprite_frames = SubResource("SpriteFrames_0bc6o")
 animation = &"paz_mental"
 autoplay = "default"
 frame_progress = 0.917417
+
+[node name="Artworks-000188509722-d50Ce4-t240x241" type="Sprite2D" parent="."]
+position = Vector2(1.74992, -35.5)
+scale = Vector2(1.13542, 0.2125)
+texture = ExtResource("3_3ldjb")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_left = -136.0

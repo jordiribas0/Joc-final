@@ -1,13 +1,13 @@
 [gd_scene load_steps=21 format=3 uid="uid://besh1ri52srt8"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_mf2kq"]
-[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/PERSONATGES/PRINCIPAL/PERSONATGE.tscn" id="2_uj5eg"]
+[ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_uj5eg"]
 [ext_resource type="PackedScene" uid="uid://dbt6x4mpiclvs" path="res://ESCENES/ITEMS/menu.tscn" id="3_1y464"]
 [ext_resource type="PackedScene" uid="uid://cct7vdc38wyei" path="res://ESCENES/ITEMS/cofre_coin.tscn" id="4_7xheh"]
 [ext_resource type="PackedScene" uid="uid://c2ckj4v0mi1c6" path="res://ESCENES/ITEMS/cofre_llave.tscn" id="5_6frc2"]
 [ext_resource type="PackedScene" uid="uid://cblpcbm22u12n" path="res://ESCENES/ITEMS/PORTES/porta_h.tscn" id="6_dwpiq"]
-[ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/PERSONATGES/ENEMIGOS/SLIME.tscn" id="8_gjbaa"]
-[ext_resource type="PackedScene" uid="uid://bcmspnsde4cnr" path="res://ESCENES/PERSONATGES/ENEMIGOS/NPC FINAL.tscn" id="8_pg0gj"]
+[ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="8_gjbaa"]
+[ext_resource type="PackedScene" uid="uid://bcmspnsde4cnr" path="res://ESCENES/personatges/ENEMIGOS/NPC FINAL.tscn" id="8_pg0gj"]
 [ext_resource type="PackedScene" uid="uid://cdnn00q6ga6b4" path="res://ESCENES/ITEMS/PORTES/porta_h_2_llaves.tscn" id="9_c2e77"]
 [ext_resource type="PackedScene" uid="uid://d2heo4ijstcen" path="res://ESCENES/ITEMS/PORTES/porta_v.tscn" id="10_78itu"]
 [ext_resource type="PackedScene" uid="uid://dvxtblabyx1l0" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.tscn" id="11_hjmb6"]
@@ -129,7 +129,6 @@ position = Vector2(8609, 2613)
 position = Vector2(6677, 1753)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.203922, 0.203922, 0.203922, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="CanvasModulate"]
@@ -600,7 +599,6 @@ position = Vector2(8863, -488)
 collision_mask = 3
 
 [node name="PointLight2D57" type="PointLight2D" parent="CharacterBody2D"]
-visible = false
 position = Vector2(0.555556, 7.77771)
 scale = Vector2(1.01042, 1.06283)
 texture = SubResource("GradientTexture2D_dauk6")

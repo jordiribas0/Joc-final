@@ -30,6 +30,7 @@ func _process(delta):
 	$ProgressBar.value=vidapersonaje
 	if vidapersonaje==0:
 		self.queue_free()
+		get_tree().change_scene_to_file("res://ESCENES/ESCENARIS/derrota.tscn")
 	pass
 	
 	
