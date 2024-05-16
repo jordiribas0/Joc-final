@@ -55,6 +55,7 @@ func _on_animated_sprite_2d_animation_finished():
 		self.position-=Vector2(100,0)
 		get_parent().get_parent().get_parent().turno_enemigo+=1
 		get_parent().get_parent().get_parent().get_node("CharacterBody2D").vidapersonaje-=daño
+		critico=false
 		
 		
 	pass # Replace with function body.

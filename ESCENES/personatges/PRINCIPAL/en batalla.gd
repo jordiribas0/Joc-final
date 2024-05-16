@@ -7,7 +7,7 @@ var objetivo=0
 var poder_atacar:bool=false
 var seleccion=""
 var seleccionvida="enemigo1"
-var poder_hacer_critico=10
+var poder_hacer_critico=2
 var poder_hacer_critico_bueno=2
 var intento_critico=0
 var paz_mental:bool=false
@@ -70,8 +70,12 @@ func _on_button_pressed():
 		if intento_critico==poder_hacer_critico:
 			daño=dañoinicial*2
 			seleccion.critico=true
+			get_tree().get_nodes_in_group(str(seleccionvida))[0].critico=true
 	else:
-		daño=dañoinicial*2
+		intento_critico= randf_range(1,4)
+		if intento_critico==poder_hacer_critico_bueno:
+			daño=dañoinicial*2
+			seleccion.critico=true
 		get_tree().get_nodes_in_group(str(seleccionvida))[0].critico=true
 
 	
@@ -80,6 +84,7 @@ func _on_button_pressed():
 
 func _on_button_2_pressed():
 	get_tree().get_nodes_in_group(str(seleccionvida))[0].poder_atacar=false
+	
 	if paz_mental==false:
 		paz_mental=true
 		$AnimatedSprite2D.play("paz_mental")

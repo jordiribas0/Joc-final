@@ -12,9 +12,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if get_parent().get_node("CharacterBody2D").num_coins>2.5:
-		tres_coins=true
-	if tres_coins==true:
+	if get_parent().get_node("CharacterBody2D").num_coins==3:
 		abrir_cofre()
 		
 	pass
@@ -24,8 +22,7 @@ func _on_area_2d_body_entered(body):
 	if body.name=="CharacterBody2D":
 		if cofre_abierto==false:
 			poder_abrir_cofre=true
-			if get_parent().get_node("CharacterBody2D").num_coins<4:
-				$"3Coins".visible=true
+			$"3Coins".visible=true
 	pass # Replace with function body.
 func abrir_cofre():
 	if poder_abrir_cofre==true:
@@ -41,6 +38,8 @@ func _on_animated_sprite_2d_animation_finished():
 	if $AnimatedSprite2D.animation=="open":
 		cofre_abierto=true
 		dar_llave()
+		get_parent().get_node("CharacterBody2D").num_coins=0
+		
 	pass # Replace with function body.
 
 
