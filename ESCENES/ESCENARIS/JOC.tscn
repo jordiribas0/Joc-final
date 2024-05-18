@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="8_gjbaa"]
 [ext_resource type="PackedScene" uid="uid://bcmspnsde4cnr" path="res://ESCENES/personatges/ENEMIGOS/NPC FINAL.tscn" id="8_pg0gj"]
 [ext_resource type="PackedScene" uid="uid://cdnn00q6ga6b4" path="res://ESCENES/ITEMS/PORTES/porta_h_2_llaves.tscn" id="9_c2e77"]
-[ext_resource type="PackedScene" uid="uid://d2heo4ijstcen" path="res://ESCENES/ITEMS/PORTES/porta_v.tscn" id="10_78itu"]
-[ext_resource type="PackedScene" uid="uid://dvxtblabyx1l0" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.tscn" id="11_hjmb6"]
+[ext_resource type="PackedScene" path="res://ESCENES/ITEMS/PORTES/porta_v.tscn" id="10_78itu"]
+[ext_resource type="PackedScene" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.tscn" id="11_hjmb6"]
 [ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="12_43b4v"]
 [ext_resource type="PackedScene" uid="uid://b83kyds6amd5b" path="res://ESCENES/ESCENARIS/teletrans.tscn" id="13_xu6wo"]
 

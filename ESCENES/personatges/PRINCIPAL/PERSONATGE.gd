@@ -2,6 +2,8 @@ extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var footsteps = $Footsteps
 
+
+
 var enemy_in_range = false
 var attack_cooldown = true
 var player_alive = true
@@ -64,9 +66,8 @@ func _physics_process(_delta):
 	ultima_direccio = velocity.normalized()
 	
 func _on_player_hitbox_area_entered(area):
-	
-	if area.is_in_group("enemy"):
-		CorPle.vida -= 1
+		if area.is_in_group("enemy"):
+			General.vida -= 20
 
 
 func _on_teletrans_body_entered(body):
