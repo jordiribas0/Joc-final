@@ -1,12 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://5xmq257y2s1u"]
+[gd_scene load_steps=7 format=3 uid="uid://5xmq257y2s1u"]
 
 [ext_resource type="Texture2D" uid="uid://icahg8rn2dml" path="res://SPRITES/Fire_Dungeon_13.jpg" id="1_yvsfx"]
+[ext_resource type="Script" path="res://ESCENES/ESCENARIS/derrota.gd" id="2_ewjkc"]
 [ext_resource type="AudioStream" uid="uid://su61vdltxxxq" path="res://SPRITES/Voicy_Brawl Stars Song Lose Meme.mp3" id="2_hwhc3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ywvc"]
+bg_color = Color(0.309804, 0.309804, 0.309804, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxami"]
+bg_color = Color(0.490196, 0.490196, 0.490196, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xypod"]
 
 [node name="derrota" type="Sprite2D"]
 position = Vector2(999, 540)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("1_yvsfx")
+script = ExtResource("2_ewjkc")
 
 [node name="Label2" type="Label" parent="."]
 offset_left = -163.846
@@ -29,3 +57,17 @@ torna-ho a probar"
 stream = ExtResource("2_hwhc3")
 volume_db = -7.0
 autoplay = true
+
+[node name="RESTARTS" type="Button" parent="."]
+offset_left = -144.615
+offset_top = 270.769
+offset_right = 161.385
+offset_bottom = 329.769
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ywvc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hxami")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xypod")
+text = "RESTART	
+"
+
+[connection signal="pressed" from="RESTARTS" to="." method="_on_restarts_pressed"]

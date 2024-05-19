@@ -11,7 +11,7 @@ func _ready():
 	controls.visible = false
 	audio.visible = false
 	
-	$vida_pb.value = get_parent().get_node("CharacterBody2D").vida
+	#$vida_pb.value = get_parent().get_node("CharacterBody2D").vida
 	if get_parent().has_node("CharacterBody2D"):
 		$coin.text= ": " + str(get_parent().get_node("CharacterBody2D").num_coins)
 		$clau.text= ": " + str(get_parent().get_node("CharacterBody2D").num_claus)
@@ -20,7 +20,7 @@ func _ready():
 func _process(_delta):
 	$coin.text= ": " + str(get_parent().get_node("CharacterBody2D").num_coins)
 	$clau.text= ": " + str(get_parent().get_node("CharacterBody2D").num_claus)
-	$vida_pb.value = get_parent().get_node("CharacterBody2D").vida
+	#$vida_pb.value = get_parent().get_node("CharacterBody2D").vida
 	
 	if Input.is_action_just_pressed("menu"):
 		get_tree().paused = true
