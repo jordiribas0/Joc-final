@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvums36c8v12g"]
+[gd_scene load_steps=6 format=3 uid="uid://dvums36c8v12g"]
 
 [ext_resource type="Script" path="res://ESCENES/ESCENARIS/batalla_final.gd" id="1_0i470"]
 [ext_resource type="Texture2D" uid="uid://kadk77lwfqti" path="res://SPRITES/Fire_Dungeon_8.jpg" id="1_bv7ct"]
 [ext_resource type="PackedScene" uid="uid://c6x3ly45gmilx" path="res://ESCENES/personatges/PRINCIPAL/en batalla.tscn" id="2_m4w5n"]
+[ext_resource type="AudioStream" uid="uid://cmu1uhnrtwpa0" path="res://SPRITES/PELEA.mp3" id="4_enikn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7x2iu"]
 size = Vector2(270, 271)
@@ -48,6 +49,11 @@ shape = SubResource("RectangleShape2D_7x2iu")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_m4w5n")]
 position = Vector2(489, 843)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_enikn")
+volume_db = -6.0
+autoplay = true
 
 [connection signal="child_exiting_tree" from="Node2D/Marker2D" to="." method="_on_marker_2d_child_exiting_tree"]
 [connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_button_pressed"]
