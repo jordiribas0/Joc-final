@@ -1,14 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://dbt6x4mpiclvs"]
+[gd_scene load_steps=15 format=3 uid="uid://dbt6x4mpiclvs"]
 
 [ext_resource type="Script" path="res://CanvasLayer.gd" id="1_it5h4"]
 [ext_resource type="Texture2D" uid="uid://b74solrn2h2u2" path="res://SPRITES/Game Paused.png" id="2_g4o35"]
-[ext_resource type="Texture2D" uid="uid://cx1bhpcyv8cq5" path="res://SPRITES/mappa.png" id="3_enypq"]
+[ext_resource type="Script" path="res://ESCENES/ITEMS/vida_pb.gd" id="2_kexga"]
+[ext_resource type="Texture2D" uid="uid://bx2h51yicjyd8" path="res://SPRITES/mapa.png" id="3_n7nmm"]
 [ext_resource type="Texture2D" uid="uid://3ia617jm2tam" path="res://SPRITES/controless.png" id="4_7h1bu"]
 [ext_resource type="Texture2D" uid="uid://bdp2i1clur6f4" path="res://SPRITES/AUDIO.png" id="5_yw5a0"]
-[ext_resource type="Script" path="res://ESCENES/ITEMS/CorPle.gd" id="6_6tyyi"]
-[ext_resource type="Texture2D" uid="uid://cicb6hygp4jje" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartFull.png" id="6_k8q3l"]
 [ext_resource type="Texture2D" uid="uid://clsq1u2lsdg23" path="res://SPRITES/2D Pixel Dungeon Asset Pack/items and trap_animation/coin/coin_1.png" id="7_20eek"]
-[ext_resource type="Texture2D" uid="uid://c32w5dxxi1hin" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/hud_heartEmpty.png" id="7_dxxri"]
 [ext_resource type="Texture2D" uid="uid://bgw16qd5vhbvy" path="res://SPRITES/key-white.png" id="8_2hniy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rs4ym"]
@@ -68,23 +66,24 @@ process_mode = 3
 script = ExtResource("1_it5h4")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 87.0
+offset_left = 32.0
 offset_top = 18.0
-offset_right = 399.0
+offset_right = 344.0
 offset_bottom = 61.0
 
 [node name="vida_pb" type="ProgressBar" parent="."]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
-offset_left = 87.0
+offset_left = 32.0
 offset_top = 18.0
-offset_right = 399.0
+offset_right = 344.0
 offset_bottom = 61.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 step = 1.0
 value = 100.0
 show_percentage = false
+script = ExtResource("2_kexga")
 
 [node name="vida" type="Label" parent="vida_pb"]
 layout_mode = 0
@@ -99,6 +98,7 @@ theme_override_font_sizes/font_size = 19
 text = "HP"
 
 [node name="menu" type="Node2D" parent="."]
+visible = false
 
 [node name="Menu" type="Sprite2D" parent="menu"]
 position = Vector2(998, 534)
@@ -151,18 +151,17 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "AUDIO"
 
 [node name="mapa" type="Node2D" parent="."]
-visible = false
 
 [node name="Mapa" type="Sprite2D" parent="mapa"]
 position = Vector2(1015, 523)
-scale = Vector2(1.45809, 1.37934)
-texture = ExtResource("3_enypq")
+scale = Vector2(1.3, 1.23)
+texture = ExtResource("3_n7nmm")
 
 [node name="RESUME_M" type="Button" parent="mapa"]
-offset_left = 910.0
-offset_top = 956.0
-offset_right = 1110.0
-offset_bottom = 1025.0
+offset_left = 1222.0
+offset_top = 912.0
+offset_right = 1422.0
+offset_bottom = 981.0
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_nqx1o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gg8xa")
@@ -226,36 +225,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jel2x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qmogv")
 text = "SALIR
 "
-
-[node name="Cors" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 2.0
-offset_top = 10.0
-offset_right = 42.0
-offset_bottom = 50.0
-
-[node name="CorPle" type="TextureRect" parent="Cors"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 22.0
-offset_right = 175.0
-offset_bottom = 67.0
-scale = Vector2(1.99958, 2.00022)
-texture = ExtResource("6_k8q3l")
-stretch_mode = 1
-script = ExtResource("6_6tyyi")
-
-[node name="CorBuit" type="TextureRect" parent="Cors"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 22.0
-offset_right = 175.0
-offset_bottom = 67.0
-scale = Vector2(1.99958, 2.00022)
-texture = ExtResource("7_dxxri")
-stretch_mode = 1
 
 [node name="Coin1" type="Sprite2D" parent="."]
 position = Vector2(1734, 71)

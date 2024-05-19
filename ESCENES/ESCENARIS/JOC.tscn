@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="8_gjbaa"]
 [ext_resource type="PackedScene" uid="uid://bcmspnsde4cnr" path="res://ESCENES/personatges/ENEMIGOS/NPC FINAL.tscn" id="8_pg0gj"]
 [ext_resource type="PackedScene" uid="uid://cdnn00q6ga6b4" path="res://ESCENES/ITEMS/PORTES/porta_h_2_llaves.tscn" id="9_c2e77"]
-[ext_resource type="PackedScene" uid="uid://d2heo4ijstcen" path="res://ESCENES/ITEMS/PORTES/porta_v.tscn" id="10_78itu"]
-[ext_resource type="PackedScene" uid="uid://dvxtblabyx1l0" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.tscn" id="11_hjmb6"]
+[ext_resource type="PackedScene" path="res://ESCENES/ITEMS/PORTES/porta_v.tscn" id="10_78itu"]
+[ext_resource type="PackedScene" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.tscn" id="11_hjmb6"]
 [ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="12_43b4v"]
 [ext_resource type="PackedScene" uid="uid://b83kyds6amd5b" path="res://ESCENES/ESCENARIS/teletrans.tscn" id="13_xu6wo"]
 
@@ -129,7 +129,6 @@ position = Vector2(8609, 2613)
 position = Vector2(6677, 1753)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.203922, 0.203922, 0.203922, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="CanvasModulate"]
@@ -596,11 +595,10 @@ autoplay = "SLIME"
 scale = Vector2(0.555556, 0.555556)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
-position = Vector2(3522, 3762)
+position = Vector2(8863, -488)
 collision_mask = 3
 
 [node name="PointLight2D57" type="PointLight2D" parent="CharacterBody2D"]
-visible = false
 position = Vector2(0.555556, 7.77771)
 scale = Vector2(1.01042, 1.06283)
 texture = SubResource("GradientTexture2D_dauk6")
@@ -702,11 +700,11 @@ position = Vector2(8305, 1797)
 position = Vector2(8368, 1797)
 
 [node name="teletrans" parent="." instance=ExtResource("13_xu6wo")]
-position = Vector2(3842, 1826)
+position = Vector2(3951, 1825)
 scale = Vector2(0.3, 0.3)
 
 [node name="teletrans2" parent="." instance=ExtResource("13_xu6wo")]
-position = Vector2(3121, 3755)
+position = Vector2(3103, 3717)
 scale = Vector2(0.3, 0.3)
 
 [connection signal="body_entered" from="teletrans" to="CharacterBody2D" method="_on_teletrans_body_entered"]

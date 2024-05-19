@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bx6krj1qwid88"]
+[gd_scene load_steps=11 format=3 uid="uid://bx6krj1qwid88"]
 
 [ext_resource type="Script" path="res://ESCENES/personatges/ENEMIGOS/NPC BATALLA.gd" id="1_psl5a"]
+[ext_resource type="Texture2D" uid="uid://csikbnftjxnip" path="res://SPRITES/artworks-000188509722-d50ce4-t240x240.jpg" id="2_fm8ly"]
 [ext_resource type="Texture2D" uid="uid://bje3jbbxagakl" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_1.png" id="2_q8mlq"]
 [ext_resource type="Texture2D" uid="uid://deker1dsg5fb4" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_2.png" id="2_t56ex"]
 [ext_resource type="Texture2D" uid="uid://ixq5vbl51fd8" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_3.png" id="3_e3uvm"]
@@ -67,6 +68,11 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 scale = Vector2(13, 13)
 script = ExtResource("1_psl5a")
+
+[node name="Artworks-000188509722-d50Ce4-t240x241" type="Sprite2D" parent="."]
+position = Vector2(0.0769196, -13.8462)
+scale = Vector2(0.0871795, 0.0262821)
+texture = ExtResource("2_fm8ly")
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
 
