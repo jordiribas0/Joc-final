@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://65llpju6qp30"]
+
+[ext_resource type="Script" path="res://CanvasLayerB.gd" id="1_d4c8b"]
+[ext_resource type="Texture2D" uid="uid://c61s8voih3nnp" path="res://SPRITES/controlsb.png" id="2_u55rr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5reot"]
+bg_color = Color(0.309804, 0.309804, 0.309804, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbkhn"]
+bg_color = Color(0.490196, 0.490196, 0.490196, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohcql"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_d4c8b")
+
+[node name="controls" type="Node2D" parent="."]
+position = Vector2(1001, 540)
+scale = Vector2(0.471802, 0.432183)
+
+[node name="controls" type="Sprite2D" parent="controls"]
+position = Vector2(0, -20.8245)
+texture = ExtResource("2_u55rr")
+
+[node name="SALIR" type="Button" parent="controls"]
+offset_left = -214.073
+offset_top = 728.858
+offset_right = 245.927
+offset_bottom = 941.858
+theme_override_font_sizes/font_size = 96
+theme_override_styles/normal = SubResource("StyleBoxFlat_5reot")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pbkhn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohcql")
+text = "SALIR
+"
+
+[connection signal="pressed" from="controls/SALIR" to="." method="_on_salir_pressed"]

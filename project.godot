@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 Regles="*res://regles.gd"
 General="*res://general.gd"
-Personatge="*res://ESCENES/personatges/PRINCIPAL/PERSONATGE.gd"
 
 [display]
 

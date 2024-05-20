@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var dañoinicial=2
-var daño=2
+var daño=5
 var vidapersonaje=30
 var vidamaxima=30
 var objetivo=0
@@ -30,7 +30,7 @@ func _process(delta):
 	$ProgressBar.value=vidapersonaje
 	if vidapersonaje==0:
 		self.queue_free()
-		get_tree().change_scene_to_file("res://ESCENES/ESCENARIS/derrota.tscn")
+		get_tree().change_scene_to_file("res://ESCENES/ESCENARIS/derrotaB.tscn")
 	pass
 	
 	

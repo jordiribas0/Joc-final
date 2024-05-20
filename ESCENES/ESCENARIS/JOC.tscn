@@ -755,10 +755,11 @@ autoplay = "SLIME"
 scale = Vector2(0.555556, 0.555556)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
-position = Vector2(8863, -470)
+position = Vector2(3623, 3736)
 collision_mask = 3
 
 [node name="PointLight2D57" type="PointLight2D" parent="CharacterBody2D"]
+visible = false
 position = Vector2(0.555556, 7.77771)
 scale = Vector2(1.01042, 1.06283)
 texture = SubResource("GradientTexture2D_dauk6")

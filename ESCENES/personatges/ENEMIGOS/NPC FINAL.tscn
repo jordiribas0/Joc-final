@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcmspnsde4cnr"]
+[gd_scene load_steps=9 format=3 uid="uid://bcmspnsde4cnr"]
 
 [ext_resource type="Texture2D" uid="uid://deker1dsg5fb4" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_2.png" id="1_62ini"]
 [ext_resource type="Script" path="res://ESCENES/personatges/ENEMIGOS/NPC FINAL.gd" id="1_k1vuf"]
@@ -28,6 +28,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tte5"]
 size = Vector2(27.3333, 26)
 
+[sub_resource type="LabelSettings" id="LabelSettings_dboxt"]
+line_spacing = 0.001
+
 [node name="StaticBody2D" type="StaticBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_k1vuf")
@@ -49,12 +52,25 @@ position = Vector2(-4.76837e-07, 0)
 shape = SubResource("RectangleShape2D_1tte5")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -11.0
-offset_top = -14.0
-offset_right = 29.0
-offset_bottom = 9.0
-theme_override_font_sizes/font_size = 4
-text = "fajhfgsadhjf"
+visible = false
+offset_left = -31.3333
+offset_top = 136.333
+offset_right = 155.667
+offset_bottom = 184.333
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "dame 12 monedas y te dejo salir si me ganas"
+label_settings = SubResource("LabelSettings_dboxt")
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -9.66667
+offset_top = -18.3333
+offset_right = 14.3333
+offset_bottom = -9.33333
+theme_override_font_sizes/font_size = 6
+text = "jsadfsgg"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

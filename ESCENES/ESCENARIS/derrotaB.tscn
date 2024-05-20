@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://5xmq257y2s1u"]
+[gd_scene load_steps=7 format=3 uid="uid://cyf8yr4pa04ok"]
 
-[ext_resource type="Texture2D" uid="uid://icahg8rn2dml" path="res://SPRITES/Fire_Dungeon_13.jpg" id="1_yvsfx"]
-[ext_resource type="Script" path="res://ESCENES/ESCENARIS/derrota.gd" id="2_ewjkc"]
-[ext_resource type="AudioStream" uid="uid://su61vdltxxxq" path="res://SPRITES/Voicy_Brawl Stars Song Lose Meme.mp3" id="2_hwhc3"]
+[ext_resource type="Texture2D" uid="uid://icahg8rn2dml" path="res://SPRITES/Fire_Dungeon_13.jpg" id="1_tsq1h"]
+[ext_resource type="Script" path="res://derrotaB.gd" id="2_t88a4"]
+[ext_resource type="AudioStream" uid="uid://su61vdltxxxq" path="res://SPRITES/Voicy_Brawl Stars Song Lose Meme.mp3" id="3_y5ecw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ywvc"]
 bg_color = Color(0.309804, 0.309804, 0.309804, 1)
@@ -33,8 +33,8 @@ corner_radius_bottom_left = 25
 [node name="derrota" type="Sprite2D"]
 position = Vector2(999, 540)
 scale = Vector2(1.3, 1.3)
-texture = ExtResource("1_yvsfx")
-script = ExtResource("2_ewjkc")
+texture = ExtResource("1_tsq1h")
+script = ExtResource("2_t88a4")
 
 [node name="Label2" type="Label" parent="."]
 offset_left = -163.846
@@ -56,7 +56,7 @@ torna-ho a probar"
 metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_hwhc3")
+stream = ExtResource("3_y5ecw")
 volume_db = -7.0
 autoplay = true
 
