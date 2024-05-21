@@ -1,10 +1,11 @@
-[gd_scene load_steps=58 format=3 uid="uid://c08vnqoxa8kow"]
+[gd_scene load_steps=59 format=3 uid="uid://c08vnqoxa8kow"]
 
 [ext_resource type="Texture2D" uid="uid://dlr206lgwp6fi" path="res://SPRITES/2D Pixel Dungeon Asset Pack/Character_animation/character/player.png" id="1_1bjfh"]
 [ext_resource type="Script" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.gd" id="1_02qfu"]
 [ext_resource type="AudioStream" uid="uid://ot38sh7n87sk" path="res://SPRITES/Witchcraft(loop - fantasy - guitar - piano).mp3" id="3_jxaad"]
 [ext_resource type="AudioStream" uid="uid://dc045ieod6tnv" path="res://SPRITES/musica/footstep03.ogg" id="3_rgnew"]
 [ext_resource type="AudioStream" uid="uid://uqmo5723p86l" path="res://SPRITES/musica/teletransporte.mp3" id="5_spekm"]
+[ext_resource type="AudioStream" uid="uid://dsn77ek5ycpv7" path="res://SPRITES/musica/daño.mp3" id="6_shsmb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ejmro"]
 radius = 6.72222
@@ -448,6 +449,9 @@ shape = SubResource("CapsuleShape2D_lnonu")
 [node name="teletrans" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_spekm")
 bus = &"sons"
+
+[node name="daño" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_shsmb")
 
 [connection signal="area_entered" from="player_hitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var footsteps = $Footsteps
-
+@onready var daño = $daño
 
 
 var enemy_in_range = false
@@ -67,6 +67,7 @@ func _physics_process(_delta):
 	
 func _on_player_hitbox_area_entered(area):
 		if area.is_in_group("enemy"):
+			daño.play()
 			General.vida -= 10
 
 
