@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://c673fl3lo8a5j"]
+[gd_scene load_steps=6 format=3 uid="uid://c673fl3lo8a5j"]
 
+[ext_resource type="Script" path="res://ESCENES/ITEMS/PORTES/porta_v_5.gd" id="1_g5jxn"]
 [ext_resource type="Texture2D" uid="uid://c1kjjjdkeus32" path="res://SPRITES/llave 5.png" id="2_dw5rv"]
 [ext_resource type="Texture2D" uid="uid://dj65fdta3j84a" path="res://SPRITES/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_fv8a2"]
 
@@ -10,6 +11,7 @@ size = Vector2(11, 78)
 size = Vector2(31, 63)
 
 [node name="porta_v" type="StaticBody2D"]
+script = ExtResource("1_g5jxn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -8)
