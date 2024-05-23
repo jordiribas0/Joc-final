@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://besh1ri52srt8"]
+[gd_scene load_steps=22 format=3 uid="uid://besh1ri52srt8"]
 
 [ext_resource type="PackedScene" uid="uid://dj55fun5fc5gs" path="res://ESCENES/ESCENARIS/MAPA.tscn" id="1_mf2kq"]
 [ext_resource type="PackedScene" uid="uid://c08vnqoxa8kow" path="res://ESCENES/personatges/PRINCIPAL/PERSONATGE.tscn" id="2_uj5eg"]
@@ -9,10 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://bwwoja2p8gg3f" path="res://ESCENES/personatges/ENEMIGOS/SLIME.tscn" id="8_gjbaa"]
 [ext_resource type="PackedScene" uid="uid://bcmspnsde4cnr" path="res://ESCENES/personatges/ENEMIGOS/NPC FINAL.tscn" id="8_pg0gj"]
 [ext_resource type="PackedScene" uid="uid://cdnn00q6ga6b4" path="res://ESCENES/ITEMS/PORTES/porta_h_2_llaves.tscn" id="9_c2e77"]
-[ext_resource type="PackedScene" path="res://ESCENES/ITEMS/PORTES/porta_v.tscn" id="10_78itu"]
-[ext_resource type="PackedScene" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.tscn" id="11_hjmb6"]
+[ext_resource type="PackedScene" uid="uid://d2heo4ijstcen" path="res://ESCENES/ITEMS/PORTES/porta_v.tscn" id="10_78itu"]
+[ext_resource type="PackedScene" uid="uid://dvxtblabyx1l0" path="res://ESCENES/ITEMS/PORTES/porta_v_4_llaves.tscn" id="11_hjmb6"]
 [ext_resource type="PackedScene" uid="uid://rpxk75llqug3" path="res://ESCENES/ITEMS/AGUJERO_FLETXA.tscn" id="12_43b4v"]
 [ext_resource type="PackedScene" uid="uid://b83kyds6amd5b" path="res://ESCENES/ESCENARIS/teletrans.tscn" id="13_xu6wo"]
+[ext_resource type="PackedScene" uid="uid://c673fl3lo8a5j" path="res://ESCENES/ITEMS/PORTES/porta_v_5.tscn" id="14_n6sc6"]
 
 [sub_resource type="Gradient" id="Gradient_rbuaw"]
 offsets = PackedFloat32Array(0.279221, 0.844156, 1)
@@ -81,7 +82,7 @@ fill_to = Vector2(0.0733945, 0.105505)
 [node name="CanvasLayer" parent="." instance=ExtResource("3_1y464")]
 
 [node name="cofre_coin1,1" parent="." instance=ExtResource("4_7xheh")]
-position = Vector2(8866, -484)
+position = Vector2(8767, -265)
 
 [node name="cofre_coin1,2" parent="." instance=ExtResource("4_7xheh")]
 position = Vector2(9122, 303)
@@ -755,11 +756,10 @@ autoplay = "SLIME"
 scale = Vector2(0.555556, 0.555556)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_uj5eg")]
-position = Vector2(8809, -246)
+position = Vector2(8864, -475)
 collision_mask = 3
 
 [node name="PointLight2D57" type="PointLight2D" parent="CharacterBody2D"]
-visible = false
 position = Vector2(0.555556, 7.77771)
 scale = Vector2(1.01042, 1.06283)
 texture = SubResource("GradientTexture2D_dauk6")
@@ -867,6 +867,9 @@ scale = Vector2(0.3, 0.3)
 [node name="teletrans2" parent="." instance=ExtResource("13_xu6wo")]
 position = Vector2(3103, 3717)
 scale = Vector2(0.3, 0.3)
+
+[node name="porta_v3" parent="." instance=ExtResource("14_n6sc6")]
+position = Vector2(4111, 1822)
 
 [connection signal="body_entered" from="teletrans" to="CharacterBody2D" method="_on_teletrans_body_entered"]
 [connection signal="body_entered" from="teletrans2" to="CharacterBody2D" method="_on_teletrans_2_body_entered"]
